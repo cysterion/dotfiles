@@ -5,8 +5,8 @@ export PATH=$PATH:~/AndroidSDK/platform-tools/
 export TERM=xterm-256color
 export CLICOLOR=1
 # Use Apple command line developer tools
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 source ~/.profile
 # source ~/.git-prompt.sh
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
@@ -14,7 +14,7 @@ if [ -f 'brew --prefix'/etc/bash_completion ]; then
 fi
 
 # This is the stuff for making bash pretty
-export PS1='\[\033[32m\]\@ \[\033[33m\]$(~/.rvm/bin/rvm-prompt) \[\033[1;36m\]\u\[\033[0m\]:\W\[\033[0m\]$(__git_ps1 "\[\033[1;33m\](\[\033[0;35m\]⎇ %s\[\033[1;33m\])")\[\033[0m\]$ '
+export PS1='\[\033[33m\]$(~/.rvm/bin/rvm-prompt)\[\033[0m\]:\W\[\033[0m\]$(__git_ps1 "\[\033[1;33m\](\[\033[0;35m\]⎇ %s\[\033[1;33m\])") \[\033[1;36m\]\u\[\033[0m\]$ '
 export GIT_PS1_SHOWDIRTYSTATE=1
 
 # Copies the current path to the clipboard

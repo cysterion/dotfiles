@@ -56,9 +56,9 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 
 " Use system clipboard
-" if !exists('$TMUX')
+if !exists('$TMUX')
     set clipboard=unnamed "unnamedplus
-" endif
+endif
 
 " Vim column line
 " highlight ColorColumn ctermbg=233
