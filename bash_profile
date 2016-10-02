@@ -35,6 +35,7 @@ alias version='echo $BASH_VERSION'
 # This updates everything that is command line
 function update {
     echo 'Updating brew and brew installed items'
+    brew update
     brew upgrade
     echo 'Updating git repositories for vim pathogen plugins'
     find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
