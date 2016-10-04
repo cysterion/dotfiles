@@ -5,10 +5,10 @@ export PATH=$PATH:~/AndroidSDK/platform-tools/
 export TERM=xterm-256color
 export CLICOLOR=1
 # Use Apple command line developer tools
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+# Using implicit path
+source "$(xcode-select -p)/usr/share/git-core/git-completion.bash"
+source "$(xcode-select -p)/usr/share/git-core/git-prompt.sh"
 source ~/.profile
-# source ~/.git-prompt.sh
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
 fi
