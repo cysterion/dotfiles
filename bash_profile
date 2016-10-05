@@ -1,4 +1,4 @@
-#!bin/bash
+#!/usr/bin/env bash
 # Set up AndroidSDK for adb
 export PATH=$PATH:~/AndroidSDK/platform-tools/
 # Color bash
@@ -6,8 +6,8 @@ export TERM=xterm-256color
 export CLICOLOR=1
 # Use Apple command line developer tools
 # Using implicit path
-source "$(xcode-select -p)/usr/share/git-core/git-completion.bash"
-source "$(xcode-select -p)/usr/share/git-core/git-prompt.sh"
+source $(xcode-select -p)/usr/share/git-core/git-completion.bash
+source $(xcode-select -p)/usr/share/git-core/git-prompt.sh
 source ~/.profile
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
