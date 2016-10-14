@@ -12,6 +12,7 @@ export CLICOLOR=1
 source "$(xcode-select -p)/usr/share/git-core/git-completion.bash"
 source "$(xcode-select -p)/usr/share/git-core/git-prompt.sh"
 source "$HOME/.profile"
+test -e "$HOME/.iterm2_shell_integration.bash" && source "$HOME/.iterm2_shell_integration.bash"
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
 fi
@@ -40,6 +41,7 @@ function update {
     echo 'Updating brew and brew installed items'
     brew update
     brew upgrade
+    brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
     find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
 }
@@ -82,4 +84,3 @@ function mkmainJava {
     fi
 }
 
-# test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
