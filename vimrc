@@ -5,9 +5,25 @@ set nocompatible
 execute pathogen#infect()
 filetype plugin indent on
 
-" Vim popup for autocomplete
+" Syntax coloring
+syntax enable
+
+" Vim popup for autocomplete 
 set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
+set completeopt=noselect,noinsert,menuone,preview,longest
+let g:rubycomplete_rails = 1
+" Keys that trigger completeopt
+for i in ['.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' , 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    execute "inoremap <silent> <expr>" . i . " OpenAutocomp('" . i . "')"
+endfor
+func OpenAutocomp(l)
+    return pumvisible() ? a:l : "\<c-x>\<c-o>" . a:l
+endfunc
+" <tab> to cycle through the results
+inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
+" autocmd BufEnter * Rvm
+
+" set spell spelllang=en
 
 " Remove splash
 " set shortmess=I
@@ -19,16 +35,13 @@ set background=light
 " This is for the CursorShape changin in modes in iTerm
 " This also has the workaround for runnning in a tmux session
 " if exists('$TMUX')
-    " let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<ESC>\\"
-    " let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<ESC>\\"
+" These are if it is in a tmux session
+" let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<ESC>\\"
+" let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<ESC>\\"
 " else
-    " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" end
-
-
-" Syntax coloring
-syntax on
+" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" endif
 
 " Always show the statusline
 set laststatus=2
@@ -50,7 +63,7 @@ if has("mouse_sgr")
     set ttymouse=sgr
 else
     set ttymouse=xterm2
-end
+endif
 " Smooth scroll
 nnoremap <ScrollWheelUp> <C-Y>
 nnoremap <ScrollWheelDown> <C-E>
@@ -62,7 +75,7 @@ nnoremap <Down> gj
 " Use system clipboard
 if !exists('$TMUX')
     set clipboard=unnamed "unnamedplus
-end
+endif
 
 " AirLine configuration
 set noshowmode
@@ -104,6 +117,10 @@ highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
 highlight LineNr       cterm=none ctermbg=234 ctermfg=245
 highlight EndOfBuffer  cterm=none ctermfg=240
 highlight SignColumn   cterm=none ctermbg=234
+" Omnicompletion
+highlight Pmenu cterm=none ctermbg=237 ctermfg=250
+highlight PmenuSel cterm=none ctermbg=045 ctermfg=234
+
 " Signify gutter coloring
 highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
 highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
@@ -125,7 +142,7 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:nerdtree_tabs_open_on_console_startup=1
 
 noremap <silent> // :call NERDComment(0,"toggle")<cr>
-let g:NERDSpaceDelims = 1 
+let g:NERDSpaceDelims = 1
 let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
@@ -138,3 +155,4 @@ set statusline+=%*
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_aggregate_errors = 1
+
