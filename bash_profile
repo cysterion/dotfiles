@@ -25,7 +25,7 @@ export PS1='\[\033[33m\]$(rvm-prompt)\[\033[0m\]:\W\[\033[0m\]$(__git_ps1 "\[\03
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 
 # Reload the bash profile
-alias reload="source ~/.bash_profile"
+alias reload="source ~/.bash_profile; echo 'reloaded'"
 
 # Attatch to a session if it has been detatched from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
@@ -36,8 +36,35 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
 
+function init {
+    type brew >/dev/null || { /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
+    if [ ! -d ~/.vim ]; then
+        git clone https://github.com/tpope/vim-pathogen ~/.vim
+    fi 
+    if [ ! -d ~/.vim/bundle ]; then mkdir ~/.vim/bundle ; fi 
+    if [ ! -d ~/.vim/bundle/nerdcommenter ]; then
+        git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+    fi 
+    if [ ! -d ~/.vim/bundle/nerdtree ]; then
+        git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+    fi 
+    if [ ! -d ~/.vim/bundle/syntastic ]; then
+        git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
+    fi 
+    if [ ! -d ~/.vim/bundle/vim-airline ]; then
+        git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+    fi 
+    if [ ! -d ~/.vim/bundle/vim-signify ]; then
+        git clone https://github.com/mhinz/vim-signify.git ~/.vim/bundle/vim-signify
+    fi 
+    if [ ! -d ~/.vim/bundle/vim-rvm ]; then
+        git clone https://github.com/tpope/vim-rvm.git ~/.vim/bundle/vim-rvm
+    fi 
+}
+
 # This updates everything that is command line
 function update {
+    init
     echo 'Updating brew and brew installed items'
     brew update
     brew upgrade
