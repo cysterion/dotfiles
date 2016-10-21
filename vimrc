@@ -10,7 +10,7 @@ syntax enable
 
 " Vim popup for autocomplete 
 set omnifunc=syntaxcomplete#Complete
-set completeopt=noselect,noinsert,menuone,preview,longest
+set completeopt=noinsert,menuone,preview
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 " let g:rubycomplete_rails = 1
