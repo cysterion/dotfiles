@@ -16,15 +16,14 @@ let g:rubycomplete_classes_in_global = 1
 " let g:rubycomplete_rails = 1
 
 " Keys that trigger completeopt
-for i in ['.', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' , 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    execute "inoremap <silent> <expr>" . i . " OpenAutocomp('" . i . "')"
+for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
+    execute "inoremap <silent><expr>" . key . " OpenAutocomp('" . key . "')"
 endfor
-func OpenAutocomp(l)
-    return pumvisible() ? a:l : "\<c-x>\<c-o>" . a:l
+func OpenAutocomp(key)
+    return pumvisible() ? a:key : a:key . "\<c-x>\<c-o>"
 endfunc
-" <tab> to cycle through the results
+inoremap <silent><expr> . ".\<c-x>\<c-o>"
 inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
-" autocmd BufEnter * Rvm
 
 " set spell spelllang=en
 
