@@ -115,13 +115,13 @@ let g:signify_sign_changedelete = g:signify_sign_change
 set cursorline
 set scrolloff=2
 highlight CursorLine   cterm=bold ctermbg=234
-highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
-highlight LineNr       cterm=none ctermbg=234 ctermfg=245
+highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=045
+highlight LineNr       cterm=none ctermbg=234 ctermfg=239
 highlight EndOfBuffer  cterm=none ctermfg=240
 highlight SignColumn   cterm=none ctermbg=234
 " Omnicompletion
 highlight Pmenu cterm=none ctermbg=237 ctermfg=250
-highlight PmenuSel cterm=none ctermbg=045 ctermfg=234
+highlight PmenuSel cterm=none ctermbg=039 ctermfg=234
 
 " Signify gutter coloring
 highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
