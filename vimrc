@@ -30,10 +30,6 @@ inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
 " Remove splash
 " set shortmess=I
 
-" give support for 256bit coloring
-set t_Co=256
-set background=light
-
 " This is for the CursorShape changin in modes in iTerm
 " This also has the workaround for runnning in a tmux session
 " if exists('$TMUX')
@@ -47,9 +43,13 @@ set background=light
 
 " Always show the statusline
 set laststatus=2
-
 " Show line numbers
 set number
+" show position in the document reg statusline
+set ruler
+" give support for 256bit coloring
+set t_Co=256
+set background=light
 
 " Spacing
 set backspace=2
@@ -78,6 +78,51 @@ nnoremap <Down> gj
 if !exists('$TMUX')
     set clipboard=unnamed "unnamedplus
 endif
+" cursor line
+set cursorline
+set scrolloff=2
+set colorcolumn=81
+set hlsearch
+set incsearch
+highlight CursorLine   cterm=bold ctermbg=234
+highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=045
+highlight LineNr       cterm=none ctermbg=234 ctermfg=245
+highlight SignColumn   cterm=none ctermbg=234
+highlight MatchParen   cterm=bold ctermbg=094 ctermfg=220
+highlight Pmenu        cterm=none ctermbg=240 ctermfg=250
+highlight PmenuSel     cterm=none ctermbg=039 ctermfg=234
+highlight PmenuSbar    ctermbg=245
+highlight PmenuThumb   ctermbg=235
+highlight ColorColumn  ctermbg=234
+highlight EndOfBuffer  ctermfg=245
+highlight Search cterm=underline ctermbg=NONE
+
+" Signify gutter coloring
+highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
+highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
+highlight SignifySignChange cterm=none ctermbg=234 ctermfg=220
+set fillchars+=vert:\ 
+
+" Maps nerd tree for easy access
+inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
+noremap <silent> <C-\> :NERDTreeToggle<cr>
+let g:nerdtree_tabs_focus_on_files=1
+let g:nerdtree_tabs_open_on_console_startup=1
+
+noremap <silent> // :call NERDComment(0,"toggle")<cr>
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
+
+" Synastic java fix
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
+" Syntastic Basic setup removing the list
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_aggregate_errors = 1
 
 " AirLine configuration
 set noshowmode
@@ -106,55 +151,4 @@ let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = g:signify_sign_delete
 let g:signify_sign_changedelete = g:signify_sign_change
 
-" Vim column line
-" highlight ColorColumn ctermbg=233
-" let &colorcolumn=join(range(81,999),",")
-" let &colorcolumn=80
-
-" cursor line
-set cursorline
-set scrolloff=2
-highlight CursorLine   cterm=bold ctermbg=234
-highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=045
-highlight LineNr       cterm=none ctermbg=234 ctermfg=239
-highlight EndOfBuffer  cterm=none ctermfg=240
-highlight SignColumn   cterm=none ctermbg=234
-" Omnicompletion
-highlight Pmenu cterm=none ctermbg=237 ctermfg=250
-highlight PmenuSel cterm=none ctermbg=039 ctermfg=234
-
-" Signify gutter coloring
-highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
-highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
-highlight SignifySignChange cterm=none ctermbg=234 ctermfg=220
-set fillchars+=vert:\ 
-
-" Highlight search
-set hlsearch
-highlight Search cterm=underline ctermbg=NONE
-set incsearch
-
-" show position in the document reg statusline
-set ruler
-
-" Maps nerd tree for easy access
-inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
-noremap <silent> <C-\> :NERDTreeToggle<cr>
-let g:nerdtree_tabs_focus_on_files=1
-let g:nerdtree_tabs_open_on_console_startup=1
-
-noremap <silent> // :call NERDComment(0,"toggle")<cr>
-let g:NERDSpaceDelims = 1
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
-
-" Synastic java fix
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
-" Syntastic Basic setup removing the list
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
 
