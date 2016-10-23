@@ -25,8 +25,6 @@ endfunc
 inoremap <silent><expr> . ".\<c-x>\<c-o>"
 inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
 
-" set spell spelllang=en
-
 " Remove splash
 " set shortmess=I
 
