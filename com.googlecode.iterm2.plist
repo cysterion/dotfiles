@@ -85,11 +85,11 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>447 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>288 120 918 495 0 0 1440 900 </string>
+	<string>288 120 796 473 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>298 180 1137 601 0 0 1440 878 </string>
+	<string>260 390 570 402 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>98 153 1186 699 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -801,7 +801,7 @@
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>2</integer>
+			<integer>0</integer>
 			<key>Transparency</key>
 			<real>0.2262897559171598</real>
 			<key>Unlimited Scrollback</key>
