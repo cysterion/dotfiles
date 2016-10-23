@@ -1,18 +1,24 @@
 " Doesn't need to be Vi compatible the improved part of Vim
 set nocompatible
-
-" Enable everything
-execute pathogen#infect()
 filetype plugin indent on
+
+" Enable pathogen
+execute pathogen#infect()
 
 " Syntax coloring
 syntax enable
+" Faster redraw
+set ttyfast
+" Only redraw when you have to -- causes lag
+" set lazyredraw
 " Always show the statusline
 set laststatus=2
 " Show line numbers
 set number
 " show position in the document reg statusline
 set ruler
+" Always report changed lines
+set report=0 
 " give support for 256bit coloring
 set t_Co=256
 set background=light
@@ -51,9 +57,10 @@ inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
 " Spacing
 set backspace=2
 set tabstop=4
-set softtabstop=0
-set expandtab
+set softtabstop=4
 set shiftwidth=4
+set expandtab
+set autoindent
 
 " Enable mouse suppourt
 set mouse=a
