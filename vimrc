@@ -7,6 +7,15 @@ filetype plugin indent on
 
 " Syntax coloring
 syntax enable
+" Always show the statusline
+set laststatus=2
+" Show line numbers
+set number
+" show position in the document reg statusline
+set ruler
+" give support for 256bit coloring
+set t_Co=256
+set background=light
 
 " Vim popup for autocomplete 
 set omnifunc=syntaxcomplete#Complete
@@ -38,16 +47,6 @@ inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
 " let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " endif
-
-" Always show the statusline
-set laststatus=2
-" Show line numbers
-set number
-" show position in the document reg statusline
-set ruler
-" give support for 256bit coloring
-set t_Co=256
-set background=light
 
 " Spacing
 set backspace=2
