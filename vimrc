@@ -88,6 +88,7 @@ highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
 highlight LineNr       cterm=none ctermbg=234 ctermfg=245
 highlight SignColumn   cterm=none ctermbg=234
 highlight MatchParen   cterm=bold ctermbg=094 ctermfg=220
+highlight ModeMsg      cterm=bold ctermbg=220 ctermfg=235
 highlight Pmenu        cterm=none ctermbg=240 ctermfg=250
 highlight PmenuSel     cterm=none ctermbg=039 ctermfg=234
 highlight PmenuSbar    ctermbg=245
