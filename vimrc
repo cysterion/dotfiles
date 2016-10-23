@@ -62,8 +62,8 @@ endfor
 func OpenAutocomp(key)
     return pumvisible() ? a:key : a:key . "\<c-x>\<c-o>"
 endfunc
-inoremap <silent><expr> . ".\<c-x>\<c-o>"
-inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
+inoremap <silent><expr> . ".\<C-X>\<C-O>"
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "<Tab>"
 
 " Remove splash
 " set shortmess=I
