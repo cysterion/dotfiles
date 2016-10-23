@@ -9,8 +9,8 @@ execute pathogen#infect()
 syntax enable
 " Faster redraw
 set ttyfast
-" Only redraw when you have to -- causes lag
-" set lazyredraw
+" Only redraw when you have to
+set lazyredraw
 " Always show the statusline
 set laststatus=2
 " Show line numbers
