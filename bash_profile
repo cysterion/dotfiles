@@ -57,9 +57,6 @@ function init {
     if [ ! -d ~/.vim/bundle/vim-signify ]; then
         git clone https://github.com/mhinz/vim-signify.git ~/.vim/bundle/vim-signify
     fi 
-    if [ ! -d ~/.vim/bundle/vim-rvm ]; then
-        git clone https://github.com/tpope/vim-rvm.git ~/.vim/bundle/vim-rvm
-    fi 
 }
 
 # This updates everything that is command line
