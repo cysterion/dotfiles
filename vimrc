@@ -78,14 +78,15 @@ nnoremap <Down> gj
 if !exists('$TMUX')
     set clipboard=unnamed "unnamedplus
 endif
-" cursor line
+
+" highlighting
 set cursorline
 set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
 highlight CursorLine   cterm=bold ctermbg=234
-highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=045
+highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
 highlight LineNr       cterm=none ctermbg=234 ctermfg=245
 highlight SignColumn   cterm=none ctermbg=234
 highlight MatchParen   cterm=bold ctermbg=094 ctermfg=220
@@ -150,5 +151,4 @@ let g:signify_sign_delete = '-'
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = g:signify_sign_delete
 let g:signify_sign_changedelete = g:signify_sign_change
-
 
