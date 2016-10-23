@@ -65,7 +65,7 @@ function update {
     echo 'Updating brew and brew installed items'
     brew update
     brew upgrade
-    brew cleanup
+    # brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
     find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
 }
