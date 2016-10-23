@@ -2,9 +2,6 @@
 set nocompatible
 filetype plugin indent on
 
-" Enable pathogen
-execute pathogen#infect()
-
 " Syntax coloring
 syntax enable
 " Faster redraw
@@ -23,7 +20,35 @@ set report=0
 set t_Co=256
 set background=light
 
-" Vim popup for autocomplete 
+" Enable mouse suppourt
+set mouse=a
+" Mouse fix for tmux
+if has("mouse_sgr")
+    set ttymouse=sgr
+else
+    set ttymouse=xterm2
+endif
+" Smooth scroll
+nnoremap <ScrollWheelUp> <C-Y>
+nnoremap <ScrollWheelDown> <C-E>
+" Arrow don't skip lines
+nnoremap <Up> gk
+nnoremap <Down> gj
+
+" Spacing
+set backspace=2
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set autoindent
+
+" Use system clipboard
+if !exists('$TMUX')
+    set clipboard=unnamed "unnamedplus
+endif
+
+" Vim popup for omnicomplete 
 set omnifunc=syntaxcomplete#Complete
 set completeopt=noinsert,menuone,preview
 let g:rubycomplete_buffer_loading = 1
@@ -54,35 +79,6 @@ inoremap <silent><expr> <tab> pumvisible() ? "\<c-n>" : "<tab>"
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " endif
 
-" Spacing
-set backspace=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-
-" Enable mouse suppourt
-set mouse=a
-" Mouse fix for tmux
-if has("mouse_sgr")
-    set ttymouse=sgr
-else
-    set ttymouse=xterm2
-endif
-" Smooth scroll
-nnoremap <ScrollWheelUp> <C-Y>
-nnoremap <ScrollWheelDown> <C-E>
-
-" Arrow don't skip lines
-nnoremap <Up> gk
-nnoremap <Down> gj
-
-" Use system clipboard
-if !exists('$TMUX')
-    set clipboard=unnamed "unnamedplus
-endif
-
 " highlighting
 set cursorline
 set scrolloff=2
@@ -102,12 +98,11 @@ highlight PmenuThumb   ctermbg=235
 highlight ColorColumn  ctermbg=234
 highlight EndOfBuffer  ctermfg=245
 highlight Search cterm=underline ctermbg=NONE
-
-" Signify gutter coloring
-highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
-highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
-highlight SignifySignChange cterm=none ctermbg=234 ctermfg=220
 set fillchars+=vert:\ 
+
+"------   Plugin Settings   ------"
+" Enable pathogen
+execute pathogen#infect()
 
 " Maps nerd tree for easy access
 inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
@@ -116,9 +111,9 @@ let g:nerdtree_tabs_focus_on_files=1
 let g:nerdtree_tabs_open_on_console_startup=1
 
 noremap <silent> // :call NERDComment(0,"toggle")<cr>
-let g:NERDSpaceDelims = 1
-let g:NERDCommentEmptyLines = 1
-let g:NERDTrimTrailingWhitespace = 1
+let g:NERDSpaceDelims=1
+let g:NERDCommentEmptyLines=1
+let g:NERDTrimTrailingWhitespace=1
 
 " Synastic java fix
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
@@ -126,9 +121,9 @@ let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_aggregate_errors = 1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
+let g:syntastic_aggregate_errors=1
 
 " AirLine configuration
 set noshowmode
@@ -156,4 +151,9 @@ let g:signify_sign_delete = '-'
 let g:signify_sign_change = '~'
 let g:signify_sign_delete_first_line = g:signify_sign_delete
 let g:signify_sign_changedelete = g:signify_sign_change
+
+" Signify gutter coloring
+highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
+highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
+highlight SignifySignChange cterm=none ctermbg=234 ctermfg=220
 
