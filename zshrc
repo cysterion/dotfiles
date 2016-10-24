@@ -1,18 +1,13 @@
 # RVM
 if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
-
-
-
-
-
-
-# Adapted from code found at <https://gist.github.com/1712320>.
-
-
 setopt prompt_subst
-autoload -U colors && colors # Enable colors in prompt
-
+# Enable colors in prompt
+autoload -U colors 
+colors
+# Load completions for Ruby, Git, etc.
+autoload compinit
+compinit
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="⎇"
@@ -34,7 +29,7 @@ git_prompt() {
     if [[ -n "$GIT_WHERE" ]]; then
         # Compose this value via multiple conditional appends.
         local GIT_STATE=""
-        local GIT_COLOR="%{$reset_color%}"
+        local GIT_COLOR="%{$fg[blue]%}"
 
         if ! git diff --quiet 2> /dev/null; then
             GIT_COLOR="%{$fg[yellow]%}"
@@ -72,34 +67,9 @@ git_prompt() {
     fi
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Colors
-autoload -U colors
-colors
 setopt prompt_subst
 
-PROMPT='%n:%~$(git_prompt) $ '
+PROMPT='%{$fg_bold[cyan]%}%n%f%b:%~$(git_prompt) $ '
 
 RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
 
@@ -109,7 +79,4 @@ RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
 # Show completion on first TAB
 setopt menucomplete
 
-# Load completions for Ruby, Git, etc.
-autoload compinit
-compinit
 alias reload="source ~/.zshrc; echo 'reloaded'"
