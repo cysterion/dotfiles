@@ -30,45 +30,48 @@ parse_git_branch() {
 
 # Show different symbols as appropriate for various Git repository states
 git_prompt() {
-    # Compose this value via multiple conditional appends.
-    local GIT_STATE=" "
-    local GIT_COLOR="%{$reset_color%}"
+    local GIT_WHERE="$(parse_git_branch)"
+    if [[ -n "$GIT_WHERE" ]]; then
+        # Compose this value via multiple conditional appends.
+        local GIT_STATE=""
+        local GIT_COLOR="%{$reset_color%}"
 
-    if ! git diff --quiet 2> /dev/null; then
-        GIT_COLOR="%{$fg[yellow]%}"
-        GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
+        if ! git diff --quiet 2> /dev/null; then
+            GIT_COLOR="%{$fg[yellow]%}"
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
+        fi
+
+        if ! git diff --cached --quiet 2> /dev/null; then
+            GIT_COLOR="%{$fg[green]%}"
+            GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
+        fi
+
+        local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+        if [ "$NUM_AHEAD" -gt 0 ]; then
+            GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+        fi
+
+        local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+        if [ "$NUM_BEHIND" -gt 0 ]; then
+            GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+        fi
+
+
+        local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
+        if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
+            GIT_COLOR="%{$fg[magenta]%}"
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
+        fi
+
+
+
+        local GIT_STRING="$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}"
+        if [[ -n $GIT_STATE ]]; then
+            echo "$GIT_STRING $GIT_STATE%{$reset_color%}"
+        else
+            echo "$GIT_STRING%{$reset_color%}"
+        fi
     fi
-
-    if ! git diff --cached --quiet 2> /dev/null; then
-        GIT_COLOR="%{$fg[green]%}"
-        GIT_STATE=$GIT_STATE$GIT_PROMPT_STAGED
-    fi
-
-    local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
-    if [ "$NUM_AHEAD" -gt 0 ]; then
-        GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
-    fi
-
-    local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
-    if [ "$NUM_BEHIND" -gt 0 ]; then
-        GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
-    fi
-
-
-    local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
-    if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-        GIT_COLOR="%{$fg[magenta]%}"
-        GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
-    fi
-
-
-
-    if [[ -n $GIT_STATE ]]; then
-        local git_where="$(parse_git_branch)"
-        [ -n "$git_where" ] && echo "$GIT_COLOR$GIT_PROMPT_SYMBOL ${git_where#(refs/heads/|tags/)}$GIT_STATE%{$reset_color%}"
-    fi
-
-
 }
 
 
@@ -98,7 +101,7 @@ autoload -U colors
 colors
 setopt prompt_subst
 
-PROMPT='%n:%~$(git_prompt) %{$reset_color%}'
+PROMPT='%n:%~$(git_prompt) $ '
 
 RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
 
