@@ -49,11 +49,11 @@ function git_prompt {
         local GIT_STATE=""
 
         if ! git diff --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE%{$fg[yellow]%}$GIT_PROMPT_MODIFIED"
+            GIT_STATE="$GIT_STATE%{$fg[yellow]%}$GIT_PROMPT_MODIFIED%{$reset_color%}"
         fi
 
         if ! git diff --cached --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE%{$fg[green]%}$GIT_PROMPT_STAGED"
+            GIT_STATE="$GIT_STATE%{$fg[green]%}$GIT_PROMPT_STAGED%{$reset_color%}"
         fi
 
         local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null\
