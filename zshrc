@@ -7,6 +7,7 @@ if [ -f 'brew --prefix'/etc/bash_completion ]; then
 fi
 
 setopt prompt_subst
+setopt correct
 # Enable colors in prompt
 autoload -U colors 
 colors
