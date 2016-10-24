@@ -1,5 +1,12 @@
+export PATH=$PATH:~/AndroidSDK/platform-tools/
+# Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+source "$HOME/.profile"
+if [ -f 'brew --prefix'/etc/bash_completion ]; then
+    . 'brew --prefix'/etc/bash_completion
+fi
 # RVM
-if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
+# if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 setopt prompt_subst
 # Enable colors in prompt
@@ -74,5 +81,67 @@ RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
 # Show completion on first TAB
 setopt menucomplete
 
+# Copies the current path to the clipboard
+alias cpdir="pwd | tr -d '\n' | pbcopy"
+
+# Reload the zshrc
 alias reload="source ~/.zshrc; echo 'reloaded'"
+
+# Attatch to a session if it has been detatched from or create a new one
+alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
+
+# iCloud Drive referance
+alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
+
+# Prints out the current bash version
+alias version='echo $BASH_VERSION'
+
+init() {
+    type brew >/dev/null || { /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
+    if [ ! -d ~/.vim ]; then
+        git clone https://github.com/tpope/vim-pathogen ~/.vim
+    fi 
+    if [ ! -d ~/.vim/bundle ]; then mkdir ~/.vim/bundle ; fi 
+    if [ ! -d ~/.vim/bundle/nerdcommenter ]; then
+        git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
+    fi 
+    if [ ! -d ~/.vim/bundle/nerdtree ]; then
+        git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+    fi 
+    if [ ! -d ~/.vim/bundle/syntastic ]; then
+        git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
+    fi 
+    if [ ! -d ~/.vim/bundle/vim-airline ]; then
+        git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
+    fi 
+    if [ ! -d ~/.vim/bundle/vim-signify ]; then
+        git clone https://github.com/mhinz/vim-signify.git ~/.vim/bundle/vim-signify
+    fi 
+}
+
+# This updates everything that is command line
+update() {
+    init
+    echo 'Updating brew and brew installed items'
+    brew update
+    brew upgrade
+    # brew cleanup
+    echo 'Updating git repositories for vim pathogen plugins'
+    find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
+}
+
+## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
+# Show and hide hidden files on mac os x
+toggleHidden() {
+    local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
+    if [ $current_value = TRUE ]
+    then
+            echo 'Files are now hidden'
+            defaults write com.apple.finder AppleShowAllFiles FALSE
+    else
+            echo 'Files are now visible'
+            defaults write com.apple.finder AppleShowAllFiles TRUE
+    fi
+    killall Finder
+}
 
