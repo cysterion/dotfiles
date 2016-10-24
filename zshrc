@@ -72,7 +72,7 @@ function git_prompt {
 }
 
 
-PROMPT='%{$fg_bold[cyan]%}%n%f%b:%~$(git_prompt) $ '
+PROMPT='%{$fg_bold[cyan]%}%n%f%b|%~$(git_prompt)$ '
 RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
 
 # Show completion on first TAB

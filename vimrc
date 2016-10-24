@@ -54,6 +54,7 @@ set completeopt=noinsert,menuone,preview
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 " let g:rubycomplete_rails = 1
+let g:loaded_sql_completion = 0
 
 " Keys that trigger completeopt
 for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
