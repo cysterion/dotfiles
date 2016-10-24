@@ -31,15 +31,18 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Modify the colors and symbols in these variables as desired.
+GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
+GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_SYMBOL="⎇"
 GIT_PROMPT_AHEAD="↑NUM"
-GIT_PROMPT_BEHIND="↓NUM"
-GIT_PROMPT_MERGING="∑"
-GIT_PROMPT_MODIFIED="*"
-GIT_PROMPT_STAGED="+"
-GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
+GIT_PROMPT_BEHIND="↓NUM"
 GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
+GIT_PROMPT_MERGING="∑"
+GIT_PROMPT_MERGING_COLOR="%{$fg[cyan]%}"
+GIT_PROMPT_MODIFIED="%{$fg[yellow]%}*%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[green]%}+%{$reset_color%}"
+GIT_PROMPT_CLOSE="%{$fg_bold[yellow]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
 function git_prompt {
@@ -51,11 +54,11 @@ function git_prompt {
         local GIT_STATE=""
 
         if ! git diff --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE%{$fg[yellow]%}$GIT_PROMPT_MODIFIED%{$reset_color%}"
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
         fi
 
         if ! git diff --cached --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE%{$fg[green]%}$GIT_PROMPT_STAGED%{$reset_color%}"
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_STAGED"
         fi
 
         local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null\
@@ -74,16 +77,16 @@ function git_prompt {
 
         local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
         if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
-            GIT_COLOR="%{$fg[cyan]%}"
+            GIT_COLOR="$GIT_PROMPT_MERGING_COLOR"
             GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
         fi
 
         # Compose the final git status line
-        local GIT_STRING="%{$fg_bold[yellow]%}(%{$reset_color%}$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}%{$reset_color%}"
+        local GIT_STRING="$GIT_PROMPT_OPEN$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}%{$reset_color%}"
         if [[ -n $GIT_STATE ]]; then
             GIT_STRING="$GIT_STRING $GIT_STATE%{$reset_color%}"
         fi
-        echo "$GIT_STRING%{$fg_bold[yellow]%})%{$reset_color%}"
+        echo "$GIT_STRING$GIT_PROMPT_CLOSE"
     fi
 }
 
