@@ -5,8 +5,6 @@ source "$HOME/.profile"
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
 fi
-# RVM
-# if [[ -s ~/.rvm/scripts/rvm ]] ; then source ~/.rvm/scripts/rvm ; fi
 
 setopt prompt_subst
 # Enable colors in prompt
@@ -25,14 +23,13 @@ GIT_PROMPT_MODIFIED="*"
 GIT_PROMPT_STAGED="+"
 GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 
-
 # Show Git branch/tag, or name-rev if on detached head
-parse_git_branch() {
+function parse_git_branch {
   (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
 }
 
 # Show different symbols as appropriate for various Git repository states
-git_prompt() {
+function git_prompt {
     local GIT_WHERE="$(parse_git_branch)"
     if [[ -n "$GIT_WHERE" ]]; then
         local GIT_COLOR="$GIT_PROMPT_COLOR"
@@ -96,7 +93,7 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
 
-init() {
+function init {
     type brew >/dev/null || { /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
     if [ ! -d ~/.vim ]; then
         git clone https://github.com/tpope/vim-pathogen ~/.vim
@@ -120,7 +117,7 @@ init() {
 }
 
 # This updates everything that is command line
-update() {
+function update {
     init
     echo 'Updating brew and brew installed items'
     brew update
@@ -132,7 +129,7 @@ update() {
 
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
 # Show and hide hidden files on mac os x
-toggleHidden() {
+function toggleHidden {
     local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
     if [ $current_value = TRUE ]
     then
