@@ -56,21 +56,19 @@ git_prompt() {
             GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
         fi
 
-
         local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
         if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
             GIT_COLOR="%{$fg[magenta]%}"
             GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
         fi
 
-
-
-        local GIT_STRING="$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}"
+        local GIT_STRING="%{$fg_bold[yellow]%}(%{$reset_color%}$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}"
         if [[ -n $GIT_STATE ]]; then
-            echo "$GIT_STRING $GIT_STATE%{$reset_color%}"
+            GIT_STRING="$GIT_STRING $GIT_STATE%{$reset_color%}"
         else
-            echo "$GIT_STRING%{$reset_color%}"
+            GIT_STRING"$GIT_STRING%{$reset_color%}"
         fi
+        echo "$GIT_STRING%{$fg_bold[yellow]%})%{$reset_color%}"
     fi
 }
 
