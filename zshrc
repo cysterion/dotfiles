@@ -38,6 +38,8 @@ GIT_PROMPT_MERGING="∑"
 GIT_PROMPT_MODIFIED="*"
 GIT_PROMPT_STAGED="+"
 GIT_PROMPT_COLOR="%{$fg[magenta]%}"
+GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
+GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
 
 # Show different symbols as appropriate for various Git repository states
 function git_prompt {
@@ -59,14 +61,14 @@ function git_prompt {
         local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null\
             | wc -l | tr -d ' ')"
         if [ "$NUM_AHEAD" -gt 0 ]; then
-            GIT_COLOR="%{$fg[green]%}"
+            GIT_COLOR="$GIT_PROMPT_AHEAD_COLOR"
             GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
         fi
 
         local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null\
             | wc -l | tr -d ' ')"
         if [ "$NUM_BEHIND" -gt 0 ]; then
-            GIT_COLOR="%{$fg[yellow]%}"
+            GIT_COLOR="$GIT_PROMPT_BEHIND_COLOR"
             GIT_STATE="$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}"
         fi
 
