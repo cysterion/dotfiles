@@ -18,7 +18,6 @@ zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
-# zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
