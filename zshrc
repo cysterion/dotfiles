@@ -37,14 +37,10 @@ GIT_PROMPT_MODIFIED="*"
 GIT_PROMPT_STAGED="+"
 GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 
-# Show Git branch/tag, or name-rev if on detached head
-function parse_git_branch {
-  (git symbolic-ref -q HEAD || git name-rev --name-only --no-undefined --always HEAD) 2> /dev/null
-}
-
 # Show different symbols as appropriate for various Git repository states
 function git_prompt {
-    local GIT_WHERE="$(parse_git_branch)"
+    local GIT_WHERE="$(git symbolic-ref -q HEAD 2> /dev/null \
+        || git name-rev --name-only --no-undefined --always HEAD 2> /dev/null)"
     if [[ -n "$GIT_WHERE" ]]; then
         local GIT_COLOR="$GIT_PROMPT_COLOR"
         # Compose this value via multiple conditional appends.
@@ -58,13 +54,15 @@ function git_prompt {
             GIT_STATE="$GIT_STATE%{$fg[green]%}$GIT_PROMPT_STAGED"
         fi
 
-        local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
+        local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null\
+            | wc -l | tr -d ' ')"
         if [ "$NUM_AHEAD" -gt 0 ]; then
             GIT_COLOR="%{$fg[green]%}"
             GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
         fi
 
-        local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
+        local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null\
+            | wc -l | tr -d ' ')"
         if [ "$NUM_BEHIND" -gt 0 ]; then
             GIT_COLOR="%{$fg[yellow]%}"
             GIT_STATE="$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}"
@@ -85,9 +83,8 @@ function git_prompt {
     fi
 }
 
-
 PROMPT='%{$fg_bold[cyan]%}%n%f%b|%~$(git_prompt)$ '
-RPROMPT='%{$fg[yellow]%} $(rvm-prompt)%{$reset_color%}'
+RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Show completion on first TAB
 setopt menucomplete
@@ -141,8 +138,8 @@ function update {
     find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
 }
 
-## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
-# Show and hide hidden files on mac os x
+## FF ## First thing I ever wrote in shell and the first thing to make it's way 
+# to my bash profile show and hide hidden files on mac os x
 function toggleHidden {
     local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
     if [ $current_value = TRUE ]
