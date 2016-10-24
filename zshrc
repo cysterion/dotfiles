@@ -10,9 +10,22 @@ setopt prompt_subst
 # Enable colors in prompt
 autoload -U colors 
 colors
-# Load completions for Ruby, Git, etc.
-autoload compinit
+# The following lines were added by compinstall
+zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' menu select=1
+zstyle ':completion:*' original true
+# zstyle :compinstall filename '~/.zshrc'
+
+autoload -Uz compinit
 compinit
+# End of lines added by compinstall
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_SYMBOL="⎇"
@@ -47,13 +60,13 @@ function git_prompt {
         local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null | wc -l | tr -d ' ')"
         if [ "$NUM_AHEAD" -gt 0 ]; then
             GIT_COLOR="%{$fg[green]%}"
-            GIT_STATE=$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}
+            GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
         fi
 
         local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null | wc -l | tr -d ' ')"
         if [ "$NUM_BEHIND" -gt 0 ]; then
             GIT_COLOR="%{$fg[yellow]%}"
-            GIT_STATE=$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}
+            GIT_STATE="$GIT_STATE${GIT_PROMPT_BEHIND//NUM/$NUM_BEHIND}"
         fi
 
         local GIT_DIR="$(git rev-parse --git-dir 2> /dev/null)"
@@ -142,22 +155,3 @@ function toggleHidden {
     killall Finder
 }
 
-# The following lines were added by compinstall
-
-zstyle ':completion:*' completer _complete _ignored _approximate
-zstyle ':completion:*' list-colors ''
-# zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' menu select=1
-zstyle ':completion:*' original true
-# zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle :compinstall filename '/Users/BrandonRoehl/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -v
-# End of lines configured by zsh-newuser-install
