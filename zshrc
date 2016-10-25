@@ -67,6 +67,7 @@ function git_prompt {
             GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
         fi
 
+        git fetch 2> /dev/null
         local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null\
             | wc -l | tr -d ' ')"
         if [ "$NUM_BEHIND" -gt 0 ]; then
@@ -83,7 +84,7 @@ function git_prompt {
         # Compose the final git status line
         local GIT_STRING="$GIT_PROMPT_OPEN$GIT_COLOR$GIT_PROMPT_SYMBOL ${GIT_WHERE#(refs/heads/|tags/)}%{$reset_color%}"
         if [[ -n $GIT_STATE ]]; then
-            GIT_STRING="$GIT_STRING $GIT_STATE%{$reset_color%}"
+            GIT_STRING="$GIT_STRING $GIT_STATE"
         fi
         echo "$GIT_STRING$GIT_PROMPT_CLOSE"
     fi
