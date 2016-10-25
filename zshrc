@@ -52,14 +52,6 @@ function git-prompt {
         # Compose this value via multiple conditional appends.
         local GIT_STATE=""
 
-        if ! git diff --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
-        fi
-
-        if ! git diff --cached --quiet 2> /dev/null; then
-            GIT_STATE="$GIT_STATE$GIT_PROMPT_STAGED"
-        fi
-
         local NUM_AHEAD="$(git log --oneline @{u}.. 2> /dev/null\
             | wc -l | tr -d ' ')"
         if [ "$NUM_AHEAD" -gt 0 ]; then
@@ -78,6 +70,14 @@ function git-prompt {
         if [ -n $GIT_DIR ] && test -r $GIT_DIR/MERGE_HEAD; then
             GIT_COLOR="$GIT_PROMPT_MERGING_COLOR"
             GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
+        fi
+
+        if ! git diff --quiet 2> /dev/null; then
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
+        fi
+
+        if ! git diff --cached --quiet 2> /dev/null; then
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_STAGED"
         fi
 
         # Compose the final git status line

@@ -67,6 +67,9 @@ endfunc
 inoremap <silent><expr> . ".\<C-X>\<C-O>"
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 
+" Spellcheck
+" set spell spelllang=en
+
 " Remove splash
 " set shortmess=I
 
@@ -87,6 +90,7 @@ set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
+" highlight Comment cterm=italic
 highlight CursorLine   cterm=bold ctermbg=234
 highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
 highlight LineNr       cterm=none ctermbg=234 ctermfg=245
