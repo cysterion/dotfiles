@@ -44,7 +44,7 @@ GIT_PROMPT_STAGED="%{$fg[green]%}+%{$reset_color%}"
 GIT_PROMPT_CLOSE="%{$fg_bold[yellow]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
-function git_prompt {
+function git-prompt {
     local GIT_WHERE="$(git symbolic-ref -q HEAD 2> /dev/null \
         || git name-rev --name-only --no-undefined --always HEAD 2> /dev/null)"
     if [[ -n "$GIT_WHERE" ]]; then
@@ -89,7 +89,7 @@ function git_prompt {
     fi
 }
 
-PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git_prompt)$ '
+PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git-prompt)$ '
 RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Show completion on first TAB
