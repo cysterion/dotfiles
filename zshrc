@@ -67,7 +67,6 @@ function git_prompt {
             GIT_STATE="$GIT_STATE${GIT_PROMPT_AHEAD//NUM/$NUM_AHEAD}"
         fi
 
-        git fetch 2> /dev/null
         local NUM_BEHIND="$(git log --oneline ..@{u} 2> /dev/null\
             | wc -l | tr -d ' ')"
         if [ "$NUM_BEHIND" -gt 0 ]; then
