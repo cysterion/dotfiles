@@ -44,7 +44,10 @@ function update {
     brew upgrade
     # brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
-    find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
+    currentPath=$PWD
+    cd "${$(readlink ~/.bashrc)//bashrc/}"
+    git submodule update --recursive
+    cd currentPath
 }
 
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
