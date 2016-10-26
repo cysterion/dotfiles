@@ -118,38 +118,17 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
 
-function init {
-    type brew >/dev/null || { /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
-    if [ ! -d ~/.vim ]; then
-        git clone https://github.com/tpope/vim-pathogen ~/.vim
-    fi 
-    if [ ! -d ~/.vim/bundle ]; then mkdir ~/.vim/bundle ; fi 
-    if [ ! -d ~/.vim/bundle/nerdcommenter ]; then
-        git clone https://github.com/scrooloose/nerdcommenter.git ~/.vim/bundle/nerdcommenter
-    fi 
-    if [ ! -d ~/.vim/bundle/nerdtree ]; then
-        git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
-    fi 
-    if [ ! -d ~/.vim/bundle/syntastic ]; then
-        git clone https://github.com/scrooloose/syntastic.git ~/.vim/bundle/syntastic
-    fi 
-    if [ ! -d ~/.vim/bundle/vim-airline ]; then
-        git clone https://github.com/vim-airline/vim-airline.git ~/.vim/bundle/vim-airline
-    fi 
-    if [ ! -d ~/.vim/bundle/vim-signify ]; then
-        git clone https://github.com/mhinz/vim-signify.git ~/.vim/bundle/vim-signify
-    fi 
-}
-
 # This updates everything that is command line
 function update {
-    init
     echo 'Updating brew and brew installed items'
     brew update
     brew upgrade
     # brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
-    find ~/.vim/ -type d -name .git -execdir git -C {}/.. pull origin master \;
+    currentPath=$PWD
+    cd "${$(readlink ~/.zshrc)//\zshrc/}"
+    git submodule update --recursive
+    cd currentPath
 }
 
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way 
