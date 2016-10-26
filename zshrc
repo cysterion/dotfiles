@@ -39,10 +39,10 @@ bindkey -v
 
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
-GIT_PROMPT_SYMBOL="⎇"
-GIT_PROMPT_AHEAD="↑NUM"
-GIT_PROMPT_BEHIND="↓NUM"
-GIT_PROMPT_MERGING="∑"
+GIT_PROMPT_SYMBOL="\u2387"
+GIT_PROMPT_AHEAD="\u2191NUM"
+GIT_PROMPT_BEHIND="\u2193NUM"
+GIT_PROMPT_MERGING="\u2211"
 GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
 GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
