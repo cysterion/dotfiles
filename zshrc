@@ -14,10 +14,16 @@ setopt correct
 autoload -U colors 
 colors
 # The following lines were added by compinstall
+
+zstyle ':completion:*' auto-description '%d'
 zstyle ':completion:*' completer _complete _ignored _approximate
+zstyle ':completion:*' insert-unambiguous false
 zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
+zstyle ':completion:*' use-compctl true
+zstyle ':completion:*' verbose true
+zstyle :compinstall filename '~/.zshrc'
 
 autoload -Uz compinit
 compinit
