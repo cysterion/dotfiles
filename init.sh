@@ -10,5 +10,10 @@ do
         mv -f "$HOME/.${i}" "$HOME/${i}_${DATE_STRING}"
     fi
     ln -s "$PWD/${i}" "$HOME/.${i}"
-    echo "Installed: $HOME/.${i}"
+    if [ $? -eq 0 ]; then
+        echo "Installed: $HOME/.${i}"
+    else
+        echo "Install failed to symlink. See GitHub.com/BrandonRoehl/dotfiles for help"
+        exit 1
+    fi
 done
