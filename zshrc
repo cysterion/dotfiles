@@ -126,7 +126,7 @@ function update {
     # brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
-    cd "${$(readlink ~/.zshrc)//zshrc/}"
+    cd "$(readlink ~/.vim)/.."
     git submodule update --recursive
     cd $currentPath
 }

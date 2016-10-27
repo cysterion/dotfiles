@@ -25,7 +25,7 @@ export PS1='\[\033[33m\]$(rvm-prompt)\[\033[0m\]:\W\[\033[0m\]$(__git_ps1 "\[\03
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 
 # Reload the bash profile
-alias reload="source ~/.bash_profile; echo 'reloaded'"
+alias reload="source ~/.bashrc; echo 'reloaded'"
 
 # Attatch to a session if it has been detatched from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
@@ -45,9 +45,9 @@ function update {
     # brew cleanup
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
-    cd "${$(readlink ~/.bashrc)//bashrc/}"
+    cd "$(readlink ~/.vim)/.."
     git submodule update --recursive
-    cd currentPath
+    cd $currentPath
 }
 
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
