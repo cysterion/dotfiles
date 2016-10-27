@@ -127,7 +127,7 @@ function update {
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
     cd "$(readlink ~/.vim)/.."
-    git submodule update --recursive
+    git submodule foreach git pull origin master
     cd $currentPath
 }
 
