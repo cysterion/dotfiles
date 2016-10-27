@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 git submodule init
 git submodule update --recursive
 DATE_STRING=$(echo "$(date)" | tr -s ' ' | tr ' ' '_')
@@ -10,4 +10,5 @@ do
         mv -f "$HOME/.${i}" "$HOME/${i}_${DATE_STRING}"
     fi
     ln -s "$PWD/${i}" "$HOME/.${i}"
+    echo "Installed: $HOME/.${i}"
 done
