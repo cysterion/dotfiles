@@ -128,7 +128,7 @@ function update {
     currentPath=$PWD
     cd "${$(readlink ~/.zshrc)//zshrc/}"
     git submodule update --recursive
-    cd currentPath
+    cd $currentPath
 }
 
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way 
