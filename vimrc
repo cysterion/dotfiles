@@ -16,6 +16,8 @@ set number
 set ruler
 " Always report changed lines
 set report=0 
+" Autocomplete comands menu
+set wildmenu
 " give support for 256bit coloring
 set t_Co=256
 set background=light
@@ -66,6 +68,8 @@ func OpenAutocomp(key)
 endfunc
 inoremap <silent><expr> . ".\<C-X>\<C-O>"
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
+
+set display+=lastline
 
 " Spellcheck
 " set spell spelllang=en
