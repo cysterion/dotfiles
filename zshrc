@@ -47,8 +47,8 @@ GIT_PROMPT_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
 GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
 GIT_PROMPT_MERGING_COLOR="%{$fg[cyan]%}"
-GIT_PROMPT_MODIFIED="%{$fg[yellow]%}*%{$reset_color%}"
-GIT_PROMPT_STAGED="%{$fg[green]%}+%{$reset_color%}"
+GIT_PROMPT_MODIFIED="%{$fg[red]%}\u2717%{$reset_color%}"
+GIT_PROMPT_STAGED="%{$fg[green]%}\u2713%{$reset_color%}"
 GIT_PROMPT_CLOSE="%{$fg_bold[yellow]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
