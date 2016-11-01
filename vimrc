@@ -15,7 +15,7 @@ set number
 " show position in the document reg statusline
 set ruler
 " Always report changed lines
-set report=0 
+set report=0
 " Autocomplete comands menu
 set wildmenu
 " give support for 256bit coloring
@@ -50,7 +50,7 @@ if !exists('$TMUX')
     set clipboard=unnamed "unnamedplus
 endif
 
-" Vim popup for omnicomplete 
+" Vim popup for omnicomplete
 set omnifunc=syntaxcomplete#Complete
 set completeopt=noinsert,menuone,preview
 let g:rubycomplete_buffer_loading = 1
@@ -70,6 +70,8 @@ inoremap <silent><expr> . ".\<C-X>\<C-O>"
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 
 set display+=lastline
+
+autocmd BufWritePre * :%s/\s\+$//e
 
 " Spellcheck
 " set spell spelllang=en
@@ -108,7 +110,7 @@ highlight PmenuThumb   ctermbg=235
 highlight ColorColumn  ctermbg=234
 highlight EndOfBuffer  ctermfg=245
 highlight Search cterm=underline ctermbg=NONE
-set fillchars+=vert:\ 
+set fillchars=
 
 "------   Plugin Settings   ------"
 " Enable pathogen
