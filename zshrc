@@ -37,6 +37,11 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
+# Show completion on first TAB
+setopt menucomplete
+
+export DOTDIR="${$(readlink ~/.zshrc)[0,${LENGTH} - 6]}"
+
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
 GIT_PROMPT_SYMBOL="\u2387"
@@ -100,9 +105,6 @@ function git-prompt {
 PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git-prompt)$ '
 RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
-# Show completion on first TAB
-setopt menucomplete
-
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 
@@ -121,7 +123,7 @@ alias version='echo $BASH_VERSION'
 function dotUpdate {
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
-    cd "$(readlink ~/.vim)/.."
+    cd $DOTDIR
     git submodule foreach "git clean -fdx; git reset --hard; git checkout master -f; git pull origin master -f;"
     cd $currentPath
 }
