@@ -37,9 +37,6 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-# Show completion on first TAB
-setopt menucomplete
-
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
 GIT_PROMPT_SYMBOL="\u2387"
@@ -100,7 +97,7 @@ function git-prompt {
     fi
 }
 
-PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git-prompt)$ '
+PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git-prompt)> '
 RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
@@ -124,7 +121,13 @@ function dotUpdate {
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
     cd $DOTDIR
-    git submodule foreach "git clean -fdx; git reset --hard; git checkout master -f; git pull origin master -f;"
+    git submodule foreach \
+        "
+        git clean -fdx;
+        git reset --hard;
+        git checkout master -f;
+        git pull origin master -f;
+        "
     cd $currentPath
 }
 
@@ -152,5 +155,6 @@ function toggleHidden {
     killall Finder
 }
 
+# Add zsh plugins
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
