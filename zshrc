@@ -11,7 +11,7 @@ fi
 setopt prompt_subst
 setopt correct
 # Enable colors in prompt
-autoload -U colors 
+autoload -U colors
 colors
 # The following lines were added by compinstall
 
@@ -118,20 +118,27 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
 
+function dotUpdate {
+    echo 'Updating git repositories for vim pathogen plugins'
+    currentPath=$PWD
+    cd "$(readlink ~/.vim)/.."
+    git submodule foreach git clean -fdx
+    git submodule foreach git reset --hard
+    git submodule foreach git checkout master -f
+    git submodule foreach git pull origin master -f
+    cd $currentPath
+}
+
 # This updates everything that is command line
 function update {
     echo 'Updating brew and brew installed items'
     brew update
     brew upgrade
     # brew cleanup
-    echo 'Updating git repositories for vim pathogen plugins'
-    currentPath=$PWD
-    cd "$(readlink ~/.vim)/.."
-    git submodule foreach git pull origin master
-    cd $currentPath
+    dotUpdate
 }
 
-## FF ## First thing I ever wrote in shell and the first thing to make it's way 
+## FF ## First thing I ever wrote in shell and the first thing to make it's way
 # to my bash profile show and hide hidden files on mac os x
 function toggleHidden {
     local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
