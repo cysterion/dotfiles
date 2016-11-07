@@ -122,10 +122,7 @@ function dotUpdate {
     echo 'Updating git repositories for vim pathogen plugins'
     currentPath=$PWD
     cd "$(readlink ~/.vim)/.."
-    git submodule foreach git clean -fdx
-    git submodule foreach git reset --hard
-    git submodule foreach git checkout master -f
-    git submodule foreach git pull origin master -f
+    git submodule foreach "git clean -fdx; git reset --hard; git checkout master -f; git pull origin master -f;"
     cd $currentPath
 }
 
