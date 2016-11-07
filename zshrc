@@ -40,8 +40,6 @@ bindkey -v
 # Show completion on first TAB
 setopt menucomplete
 
-export DOTDIR="${$(readlink ~/.zshrc)[0,${LENGTH} - 6]}"
-
 # Modify the colors and symbols in these variables as desired.
 GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
 GIT_PROMPT_SYMBOL="\u2387"
@@ -119,6 +117,8 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
+
+export DOTDIR="${$(readlink ~/.zshrc)[0,${LENGTH} - 6]}"
 
 function dotUpdate {
     echo 'Updating git repositories for vim pathogen plugins'
