@@ -49,6 +49,7 @@ GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
 GIT_PROMPT_MERGING_COLOR="%{$fg[cyan]%}"
 GIT_PROMPT_MODIFIED="%{$fg[red]%}\u2717%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg[green]%}\u2713%{$reset_color%}"
+GIT_PROMPT_UNTRACKED="%{$fg[yellow]%}\u2026%{$reset_color%}"
 GIT_PROMPT_CLOSE="%{$fg_bold[yellow]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
@@ -80,6 +81,10 @@ function git-prompt {
             GIT_STATE="$GIT_STATE$GIT_PROMPT_MERGING"
         fi
 
+        if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
+            GIT_STATE="$GIT_STATE$GIT_PROMPT_UNTRACKED"
+        fi
+
         if ! git diff --quiet 2> /dev/null; then
             GIT_STATE="$GIT_STATE$GIT_PROMPT_MODIFIED"
         fi
@@ -97,7 +102,7 @@ function git-prompt {
     fi
 }
 
-PROMPT='%{$fg_bold[cyan]%}%n%{$reset_color%}|%~$(git-prompt)> '
+PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[cyan]%})%n%{$reset_color%}|%~$(git-prompt)%# '
 RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
