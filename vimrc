@@ -12,6 +12,8 @@ set lazyredraw
 set laststatus=2
 " Show line numbers
 set number
+" Soft wrap
+set wrap
 " show position in the document reg statusline
 set ruler
 " Always report changed lines
@@ -110,7 +112,8 @@ highlight PmenuThumb   ctermbg=235
 highlight ColorColumn  ctermbg=234
 highlight EndOfBuffer  ctermfg=245
 highlight Search cterm=underline ctermbg=NONE
-set fillchars=
+let &fillchars=''
+let &showbreak='↪︎ '
 
 "------   Plugin Settings   ------"
 " Enable pathogen
