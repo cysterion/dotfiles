@@ -113,7 +113,7 @@ highlight ColorColumn  ctermbg=234
 highlight EndOfBuffer  ctermfg=245
 highlight Search cterm=underline ctermbg=NONE
 let &fillchars=''
-let &showbreak='↪︎ '
+let &showbreak='↳ '
 
 "------   Plugin Settings   ------"
 " Enable pathogen
