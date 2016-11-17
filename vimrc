@@ -160,6 +160,7 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
+" Gitgutter coloring
 highlight GitGutterAdd    cterm=none ctermbg=234 ctermfg=119
 highlight GitGutterDelete cterm=none ctermbg=234 ctermfg=167
 highlight GitGutterChange cterm=none ctermbg=234 ctermfg=220
