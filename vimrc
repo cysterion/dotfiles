@@ -160,15 +160,7 @@ let g:airline_symbols.spell = 'Ꞩ'
 let g:airline_symbols.notexists = '∄'
 let g:airline_symbols.whitespace = 'Ξ'
 
-" Signify signs and colors
-let g:signify_sign_add = '+'
-let g:signify_sign_delete = '-'
-let g:signify_sign_change = '~'
-let g:signify_sign_delete_first_line = g:signify_sign_delete
-let g:signify_sign_changedelete = g:signify_sign_change
-
-" Signify gutter coloring
-highlight SignifySignAdd    cterm=none ctermbg=234 ctermfg=119
-highlight SignifySignDelete cterm=none ctermbg=234 ctermfg=167
-highlight SignifySignChange cterm=none ctermbg=234 ctermfg=220
-
+highlight GitGutterAdd    cterm=none ctermbg=234 ctermfg=119
+highlight GitGutterDelete cterm=none ctermbg=234 ctermfg=167
+highlight GitGutterChange cterm=none ctermbg=234 ctermfg=220
+highlight link GitGutterChangeDelete GitGutterChange
