@@ -3,7 +3,7 @@ My personal dot files
 ## Cloning
 ### The easy setting
 What I use for all computers
-```
+```bash
 cd <directory for this>
 # Use the link to your fork
 git clone https://github.com/BrandonRoehl/dotfiles.git
@@ -12,11 +12,11 @@ cd dotfiles
 sh ./init.sh
 ```
 ### Custom or trial / browsing
-```
+```bash
 git clone --recursive https://github.com/BrandonRoehl/dotfiles.git
 ```
 Or remember to after cloning for the submodules
-```
+```bash
 git submodule init
 git submodule update --recursive
 ```
@@ -24,7 +24,7 @@ git submodule update --recursive
 1. [Fork it](https://github.com/BrandonRoehl/dotfiles/fork)
 2. Clone other vim plugins as submodules by using `git submodule add`
 3. Commit change and share!
-```
+```bash
 cd <dotfile directory>
 git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 ```
