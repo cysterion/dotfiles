@@ -43,10 +43,10 @@ GIT_PROMPT_SYMBOL="\u2387"
 GIT_PROMPT_AHEAD="\u2191NUM"
 GIT_PROMPT_BEHIND="\u2193NUM"
 GIT_PROMPT_MERGING="\u2211"
-GIT_PROMPT_COLOR="%{$fg[magenta]%}"
+GIT_PROMPT_COLOR="%{$fg[cyan]%}"
 GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
 GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
-GIT_PROMPT_MERGING_COLOR="%{$fg[cyan]%}"
+GIT_PROMPT_MERGING_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_MODIFIED="%{$fg[red]%}\u2717%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg[green]%}\u2713%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[yellow]%}\u2026%{$reset_color%}"
@@ -102,8 +102,8 @@ function git-prompt {
     fi
 }
 
-PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[cyan]%})%n%{$reset_color%}|%~$(git-prompt)%# '
-RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
+PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[cyan]%})%n%{$reset_color%}|%~%# '
+RPROMPT='$(git-prompt) %{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
