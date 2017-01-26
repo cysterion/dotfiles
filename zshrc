@@ -1,3 +1,4 @@
+#!/bin/env zsh
 export PATH=$PATH:~/AndroidSDK/platform-tools/
 export TERM=xterm-256color
 export CLICOLOR=1
@@ -151,11 +152,11 @@ function toggleHidden {
     local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
     if [ $current_value = TRUE ]
     then
-            echo 'Files are now hidden'
-            defaults write com.apple.finder AppleShowAllFiles FALSE
+        echo 'Files are now hidden'
+        defaults write com.apple.finder AppleShowAllFiles FALSE
     else
-            echo 'Files are now visible'
-            defaults write com.apple.finder AppleShowAllFiles TRUE
+        echo 'Files are now visible'
+        defaults write com.apple.finder AppleShowAllFiles TRUE
     fi
     killall Finder
 }
