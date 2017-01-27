@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/bin/zsh
 export PATH=$PATH:~/AndroidSDK/platform-tools/
 export TERM=xterm-256color
 export CLICOLOR=1
