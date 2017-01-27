@@ -103,7 +103,7 @@ function git-prompt {
     fi
 }
 
-PROMPT='%(!.%{$fg_bold[red]%}.%{$fg_bold[cyan]%})%n%{$reset_color%}|%~%# '
+PROMPT='%(!.%{$bg[yellow]$fg_bold[black]%}.%{$fg_bold[red]%})%n%{$reset_color%}|%~%# '
 RPROMPT='$(git-prompt) %{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
