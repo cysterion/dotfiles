@@ -39,19 +39,19 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_OPEN="%{$fg_bold[yellow]%}(%{$reset_color%}"
+GIT_PROMPT_OPEN="%{$fg_bold[black]%}(%{$reset_color%}"
 GIT_PROMPT_SYMBOL="\u2387"
 GIT_PROMPT_AHEAD="\u2191NUM"
 GIT_PROMPT_BEHIND="\u2193NUM"
 GIT_PROMPT_MERGING="\u2211"
-GIT_PROMPT_COLOR="%{$fg[cyan]%}"
+GIT_PROMPT_COLOR="%{$fg[red]%}"
 GIT_PROMPT_AHEAD_COLOR="%{$fg[green]%}"
 GIT_PROMPT_BEHIND_COLOR="%{$fg[yellow]%}"
 GIT_PROMPT_MERGING_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_MODIFIED="%{$fg[red]%}\u2717%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg[green]%}\u2713%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[yellow]%}\u2026%{$reset_color%}"
-GIT_PROMPT_CLOSE="%{$fg_bold[yellow]%})%{$reset_color%}"
+GIT_PROMPT_CLOSE="%{$fg_bold[black]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
 function git-prompt {
@@ -103,7 +103,7 @@ function git-prompt {
     fi
 }
 
-PROMPT='%(!.%{$bg[yellow]$fg_bold[black]%}.%{$fg_bold[red]%})%n%{$reset_color%}|%~%# '
+PROMPT='%(!.%{$bg[yellow]$fg_bold[black]%}.%{$fg_bold[red]%})%n%{$fg_bold[black]%}|%{$reset_color%}%~%# '
 RPROMPT='$(git-prompt) %{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
