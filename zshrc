@@ -1,7 +1,9 @@
 #!/bin/zsh
-export PATH=$PATH:~/AndroidSDK/platform-tools/
-export TERM=xterm-256color
-export CLICOLOR=1
+#brew install coreutils
+#$(brew --prefix coreutils)
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
 # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source "$HOME/.profile"
@@ -12,14 +14,18 @@ fi
 setopt prompt_subst
 setopt correct
 # Enable colors in prompt
+export TERM=xterm-256color
+export CLICOLOR=1
+alias ls='ls --color=auto --classify'
 autoload -U colors
 colors
+eval "$(dircolors)"
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description '%d'
 zstyle ':completion:*' completer _complete _ignored _approximate
 zstyle ':completion:*' insert-unambiguous false
-zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-prompt '%SAt %p: Hit TAB for more, or the character to insert%s'
 zstyle ':completion:*' menu select=1
 zstyle ':completion:*' original true
@@ -39,7 +45,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Modify the colors and symbols in these variables as desired.
-GIT_PROMPT_OPEN="%{$fg_bold[black]%}(%{$reset_color%}"
+GIT_PROMPT_OPEN="%{$fg_bold[white]%}(%{$reset_color%}"
 GIT_PROMPT_SYMBOL="\u2387"
 GIT_PROMPT_AHEAD="\u2191NUM"
 GIT_PROMPT_BEHIND="\u2193NUM"
@@ -51,7 +57,7 @@ GIT_PROMPT_MERGING_COLOR="%{$fg[magenta]%}"
 GIT_PROMPT_MODIFIED="%{$fg[red]%}\u2717%{$reset_color%}"
 GIT_PROMPT_STAGED="%{$fg[green]%}\u2713%{$reset_color%}"
 GIT_PROMPT_UNTRACKED="%{$fg[yellow]%}\u2026%{$reset_color%}"
-GIT_PROMPT_CLOSE="%{$fg_bold[black]%})%{$reset_color%}"
+GIT_PROMPT_CLOSE="%{$fg_bold[white]%})%{$reset_color%}"
 
 # Show different symbols as appropriate for various Git repository states
 function git-prompt {
@@ -103,7 +109,7 @@ function git-prompt {
     fi
 }
 
-PROMPT='%(!.%{$bg[yellow]$fg_bold[black]%}.%{$fg_bold[red]%})%n%{$fg_bold[black]%}|%{$reset_color%}%~%# '
+PROMPT='%(!.%{$bg[yellow]$fg[black]%}.%{$fg_bold[red]%})%n%{$fg_bold[white]%}|%{$reset_color%}%~%# '
 RPROMPT='$(git-prompt) %{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
 
 # Copies the current path to the clipboard
