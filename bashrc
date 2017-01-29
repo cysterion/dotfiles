@@ -36,35 +36,6 @@ alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
 
-# This updates everything that is command line
-function update {
-    init
-    echo 'Updating brew and brew installed items'
-    brew update
-    brew upgrade
-    # brew cleanup
-    echo 'Updating git repositories for vim pathogen plugins'
-    currentPath=$PWD
-    cd "$(readlink ~/.vim)/.."
-    git submodule foreach git pull origin master
-    cd $currentPath
-}
-
-## FF ## First thing I ever wrote in shell and the first thing to make it's way to my bash profile
-# Show and hide hidden files on mac os x
-function toggleHidden {
-    current_value=$(defaults read com.apple.finder AppleShowAllFiles)
-    if [ $current_value = TRUE ]
-    then
-            echo 'Files are now hidden'
-            defaults write com.apple.finder AppleShowAllFiles FALSE
-    else
-            echo 'Files are now visible'
-            defaults write com.apple.finder AppleShowAllFiles TRUE
-    fi
-    killall Finder
-}
-
 # Create a blank java main method
 function mkmainJava {
     if [ $# -eq 0 ]

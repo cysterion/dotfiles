@@ -1,0 +1,12 @@
+#!/bin/zsh
+echo 'Updating git repositories for vim pathogen plugins'
+currentPath=$PWD
+cd "${$(readlink ~/.zshrc)/%\/zshrc}"
+git submodule foreach \
+        '
+        git clean -fdx;
+        git reset --hard;
+        git checkout master -f;
+        git pull origin master -f;
+        '
+cd $currentPath

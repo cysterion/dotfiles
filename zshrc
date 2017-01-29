@@ -64,46 +64,5 @@ function reload {
 # Attatch to a session if it has been detatched from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
-# Prints out the current bash version
-alias version='echo $BASH_VERSION'
-
-function dotUpdate {
-    echo 'Updating git repositories for vim pathogen plugins'
-    currentPath=$PWD
-    cd $DOTDIR
-    git submodule foreach \
-        '
-        git clean -fdx;
-        git reset --hard;
-        git checkout master -f;
-        git pull origin master -f;
-        '
-    cd $currentPath
-}
-
-# This updates everything that is command line
-function update {
-    echo 'Updating brew and brew installed items'
-    brew update
-    brew upgrade
-    # brew cleanup
-    dotUpdate
-}
-
-## FF ## First thing I ever wrote in shell and the first thing to make it's way
-# to my bash profile show and hide hidden files on mac os x
-function toggleHidden {
-    local current_value=$(defaults read com.apple.finder AppleShowAllFiles)
-    if [ $current_value = TRUE ]
-    then
-        echo 'Files are now hidden'
-        defaults write com.apple.finder AppleShowAllFiles FALSE
-    else
-        echo 'Files are now visible'
-        defaults write com.apple.finder AppleShowAllFiles TRUE
-    fi
-    killall Finder
-}
-
 # Command not found
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
