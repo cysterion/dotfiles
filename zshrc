@@ -1,5 +1,5 @@
 #!/bin/zsh
-local DOTDIR="${$(readlink ~/.zshrc)/%\/zshrc}"
+DOTDIR="${$(readlink ~/.zshrc)/%\/zshrc}"
 if [ -z $DOTDIR ]; then
     DOTDIR='~'
 fi

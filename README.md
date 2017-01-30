@@ -4,12 +4,12 @@ My personal dot files
 ### The easy setting
 What I use for all computers
 ```bash
-cd <directory for this>
+cd ~/wherever
 # Use the link to your fork
 git clone https://github.com/BrandonRoehl/dotfiles.git
 # The folder just made
 cd dotfiles
-sh ./init.sh
+./init
 ```
 ### Custom or trial / browsing
 ```bash
@@ -25,7 +25,7 @@ git submodule update --recursive
 2. Clone other vim plugins as submodules by using `git submodule add`
 3. Commit change and share!
 ```bash
-cd <dotfile directory>
+cd $DOTDIR # Works if installed
 git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 ```
 

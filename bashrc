@@ -1,4 +1,3 @@
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 # Set up AndroidSDK for adb
 export PATH=$PATH:~/AndroidSDK/platform-tools/
 # Color bash
@@ -24,14 +23,14 @@ export PS1='\[\033[33m\]$(rvm-prompt)\[\033[0m\]:\W\[\033[0m\]$(__git_ps1 "\[\03
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
 
-# Reload the bash profile
-alias reload="source ~/.bashrc; echo 'reloaded'"
+# Reload the bashrc
+function reload {
+    source ~/.bashrc
+    echo 'reloaded'
+}
 
 # Attatch to a session if it has been detatched from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
-
-# iCloud Drive referance
-alias iCloud='cd ~/Library/Mobile\ Documents/com\~apple\~CloudDocs/'
 
 # Prints out the current bash version
 alias version='echo $BASH_VERSION'
