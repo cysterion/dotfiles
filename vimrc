@@ -81,17 +81,6 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Remove splash
 " set shortmess=I
 
-" This is for the CursorShape changin in modes in iTerm
-" This also has the workaround for runnning in a tmux session
-" if exists('$TMUX')
-" These are if it is in a tmux session
-" let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<ESC>\\"
-" let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<ESC>\\"
-" else
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-" endif
-
 " highlighting
 set cursorline
 set scrolloff=2
