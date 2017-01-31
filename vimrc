@@ -54,7 +54,7 @@ endif
 
 " Vim popup for omnicomplete
 set omnifunc=syntaxcomplete#Complete
-set completeopt=noinsert,menuone,preview
+set completeopt=noinsert,menuone
 let g:rubycomplete_buffer_loading = 1
 let g:rubycomplete_classes_in_global = 1
 let g:rubycomplete_rails = 1
