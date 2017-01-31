@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env zsh
 DOTDIR="${$(readlink ~/.zshrc)/%\/zshrc}"
 if [ -z $DOTDIR ]; then
     DOTDIR='~'
