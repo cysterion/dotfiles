@@ -50,7 +50,7 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 PROMPT='%(!.%{$bg[yellow]$fg[black]%}.%{$fg_bold[red]%})%n%{$fg_bold[white]%}|%{$reset_color%}%~%# '
-RPROMPT='$(git-prompt --zsh) %{$fg[yellow]%}$(rvm-prompt)%{$reset_color%}'
+RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%} $(git-prompt --zsh)'
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
