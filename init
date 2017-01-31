@@ -2,18 +2,18 @@
 git submodule init
 git submodule update --recursive
 files=( "zshrc" "bashrc" "vimrc" "vim" "tmux.conf" "profile" )
-for file in files
+for file in $files
 do
     echo ""
-    if [ -e "$HOME/.${i}" ]
+    if [ -e "$HOME/.${file}" ]
     then
-        echo "Moving current .${i}"
-        mv -iv "$HOME/.${i}" "$HOME/${i}_$(date +%s)"
+        echo "Moving current .${file}"
+        mv -iv "$HOME/.${file}" "$HOME/${file}_$(date +%s)"
     fi
-    echo "Simlinking ${i} to $HOME"
-    ln -s "$PWD/${i}" "$HOME/.${i}"
+    echo "Simlinking ${file} to $HOME"
+    ln -s "$PWD/${file}" "$HOME/.${file}"
     if [ $? -eq 0 ]; then
-        echo "$PWD/${i} ~> $HOME/.${i}"
+        echo "$PWD/${file} ~> $HOME/.${file}"
     else
         echo 'Install failed to symlink. See GitHub.com/BrandonRoehl/dotfiles for help'
         exit 1
