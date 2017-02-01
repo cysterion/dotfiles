@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 git submodule init
 git submodule update --recursive
-files=( "zshrc" "bashrc" "vimrc" "vim" "tmux.conf" "profile" )
+files=( 'zshrc' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'scripts' )
 for file in $files
 do
     echo ""

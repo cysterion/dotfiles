@@ -1,0 +1,7 @@
+#!/bin/sh
+# Shell script to compile run and remove the files with gcc
+for file in $@
+do
+    raw=${file/.c/}
+    gcc -std=gnu99 $file -o ./$raw && ./$raw && rm ./$raw
+done

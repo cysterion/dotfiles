@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/sh
 echo 'Updating brew and brew installed items'
 brew update
 brew upgrade

@@ -1,12 +1,7 @@
 #!/usr/bin/env zsh
-DOTDIR="${$(readlink ~/.zshrc)/%\/zshrc}"
-if [ -z $DOTDIR ]; then
-    DOTDIR='~'
-fi
-
 #brew install coreutils
 #$(brew --prefix coreutils)
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$DOTDIR/scripts"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.scripts"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source "$HOME/.profile"

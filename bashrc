@@ -1,5 +1,5 @@
 # Set up AndroidSDK for adb
-export PATH=$PATH:~/AndroidSDK/platform-tools/
+export PATH="$PATH:$HOME/AndroidSDK/platform-tools/:$HOME/.scripts"
 # Color bash
 export TERM=xterm-256color
 export CLICOLOR=1

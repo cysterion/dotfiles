@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ## FF ## First thing I ever wrote in shell and the first thing to make it's way
 # to my bash profile show and hide hidden files on mac os x
 current_value=$(defaults read com.apple.finder AppleShowAllFiles)
