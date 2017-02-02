@@ -2,6 +2,9 @@
 # Shell script to compile run and remove the files with gcc
 for file in $@
 do
-    raw=${file/.c/}
+    raw="${file/.c/}_$(date +%s)"
+    if ! [[ $raw =~ '^\.' ]]; then
+        raw=".$raw"
+    fi
     gcc -std=gnu99 $file -o ./$raw && ./$raw && rm ./$raw
 done
