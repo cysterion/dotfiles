@@ -75,9 +75,6 @@ set display+=lastline
 
 autocmd BufWritePre * :%s/\s\+$//e
 
-" Spellcheck
-" set spell spelllang=en
-
 " Remove splash
 " set shortmess=I
 
