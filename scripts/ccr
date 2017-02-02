@@ -6,5 +6,6 @@ do
     if ! [[ $raw =~ '^\.' ]]; then
         raw=".$raw"
     fi
-    gcc -std=gnu99 $file -o ./$raw && ./$raw && rm ./$raw
+    gcc -std=gnu99 $file -o ./$raw && ./$raw
+    rm ./$raw
 done
