@@ -12,7 +12,8 @@ do
     fi
     echo "Simlinking ${file} to $HOME"
     ln -s "$PWD/${file}" "$HOME/.${file}"
-    if [ $? -eq 0 ]; then
+    if [ $? -eq 0 ]
+    then
         echo "$PWD/${file} ~> $HOME/.${file}"
     else
         echo 'Install failed to symlink. See GitHub.com/BrandonRoehl/dotfiles for help'
@@ -20,9 +21,11 @@ do
     fi
 done
 
-if [ hash brew >/dev/null 2>&1 ]; then
+if [ hash brew >/dev/null 2>&1 ]
+then
     echo 'Attempting to install brew'
-    if [ uname = "Darwin" ]; then
+    if [ uname = "Darwin" ]
+    then
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     else
         sudo apt-get install build-essential curl git python-setuptools ruby
