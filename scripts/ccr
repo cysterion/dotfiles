@@ -8,5 +8,8 @@ do
         raw=".$raw"
     fi
     gcc -std=gnu99 $file -o ./$raw && ./$raw
-    rm ./$raw
+    if [ -e ./$raw ]
+    then
+        rm ./$raw
+    fi
 done
