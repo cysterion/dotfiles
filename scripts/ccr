@@ -2,7 +2,7 @@
 # Shell script to compile run and remove the files with gcc
 for file in $@
 do
-    raw="${file/.c/}_$(md5sum $file | awk '{print $1}')"
+    raw="$(echo $file | cut -f 1 -d '.')_$(md5sum $file | awk '{print $1}')"
     if ! [[ $raw =~ '^\.' ]]
     then
         raw=".$raw"
