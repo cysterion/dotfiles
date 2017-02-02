@@ -5,16 +5,21 @@ files=( 'zshrc' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'scripts' )
 for file in $files
 do
     echo ""
-    if [ -e "$HOME/.${file}" ]
+    if [ -e "$HOME/.$file" ]
     then
-        echo "Moving current .${file}"
-        mv -iv "$HOME/.${file}" "$HOME/${file}_$(date +%s)"
+        if [ -h "$HOME/.$file" ] && [ $(readlink "$HOME/.$file") = "$PWD/$file" ]
+        then
+            rm "$HOME/.$file"
+        else
+            echo "Moving current .$file"
+            mv -iv "$HOME/.$file" "$HOME/${file}_$(date +%s)"
+        fi
     fi
-    echo "Simlinking ${file} to $HOME"
-    ln -s "$PWD/${file}" "$HOME/.${file}"
+    echo "Simlinking $file to $HOME"
+    ln -s "$PWD/$file" "$HOME/.$file"
     if [ $? -eq 0 ]
     then
-        echo "$PWD/${file} ~> $HOME/.${file}"
+        echo "$PWD/$file ~> $HOME/.$file"
     else
         echo 'Install failed to symlink. See GitHub.com/BrandonRoehl/dotfiles for help'
         exit 1
