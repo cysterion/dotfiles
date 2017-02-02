@@ -3,7 +3,8 @@
 for file in $@
 do
     raw="${file/.c/}_$(md5sum $file | awk '{print $1}')"
-    if ! [[ $raw =~ '^\.' ]]; then
+    if ! [[ $raw =~ '^\.' ]]
+    then
         raw=".$raw"
     fi
     gcc -std=gnu99 $file -o ./$raw && ./$raw
