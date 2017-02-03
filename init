@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 git submodule init
 git submodule update --recursive
-./universe/universe update
 files=( 'zshrc' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'universe' )
 for file in $files
 do
@@ -38,6 +37,7 @@ then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
     fi
 fi
+./universe/universe update
 brew install coreutils vim tmux wget bash
 
 echo 'install rvm or upgrade rvm'
