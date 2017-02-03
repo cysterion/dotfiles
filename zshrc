@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 #brew install coreutils
 #$(brew --prefix coreutils)
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.scripts"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.universe/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source "$HOME/.profile"
