@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 #brew install coreutils
 #$(brew --prefix coreutils)
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.scripts"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.universe/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source "$HOME/.profile"
@@ -44,7 +44,7 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-PROMPT='%(!.%{$bg[yellow]$fg[black]%}.%{$fg_bold[red]%})%n%{$fg_bold[white]%}|%{$reset_color%}%~%# '
+PROMPT='%(!.%{$fg_bold[yellow]%}.%{$fg_bold[red]%})%n%{$reset_color%}%{$fg_bold[white]%}|%{$reset_color%}%~%# '
 RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%} $(git-prompt --zsh)'
 
 # Copies the current path to the clipboard

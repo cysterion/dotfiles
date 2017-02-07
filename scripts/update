@@ -1,6 +1,0 @@
-#!/bin/sh
-echo 'Updating brew and brew installed items'
-brew update
-brew upgrade
-# brew cleanup
-dot-update

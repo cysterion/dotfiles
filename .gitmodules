@@ -19,3 +19,6 @@
 [submodule "syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "universe"]
+	path = universe
+	url = git@github.com:BrandonRoehl/universe.git
