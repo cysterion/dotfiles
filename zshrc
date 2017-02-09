@@ -44,8 +44,8 @@ SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-PROMPT='%(!.%{$fg_bold[yellow]%}.%{$fg_bold[red]%})%n%{$reset_color%}%{$fg_bold[white]%}|%{$reset_color%}%~%# '
-RPROMPT='%{$fg[yellow]%}$(rvm-prompt)%{$reset_color%} $(git-prompt --zsh)'
+PROMPT='%B%(!.%F{yellow}.%F{red})%n%F{white}|%f%b%~ %B%(?:%F{green}:%F{red})%(!.#.❯)%f%b '
+RPROMPT='%F{yellow}$(rvm-prompt)%f $(git-prompt --zsh)'
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
@@ -61,3 +61,5 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 # Command not found
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
+
+source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"

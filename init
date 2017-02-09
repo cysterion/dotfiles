@@ -6,7 +6,7 @@ echo ' | (_| | (_) | |_|  _| | |  __/\__ \'
 echo '(_)__,_|\___/ \__|_| |_|_|\___||___/'
 git submodule init
 git submodule update --recursive
-files=( 'zshrc' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'universe' )
+files=( 'zshrc' 'zsh' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'universe' )
 for file in $files
 do
     echo ""
@@ -17,7 +17,7 @@ do
             rm "$HOME/.$file"
         else
             echo "Moving current .$file"
-            mv -iv "$HOME/.$file" "$HOME/${file}_$(date +%s)"
+            mv -ivf "$HOME/.$file" "$HOME/${file}_$(date +%s)"
         fi
     fi
     echo "Simlinking $file to $HOME"
