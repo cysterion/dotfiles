@@ -6,8 +6,8 @@ filetype plugin indent on
 syntax enable
 " Faster redraw
 set ttyfast
-" Only redraw when you have to
-set lazyredraw
+" Quick redraw
+set nolazyredraw
 " Always show the statusline
 set laststatus=2
 " Show line numbers
