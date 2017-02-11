@@ -52,7 +52,7 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 
 # Reload the zshrc
 function reload {
-    source ~/.zshrc
+    source "$HOME/.zshrc"
     echo 'reloaded'
 }
 

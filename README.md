@@ -36,5 +36,12 @@ cd $DOTDIR # Works if installed
 git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 ```
 
+## Linuxbrew the right way
+```bash
+sudo rm -rf /usr/local
+sudo git clone https://github.com/Linuxbrew/brew.git /usr/local
+sudo chmod -R $(whoami) /usr/local
+```
+
 # Contact
 [BrandonRoehl@gmail.com](mailto://brandonroehl@gmail.com)
