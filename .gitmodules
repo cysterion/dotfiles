@@ -19,6 +19,9 @@
 [submodule "syntastic"]
 	path = vim/bundle/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "zsh/zsh-syntax-highlighting"]
+[submodule "swift.vim"]
+	path = vim/bundle/swift.vim
+	url = https://github.com/keith/swift.vim.git
+[submodule "zsh-syntax-highlighting"]
 	path = zsh/zsh-syntax-highlighting
 	url = git@github.com:zsh-users/zsh-syntax-highlighting.git
