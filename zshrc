@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 #brew install coreutils
 #$(brew --prefix coreutils)
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.universe/bin"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source "$HOME/.profile"
@@ -59,7 +59,8 @@ function reload {
 # Attatch to a session if it has been detatched from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
-# Command not found
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 
 source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+export PATH="$PATH:$HOME/workspace/universe/bin"
