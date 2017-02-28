@@ -31,7 +31,7 @@
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabCloseButton</key>
@@ -108,19 +108,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>827 61 445 77 0 0 1440 878 </string>
+	<string>827 33 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 403 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>445 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>398 123 918 512 0 0 1440 878 </string>
+	<string>384 146 918 498 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame com.apple.typography_panel_UbuntuMono-Regular</key>
 	<string>246 464 260 96 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>182 321 570 427 0 0 1440 878 </string>
+	<string>74 21 1361 857 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>98 441 570 404 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -1030,7 +1030,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-02-17T15:07:27Z</date>
+	<date>2017-02-23T15:21:42Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
