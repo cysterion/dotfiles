@@ -55,11 +55,11 @@ endif
 " Vim popup for omnicomplete
 set omnifunc=syntaxcomplete#Complete
 set completeopt=noinsert,menuone
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-let g:loaded_sql_completion = 0
-let g:omni_sql_no_default_maps = 1
+let g:rubycomplete_buffer_loading=1
+let g:rubycomplete_classes_in_global=1
+let g:rubycomplete_rails=1
+let g:loaded_sql_completion=0
+let g:omni_sql_no_default_maps=1
 
 " Keys that trigger completeopt
 for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
@@ -125,28 +125,28 @@ set statusline+=%*
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11 -stdlib=libc++'
+let g:syntastic_cpp_compiler='clang++'
+let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
 
 " AirLine configuration
 set noshowmode
 let g:airline_theme='dark'
 " setup custom symbols
-let g:airline_symbols = {}
+let g:airline_symbols={}
 " compatible without powerline fonts
-let g:airline_left_sep = ''
-let g:airline_right_sep = ''
-let g:airline_symbols.crypt = '🔒'
-let g:airline_symbols.linenr = '␤' " Original symbol
-"let g:airline_symbols.linenr = '¶'
-let g:airline_symbols.maxlinenr = '☰'
-let g:airline_symbols.branch = '⎇'
-"let g:airline_symbols.paste = 'ρ'
-"let g:airline_symbols.paste = 'Þ'
-let g:airline_symbols.paste = '∥'
-let g:airline_symbols.spell = 'Ꞩ'
-let g:airline_symbols.notexists = '∄'
-let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+let g:airline_symbols.crypt='🔒'
+let g:airline_symbols.linenr='␤' " Original symbol
+"let g:airline_symbols.linenr='¶'
+let g:airline_symbols.maxlinenr='☰'
+let g:airline_symbols.branch='⎇'
+"let g:airline_symbols.paste='ρ'
+"let g:airline_symbols.paste='Þ'
+let g:airline_symbols.paste='∥'
+let g:airline_symbols.spell='Ꞩ'
+let g:airline_symbols.notexists='∄'
+let g:airline_symbols.whitespace='Ξ'
 
 " Gitgutter coloring
 highlight GitGutterAdd    cterm=none ctermbg=234 ctermfg=119
