@@ -38,9 +38,7 @@ git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 
 ## Linuxbrew the right way
 ```bash
-sudo rm -rf /usr/local
-sudo git clone https://github.com/Linuxbrew/brew.git /usr/local
-sudo chmod -R agou+wrx /usr/local
+./installLinuxBrew
 ```
 
 # Contact
