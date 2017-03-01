@@ -40,7 +40,7 @@ git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 ```bash
 sudo rm -rf /usr/local
 sudo git clone https://github.com/Linuxbrew/brew.git /usr/local
-sudo chmod -R a+wrx /usr/local
+sudo chmod -R agou+wrx /usr/local
 ```
 
 # Contact
