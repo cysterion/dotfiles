@@ -49,6 +49,7 @@ RPROMPT='%F{yellow}$(rvm-prompt)%f$(git-prompt --zsh -l)'
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
+alias 'git log'='git l'
 
 # Reload the zshrc
 function reload {
