@@ -31,3 +31,6 @@
 [submodule "vim-rails"]
 	path = vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
+[submodule "universe"]
+	path = universe
+	url = https://github.com/BrandonRoehl/universe.git

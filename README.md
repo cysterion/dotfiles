@@ -38,7 +38,7 @@ git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
 
 ## Linuxbrew the right way
 ```bash
-./installLinuxBrew
+sudo ./installLinuxBrew
 ```
 
 # Contact
