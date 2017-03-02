@@ -1,4 +1,15 @@
 #!/bin/bash
+if [ hash brew >/dev/null 2>&1 ]
+then
+    brew list > /tmp/brew_list &&\
+    hasBrew = 1
+fi
 rm -rf /usr/local
 git clone https://github.com/Linuxbrew/brew.git /usr/local
 chmod -R u+wrx /usr/local
+if [ hasBrew == 1 ]
+then
+    /usr/local/bin/brew install "$(cat '/tmp/brew_list')" &&\
+    rm /tmp/brewlist &&\
+    rm -rf ~/.linuxbrew
+fi
