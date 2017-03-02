@@ -63,4 +63,4 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-export PATH="$PATH:$HOME/universe/bin"
+export PATH="$PATH:$HOME/.universe/bin"
