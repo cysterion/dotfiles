@@ -7,7 +7,7 @@ syntax enable
 " Faster redraw
 set ttyfast
 " Quick redraw
-set nolazyredraw
+set lazyredraw
 " Always show the statusline
 set laststatus=2
 " Show line numbers
@@ -85,18 +85,18 @@ set colorcolumn=81
 set hlsearch
 set incsearch
 " highlight Comment cterm=italic
-highlight CursorLine   cterm=bold ctermbg=234
-highlight CursorLineNr cterm=bold ctermbg=234 ctermfg=226
-highlight LineNr       cterm=none ctermbg=234 ctermfg=245
-highlight SignColumn   cterm=none ctermbg=234
+highlight CursorLine   cterm=none ctermbg=235
+highlight CursorLineNr cterm=bold ctermbg=235 ctermfg=226
+highlight LineNr       cterm=none ctermbg=235 ctermfg=250
+highlight SignColumn   cterm=none ctermbg=235
 highlight MatchParen   cterm=bold ctermbg=094 ctermfg=220
 highlight ModeMsg      cterm=bold ctermbg=220 ctermfg=235
-highlight Pmenu        cterm=none ctermbg=240 ctermfg=250
+highlight Pmenu        cterm=none ctermbg=240 ctermfg=254
 highlight PmenuSel     cterm=none ctermbg=039 ctermfg=234
 highlight PmenuSbar    ctermbg=245
 highlight PmenuThumb   ctermbg=235
-highlight ColorColumn  ctermbg=234
-highlight EndOfBuffer  ctermfg=245
+highlight ColorColumn  ctermbg=235
+highlight EndOfBuffer  ctermfg=250
 highlight Search cterm=underline ctermbg=NONE
 let &fillchars=''
 let &showbreak='↳ '
