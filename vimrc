@@ -22,7 +22,7 @@ set report=0
 set wildmenu
 " give support for 256bit coloring
 set t_Co=256
-set background=light
+set background=dark
 
 " Enable mouse suppourt
 set mouse=a
