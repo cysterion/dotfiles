@@ -44,7 +44,7 @@ set backspace=2
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
+set noexpandtab
 set autoindent
 
 " Use system clipboard
@@ -84,19 +84,8 @@ set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
-highlight CursorLine   cterm=bold ctermbg=235
-highlight CursorLineNr cterm=bold ctermbg=235 ctermfg=226
-highlight LineNr       cterm=none ctermbg=235 ctermfg=250
-highlight SignColumn   cterm=none ctermbg=235
-highlight MatchParen   cterm=bold ctermbg=094 ctermfg=220
-highlight ModeMsg      cterm=bold ctermbg=220 ctermfg=235
-highlight Pmenu        cterm=none ctermbg=240 ctermfg=254
-highlight PmenuSel     cterm=none ctermbg=039 ctermfg=234
-highlight PmenuSbar    ctermbg=245
-highlight PmenuThumb   ctermbg=235
-highlight ColorColumn  ctermbg=235
-highlight EndOfBuffer  ctermfg=250
-highlight Search cterm=underline ctermbg=NONE
+
+colorscheme XColors
 let &fillchars=''
 let &showbreak='↳ '
 
@@ -148,7 +137,7 @@ let g:airline_symbols.notexists='∄'
 let g:airline_symbols.whitespace='Ξ'
 
 " Gitgutter coloring
-highlight GitGutterAdd    cterm=none ctermbg=234 ctermfg=119
-highlight GitGutterDelete cterm=none ctermbg=234 ctermfg=167
-highlight GitGutterChange cterm=none ctermbg=234 ctermfg=220
+highlight GitGutterAdd    cterm=none ctermbg=235 ctermfg=119
+highlight GitGutterDelete cterm=none ctermbg=235 ctermfg=167
+highlight GitGutterChange cterm=none ctermbg=235 ctermfg=220
 highlight link GitGutterChangeDelete GitGutterChange
