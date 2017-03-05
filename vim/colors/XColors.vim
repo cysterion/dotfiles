@@ -54,7 +54,7 @@ hi Statement	term=none			cterm=none	ctermfg=208
 
 hi Operator		term=none	cterm=none	ctermfg=160 ctermbg=none
 
-hi PreProc		term=underline		cterm=none	ctermfg=093
+hi PreProc		term=underline		cterm=none	ctermfg=063
 hi link Include			PreProc
 hi link Define			PreProc
 hi PreCondit	term=bold	cterm=bold	ctermfg=208
@@ -67,7 +67,7 @@ hi Typedef		term=none	cterm=bold	ctermfg=039
 hi Structure	term=none	cterm=none	ctermfg=040
 
 hi String		cterm=none	ctermfg=160
-hi Comment		term=none			cterm=none	ctermfg=240
+hi Comment		term=none			cterm=none	ctermfg=034
 
 hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
 hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235

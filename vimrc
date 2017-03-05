@@ -84,7 +84,7 @@ set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
-set spell spelllang=en_us
+" set spell spelllang=en_us
 
 colorscheme XColors
 let &fillchars=''
