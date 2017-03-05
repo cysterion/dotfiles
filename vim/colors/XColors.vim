@@ -67,7 +67,7 @@ hi Typedef		term=none	cterm=bold	ctermfg=039
 hi Structure	term=none	cterm=none	ctermfg=040
 
 hi String		cterm=none	ctermfg=160
-hi Comment		term=none			cterm=none	ctermfg=034
+hi Comment		term=none			cterm=none	ctermfg=240
 
 hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
 hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
