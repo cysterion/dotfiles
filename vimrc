@@ -84,6 +84,7 @@ set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
+set spell spelllang=en_us
 
 colorscheme XColors
 let &fillchars=''
@@ -136,8 +137,3 @@ let g:airline_symbols.spell='Ꞩ'
 let g:airline_symbols.notexists='∄'
 let g:airline_symbols.whitespace='Ξ'
 
-" Gitgutter coloring
-highlight GitGutterAdd    cterm=none ctermbg=235 ctermfg=119
-highlight GitGutterDelete cterm=none ctermbg=235 ctermfg=167
-highlight GitGutterChange cterm=none ctermbg=235 ctermfg=220
-highlight link GitGutterChangeDelete GitGutterChange
