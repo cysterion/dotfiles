@@ -26,10 +26,11 @@ hi PmenuThumb	ctermbg=235
 hi ColorColumn	ctermbg=235
 hi EndOfBuffer	ctermfg=250
 
-hi Visual	term=none	cterm=none	ctermbg=195	ctermfg=232
+hi Visual	term=none	cterm=none	ctermbg=255	ctermfg=232
 hi link IncSearch		Visual
 
 hi Search	cterm=underline	ctermbg=NONE ctermfg=none
+hi Todo		term=standout 	cterm=reverse ctermfg=226	ctermbg=232
 
 hi Title		term=bold		cterm=bold	ctermfg=green	ctermbg=none
 hi Directory	term=bold		cterm=bold	ctermfg=blue	ctermbg=none
@@ -83,7 +84,6 @@ hi Macro		term=bold		cterm=bold	ctermfg=cyan
 " hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
 "
 " hi Error		term=standout		ctermbg=235 ctermfg=196
-" hi Todo			term=standout 		cterm=reverse,bold ctermfg=226	ctermbg=232
 "
 " hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
 "
