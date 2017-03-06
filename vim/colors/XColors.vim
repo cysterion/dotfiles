@@ -38,29 +38,29 @@ hi link Delimiter		Special
 hi link SpecialComment	Special
 hi link Debug			Special
 
-hi Constant		term=underline		cterm=none	ctermfg=039
+hi Constant		term=underline		cterm=none	ctermfg=208
 hi link Character		Constant
 hi link Boolean			Constant
 hi link Number			Constant
 hi link Float			Number
 
-hi Type			term=none	cterm=none	ctermfg=199
-hi link Conditional		Type
-hi link Repeat			Type
-hi link Label			Type
-hi link Keyword			Type
-hi link Exception		Type
-hi Statement	term=none			cterm=none	ctermfg=208
+hi Type			term=none	cterm=none	ctermfg=063
+hi Statement	term=none	cterm=none	ctermfg=199
+hi link Conditional		Statement
+hi link Repeat			Statement
+hi link Label			Statement
+hi link Keyword			Statement
+hi link Exception		Statement
+hi PreProc		term=underline		cterm=none	ctermfg=040
+hi Include		term=underline		cterm=none	ctermfg=220
+hi Define		term=underline		cterm=none	ctermfg=199
 
-hi Operator		term=none	cterm=none	ctermfg=160 ctermbg=none
+hi Operator		term=none	cterm=none	ctermfg=045 ctermbg=none
 
-hi PreProc		term=underline		cterm=none	ctermfg=063
-hi link Include			PreProc
-hi link Define			PreProc
 hi PreCondit	term=bold	cterm=bold	ctermfg=208
 
-hi Identifier	term=underline		cterm=none	ctermfg=045
-hi link Function		Identifier
+hi Identifier	term=underline	cterm=none	ctermfg=040
+hi Function	term=underline	cterm=none	ctermfg=033
 
 hi StorageClass	term=none	cterm=bold	ctermfg=039
 hi Typedef		term=none	cterm=bold	ctermfg=039
@@ -79,10 +79,11 @@ hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
 
 hi Underlined	term=underline		cterm=underline
 
-hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
 hi Title		term=bold		cterm=bold	ctermfg=green	ctermbg=none
 hi Directory	term=bold		cterm=bold	ctermfg=blue	ctermbg=none
 hi Macro		term=bold		cterm=bold	ctermfg=cyan
+
+hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
 hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
 hi MoreMsg		term=none		cterm=none	ctermfg=255	ctermbg=040
 hi WarningMsg	term=none		cterm=none	ctermfg=255	ctermbg=202
