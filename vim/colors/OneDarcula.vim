@@ -8,7 +8,7 @@ set background=dark
 if exists("syntax_on")
 	syntax reset
 endif
-let g:colors_name = "XColors"
+let g:colors_name = "OneDarcula"
 
 hi CursorLine	term=bold cterm=bold	ctermbg=235
 hi CursorLineNr	term=bold cterm=bold	ctermbg=235	ctermfg=226
@@ -67,7 +67,7 @@ hi link StorageClass	Structure
 hi link Typedef		Structure
 
 hi Type			term=none		cterm=none	ctermfg=045
-hi PreProc		term=underline	cterm=none	ctermfg=085
+hi PreProc		term=underline	cterm=none	ctermfg=050
 hi Include		term=underline	cterm=none	ctermfg=227
 
 hi Operator		term=none	cterm=none	ctermfg=227

@@ -52,7 +52,7 @@ function mkmainJava {
                 echo "        " >> "$CLASS.java"
                 echo "    }" >> "$CLASS.java"
                 echo "}" >> "$CLASS.java"
-                echo "$CLASS.java with main was created successfuly"
+                echo "$CLASS.java with main was created successfully"
             fi
         done
     fi

@@ -84,11 +84,11 @@ set scrolloff=2
 set colorcolumn=81
 set hlsearch
 set incsearch
-" set spell spelllang=en_us
 
-colorscheme XColors
+colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
+" set spell spelllang=en_us
 
 "------   Plugin Settings   ------"
 " Enable pathogen
@@ -119,7 +119,7 @@ let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
 
 " AirLine configuration
 set noshowmode
-let g:airline_theme='dark'
+let g:airline_theme='wombat'
 " setup custom symbols
 let g:airline_symbols={}
 " compatible without powerline fonts
@@ -136,7 +136,6 @@ let g:airline_symbols.paste='∥'
 let g:airline_symbols.spell='Ꞩ'
 let g:airline_symbols.notexists='∄'
 let g:airline_symbols.whitespace='Ξ'
-let g:airline_theme='wombat'
 
 " let g:gitgutter_sign_added=' '
 " let g:gitgutter_sign_modified=' '
