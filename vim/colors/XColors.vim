@@ -39,12 +39,12 @@ hi Macro		term=bold		cterm=bold	ctermfg=cyan
 " Other stuff
 hi Comment		term=none			cterm=none	ctermfg=243
 
-" hi Special		term=none	cterm=bold	ctermfg=201
-" hi link Tag				Special
-" hi link SpecialChar		Special
-" hi link Delimiter		Special
-" hi link SpecialComment	Special
-" hi link Debug			Special
+hi Special		term=none	cterm=none	ctermfg=212
+hi link Tag				Special
+hi link SpecialChar		Special
+hi link Delimiter		Special
+hi link SpecialComment	Special
+hi link Debug			Special
 
 hi String		cterm=none	ctermfg=203
 
@@ -61,32 +61,32 @@ hi link Label			Statement
 hi link Keyword			Statement
 hi link Exception		Statement
 hi link Define			Statement
-" hi StorageClass	term=none	cterm=none	ctermfg=039
-" hi Typedef		term=none	cterm=none	ctermfg=039
-"
-hi Type			term=none			cterm=none	ctermfg=045
-hi PreProc		term=underline		cterm=none	ctermfg=085
-" hi Include		term=underline		cterm=none	ctermfg=033
-"
-" hi Operator		term=none	cterm=none	ctermfg=045 ctermbg=none
-"
-" hi PreCondit	term=bold	cterm=bold	ctermfg=208
-"
-" hi Identifier	term=underline	cterm=none	ctermfg=034
-" hi Function		term=underline	cterm=none	ctermfg=033
-"
-"
-" hi Structure	term=none	cterm=none	ctermfg=040
-"
-" hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
-" hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
-"
-" hi Error		term=standout		ctermbg=235 ctermfg=196
-"
-" hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
-"
-" hi Underlined	term=underline		cterm=underline
-"
+
+hi Structure	term=none	cterm=none	ctermfg=084
+hi link StorageClass	Structure
+hi link Typedef		Structure
+
+hi Type			term=none		cterm=none	ctermfg=045
+hi PreProc		term=underline	cterm=none	ctermfg=085
+hi Include		term=underline	cterm=none	ctermfg=227
+
+hi Operator		term=none	cterm=none	ctermfg=227
+
+hi PreCondit	term=bold	cterm=bold	ctermfg=045
+
+hi Identifier	term=underline	cterm=none	ctermfg=084
+hi Function		term=underline	cterm=none	ctermfg=051
+
+
+hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
+hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
+
+hi Error		term=standout		ctermbg=235 ctermfg=196
+
+hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
+
+hi Underlined	term=underline		cterm=underline
+
 " hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
 " hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
 " hi MoreMsg		term=none		cterm=none	ctermfg=255	ctermbg=040
@@ -101,7 +101,7 @@ hi PreProc		term=underline		cterm=none	ctermfg=085
 " hi Ignore										ctermfg=lightgreen	ctermbg=lightcyan
 
 " Gitgutter coloring
-highlight GitGutterAdd    cterm=none ctermbg=235 ctermfg=119
-highlight GitGutterDelete cterm=none ctermbg=235 ctermfg=167
-highlight GitGutterChange cterm=none ctermbg=235 ctermfg=220
-highlight link GitGutterChangeDelete GitGutterChange
+hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=084
+hi GitGutterDelete cterm=none ctermbg=235 ctermfg=203
+hi GitGutterChange cterm=none ctermbg=235 ctermfg=227
+hi link GitGutterChangeDelete GitGutterChange
