@@ -57,7 +57,7 @@ function reload {
     echo 'reloaded'
 }
 
-# Attatch to a session if it has been detatched from or create a new one
+# Attached a session if it has been detached from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi

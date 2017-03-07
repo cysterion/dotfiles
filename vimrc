@@ -18,7 +18,7 @@ set wrap
 set ruler
 " Always report changed lines
 set report=0
-" Autocomplete comands menu
+" Autocomplete commands menu
 set wildmenu
 " give support for 256bit coloring
 set t_Co=256
@@ -88,7 +88,8 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
-set spell spelllang=en_us
+set spell spelllang=en
+set spellfile=~/.vim/spell/en.utf-8.add
 
 "------   Plugin Settings   ------"
 " Enable pathogen
