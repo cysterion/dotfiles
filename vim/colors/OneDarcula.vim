@@ -90,9 +90,9 @@ hi Underlined	term=underline		cterm=underline
 
 hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
 hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
-hi MoreMsg		term=none		cterm=none	ctermfg=255	ctermbg=040
+hi MoreMsg		term=none		cterm=none	ctermfg=232	ctermbg=040
 hi WarningMsg	term=none		cterm=none	ctermfg=232	ctermbg=216
-hi SpellBad		term=underline	cterm=underline	ctermfg=203	ctermbg=none
+hi SpellBad		term=underline	cterm=underline,bold	ctermfg=none	ctermbg=none
 hi SpellRare	term=underline	cterm=underline	ctermfg=none	ctermbg=none
 hi link SpellCap	SpellRare
 hi SpellLocal	term=none	cterm=none	ctermfg=none	ctermbg=none
