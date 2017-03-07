@@ -136,4 +136,4 @@ let g:airline_symbols.paste='∥'
 let g:airline_symbols.spell='Ꞩ'
 let g:airline_symbols.notexists='∄'
 let g:airline_symbols.whitespace='Ξ'
-
+let g:airline_theme='wombat'

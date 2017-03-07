@@ -37,6 +37,7 @@ hi Directory	term=bold		cterm=bold	ctermfg=blue	ctermbg=none
 hi Macro		term=bold		cterm=bold	ctermfg=cyan
 
 " Other stuff
+hi Comment		term=none			cterm=none	ctermfg=243
 
 " hi Special		term=none	cterm=bold	ctermfg=201
 " hi link Tag				Special
@@ -44,28 +45,27 @@ hi Macro		term=bold		cterm=bold	ctermfg=cyan
 " hi link Delimiter		Special
 " hi link SpecialComment	Special
 " hi link Debug			Special
-"
-" hi Constant		term=underline		cterm=none	ctermfg=044
-"
-" hi String		cterm=none	ctermfg=160
-" hi link Character		String
-"
-" hi Number		term=underline		cterm=none	ctermfg=208
-" hi link Float			Number
-" hi link Boolean			Number
-"
-" hi Statement	term=none	cterm=none	ctermfg=199
-" hi link Conditional		Statement
-" hi link Repeat			Statement
-" hi link Label			Statement
-" hi link Keyword			Statement
-" hi link Exception		Statement
-" hi link Define			Statement
+
+hi String		cterm=none	ctermfg=203
+
+hi Constant		term=underline		cterm=none	ctermfg=215
+hi link Boolean			Constant
+hi link Character		Constant
+hi link Number			Constant
+hi link Float			Number
+
+hi Statement	term=none	cterm=none	ctermfg=177
+hi link Conditional		Statement
+hi link Repeat			Statement
+hi link Label			Statement
+hi link Keyword			Statement
+hi link Exception		Statement
+hi link Define			Statement
 " hi StorageClass	term=none	cterm=none	ctermfg=039
 " hi Typedef		term=none	cterm=none	ctermfg=039
 "
-" hi Type			term=none			cterm=none	ctermfg=039
-" hi PreProc		term=underline		cterm=none	ctermfg=208
+hi Type			term=none			cterm=none	ctermfg=045
+hi PreProc		term=underline		cterm=none	ctermfg=085
 " hi Include		term=underline		cterm=none	ctermfg=033
 "
 " hi Operator		term=none	cterm=none	ctermfg=045 ctermbg=none
@@ -77,8 +77,6 @@ hi Macro		term=bold		cterm=bold	ctermfg=cyan
 "
 "
 " hi Structure	term=none	cterm=none	ctermfg=040
-"
-" hi Comment		term=none			cterm=none	ctermfg=240
 "
 " hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
 " hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
@@ -95,7 +93,6 @@ hi Macro		term=bold		cterm=bold	ctermfg=cyan
 " hi WarningMsg	term=none		cterm=none	ctermfg=255	ctermbg=202
 " hi SpellBad		term=underline	cterm=underline	ctermfg=160	ctermbg=none
 
-" " This is where I am
 " hi SpecialKey	term=bold			cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
 " hi Question		term=standout		cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
 " hi TabLine		term=bold,reverse	cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
