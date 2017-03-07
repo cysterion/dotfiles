@@ -1,19 +1,20 @@
 " vim: tw=0 ts=4 sw=4
 " Vim color file
 " Maintainer:	Brandon Roehl <BrandonRoehl@gmail.com>
-" Last Change:	2017 Mar 5
+" Last Change:	2017 Mar 7
 
 " hi clear
+set t_Co=256
 set background=dark
 if exists("syntax_on")
 	syntax reset
 endif
 let g:colors_name = "OneDarcula"
 
-hi CursorLine	term=bold cterm=bold	ctermbg=235
+hi CursorLine	term=bold cterm=bold	ctermbg=235 ctermfg=none
 hi CursorLineNr	term=bold cterm=bold	ctermbg=235	ctermfg=226
 hi LineNr		term=none cterm=none	ctermbg=235	ctermfg=250
-hi SignColumn	term=none cterm=none	ctermbg=235
+hi SignColumn	term=none cterm=none	ctermbg=235 ctermfg=250
 
 hi MatchParen	term=bold cterm=bold	ctermbg=094	ctermfg=220
 hi ModeMsg		term=bold cterm=bold	ctermbg=220	ctermfg=235
@@ -27,9 +28,9 @@ hi ColorColumn	ctermbg=235
 hi EndOfBuffer	ctermfg=250
 
 hi Visual	term=none	cterm=none	ctermbg=255	ctermfg=232
-hi link IncSearch		Visual
 
-hi Search	cterm=underline	ctermbg=NONE ctermfg=none
+hi Search	cterm=reverse	ctermbg=none ctermfg=none
+hi link IncSearch	Search
 hi Todo		term=standout 	cterm=reverse ctermfg=226	ctermbg=232
 
 hi Title		term=bold		cterm=bold	ctermfg=green	ctermbg=none
@@ -87,11 +88,14 @@ hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
 
 hi Underlined	term=underline		cterm=underline
 
-" hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
-" hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
-" hi MoreMsg		term=none		cterm=none	ctermfg=255	ctermbg=040
-" hi WarningMsg	term=none		cterm=none	ctermfg=255	ctermbg=202
-" hi SpellBad		term=underline	cterm=underline	ctermfg=160	ctermbg=none
+hi NonText		term=bold		cterm=bold	ctermfg=245 ctermbg=none
+hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
+hi MoreMsg		term=none		cterm=none	ctermfg=255	ctermbg=040
+hi WarningMsg	term=none		cterm=none	ctermfg=232	ctermbg=216
+hi SpellBad		term=underline	cterm=underline	ctermfg=203	ctermbg=none
+hi SpellRare	term=underline	cterm=underline	ctermfg=none	ctermbg=none
+hi link SpellCap	SpellRare
+hi SpellLocal	term=none	cterm=none	ctermfg=none	ctermbg=none
 
 " hi SpecialKey	term=bold			cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
 " hi Question		term=standout		cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan

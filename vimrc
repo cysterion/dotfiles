@@ -88,7 +88,7 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
-" set spell spelllang=en_us
+set spell spelllang=en_us
 
 "------   Plugin Settings   ------"
 " Enable pathogen
