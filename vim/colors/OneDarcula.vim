@@ -83,6 +83,7 @@ hi StatusLine	cterm=bold	ctermfg=045	ctermbg=235
 hi StatusLineNC	cterm=bold	ctermfg=214	ctermbg=235
 
 hi Error		term=standout		ctermbg=235 ctermfg=196
+hi Warning		term=standout		ctermbg=235 ctermfg=214
 
 hi ErrorMsg		term=standout		cterm=none	ctermfg=255	ctermbg=160
 
@@ -93,8 +94,8 @@ hi ModeMsg		term=bold		cterm=bold	ctermfg=045	ctermbg=none
 hi MoreMsg		term=none		cterm=none	ctermfg=232	ctermbg=083
 hi WarningMsg	term=none		cterm=none	ctermfg=232	ctermbg=216
 hi SpellBad		term=underline	cterm=underline,bold	ctermfg=none	ctermbg=none
-hi SpellRare	term=underline	cterm=underline	ctermfg=none	ctermbg=none
-hi link SpellCap	SpellRare
+hi SpellCap	term=underline	cterm=underline	ctermfg=none	ctermbg=none
+hi link SpellRare	SpellCap
 hi SpellLocal	term=none	cterm=none	ctermfg=none	ctermbg=none
 
 " hi SpecialKey	term=bold			cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
@@ -103,6 +104,10 @@ hi SpellLocal	term=none	cterm=none	ctermfg=none	ctermbg=none
 " hi TabLineFill	term=bold,reverse	cterm=bold	ctermfg=lightgreen	ctermbg=lightcyan
 " hi TabLineSel	term=reverse					ctermfg=lightgreen	ctermbg=lightcyan
 " hi Ignore										ctermfg=lightgreen	ctermbg=lightcyan
+
+" Syntastic Coloring
+hi SyntasticError	term=underline	cterm=underline,bold	ctermfg=196	ctermbg=none
+hi SyntasticWarning	term=underline	cterm=underline,bold	ctermfg=214	ctermbg=none
 
 " Gitgutter coloring
 hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=084
