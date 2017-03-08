@@ -107,7 +107,7 @@ hi SpellLocal	term=none	cterm=none	ctermfg=none	ctermbg=none
 
 " Syntastic Coloring
 hi SyntasticError	term=underline	cterm=underline,bold	ctermfg=196	ctermbg=none
-hi SyntasticWarning	term=underline	cterm=underline,bold	ctermfg=214	ctermbg=none
+hi SyntasticWarning	term=underline	cterm=underline,bold	ctermfg=226	ctermbg=none
 
 " Gitgutter coloring
 hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=084
