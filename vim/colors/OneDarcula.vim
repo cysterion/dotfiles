@@ -111,7 +111,7 @@ hi SyntasticWarningSign term=standout  cterm=bold           ctermbg=235 ctermfg=
 
 " Gitgutter coloring
 hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=077
-hi GitGutterDelete cterm=none ctermbg=235 ctermfg=124
+hi GitGutterDelete cterm=none ctermbg=235 ctermfg=203
 hi GitGutterChange cterm=none ctermbg=235 ctermfg=221
 hi link GitGutterChangeDelete GitGutterChange
 " Signify coloring
