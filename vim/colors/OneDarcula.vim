@@ -14,7 +14,7 @@ let g:colors_name = "OneDarcula"
 hi CursorLine	term=bold cterm=bold	ctermbg=235 ctermfg=none
 hi CursorLineNr	term=bold cterm=bold	ctermbg=235	ctermfg=226
 hi LineNr		term=none cterm=none	ctermbg=235	ctermfg=250
-hi SignColumn	term=none cterm=none	ctermbg=235 ctermfg=250
+hi link SignColumn	LineNr
 
 hi MatchParen	term=bold cterm=bold	ctermbg=094	ctermfg=220
 hi ModeMsg		term=bold cterm=bold	ctermbg=220	ctermfg=235
@@ -28,7 +28,6 @@ hi ColorColumn	ctermbg=235
 hi EndOfBuffer	ctermfg=250
 
 hi Visual	term=none	cterm=none	ctermbg=255	ctermfg=232
-
 hi Search	term=standout	cterm=reverse	ctermbg=none ctermfg=none
 hi IncSearch	term=standout	cterm=reverse	ctermbg=232 ctermfg=226
 hi Todo		term=standout 	cterm=reverse ctermfg=226	ctermbg=232
