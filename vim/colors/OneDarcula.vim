@@ -15,6 +15,7 @@ hi CursorLine   term=bold cterm=bold ctermbg=235 ctermfg=none
 hi CursorLineNr term=bold cterm=bold ctermbg=235 ctermfg=226
 hi LineNr       term=none cterm=none ctermbg=235 ctermfg=250
 hi link SignColumn LineNr
+hi VertSplit    term=none cterm=none ctermbg=240 ctermfg=none
 
 hi MatchParen term=bold cterm=bold ctermbg=094 ctermfg=220
 hi ModeMsg    term=bold cterm=bold ctermbg=220 ctermfg=235
@@ -109,9 +110,9 @@ hi SyntasticErrorSign   term=standout  cterm=bold           ctermbg=235 ctermfg=
 hi SyntasticWarningSign term=standout  cterm=bold           ctermbg=235 ctermfg=226
 
 " Gitgutter coloring
-hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=084
-hi GitGutterDelete cterm=none ctermbg=235 ctermfg=203
-hi GitGutterChange cterm=none ctermbg=235 ctermfg=227
+hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=077
+hi GitGutterDelete cterm=none ctermbg=235 ctermfg=124
+hi GitGutterChange cterm=none ctermbg=235 ctermfg=221
 hi link GitGutterChangeDelete GitGutterChange
 " Signify coloring
 hi link SignifySignAdd    GitGutterAdd
