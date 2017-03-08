@@ -81,7 +81,6 @@ hi StatusLine   cterm=bold ctermfg=045 ctermbg=235
 hi StatusLineNC cterm=bold ctermfg=214 ctermbg=235
 
 hi Error   term=standout ctermbg=235 ctermfg=196
-hi Warning term=standout ctermbg=235 ctermfg=214
 
 hi ErrorMsg term=standout cterm=none ctermfg=255 ctermbg=160
 
@@ -104,8 +103,10 @@ hi SpellLocal term=none cterm=none ctermfg=none ctermbg=none
 " hi Ignore          ctermfg=lightgreen ctermbg=lightcyan
 
 " Syntastic Coloring
-hi SyntasticError   term=underline cterm=underline,bold ctermfg=196 ctermbg=none
-hi SyntasticWarning term=underline cterm=underline,bold ctermfg=226 ctermbg=none
+hi SyntasticError       term=underline cterm=underline,bold ctermfg=196 ctermbg=none
+hi SyntasticWarning     term=underline cterm=underline,bold ctermfg=226 ctermbg=none
+hi SyntasticErrorSign   term=standout  cterm=bold           ctermbg=235 ctermfg=196
+hi SyntasticWarningSign term=standout  cterm=bold           ctermbg=235 ctermfg=226
 
 " Gitgutter coloring
 hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=084

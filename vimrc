@@ -94,6 +94,7 @@ set spellfile=~/.vim/spell/en.utf-8.add
 "------   Plugin Settings   ------"
 " Enable pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 
 " Maps nerd tree for easy access
 inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
