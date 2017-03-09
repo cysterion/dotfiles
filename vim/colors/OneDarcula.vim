@@ -28,10 +28,10 @@ hi PmenuThumb ctermbg=235
 hi ColorColumn ctermbg=235
 hi EndOfBuffer ctermfg=250
 
-hi Visual   term=none     cterm=none    ctermbg=255  ctermfg=232
-hi Search   term=standout cterm=reverse ctermbg=none ctermfg=none
-hi IncSearc term=standout cterm=reverse ctermbg=232  ctermfg=226
-hi Todo     term=standout cterm=reverse ctermfg=226  ctermbg=232
+hi Visual    term=none     cterm=none    ctermbg=255  ctermfg=232
+hi Search    term=standout cterm=reverse ctermbg=none ctermfg=none
+hi IncSearch term=standout cterm=reverse ctermbg=232  ctermfg=226
+hi Todo      term=standout cterm=reverse ctermfg=226  ctermbg=232
 
 hi Title     term=bold cterm=bold ctermfg=green ctermbg=none
 hi Directory term=bold cterm=bold ctermfg=blue  ctermbg=none
