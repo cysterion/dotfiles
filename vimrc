@@ -118,7 +118,6 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
 let g:syntastic_cpp_compiler='clang++'
 let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
-
 " AirLine configuration
 set noshowmode
 let g:airline_theme='wombat'
@@ -141,6 +140,6 @@ let g:airline_symbols.whitespace='Ξ'
 
 let g:gitgutter_sign_added='┃'
 let g:gitgutter_sign_modified='┃'
-let g:gitgutter_sign_removed='┅'
-let g:gitgutter_sign_removed_first_line='▔'
+let g:gitgutter_sign_removed='﹍'
+let g:gitgutter_sign_removed_first_line='﹉'
 let g:gitgutter_sign_modified_removed='┃'
