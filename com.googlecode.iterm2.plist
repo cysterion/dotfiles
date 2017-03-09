@@ -43,7 +43,7 @@
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
 	<key>NSFontPanelAttributes</key>
-	<string>1, 0</string>
+	<string>1, 1</string>
 	<key>NSFontPanelPreviewHeight</key>
 	<real>100</real>
 	<key>NSFontPanelSizeList</key>
@@ -108,19 +108,19 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>788 127 445 77 0 0 1440 900 </string>
+	<string>800 369 445 77 0 0 1440 900 </string>
 	<key>NSWindow Frame Preferences</key>
 	<string>269 403 606 456 0 0 1440 878 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>445 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>290 233 918 495 0 0 1440 900 </string>
+	<string>348 222 918 495 0 0 1440 900 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame com.apple.typography_panel_UbuntuMono-Regular</key>
 	<string>246 464 260 96 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>86 490 570 377 0 0 1440 878 </string>
+	<string>86 426 570 427 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>98 409 570 427 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -763,7 +763,7 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>Menlo-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
@@ -861,7 +861,7 @@
 			<key>Use Italic Font</key>
 			<true/>
 			<key>Use Non-ASCII Font</key>
-			<false/>
+			<true/>
 			<key>Use Tab Color</key>
 			<false/>
 			<key>Vertical Spacing</key>
@@ -1030,7 +1030,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-07T16:18:51Z</date>
+	<date>2017-03-09T00:44:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
