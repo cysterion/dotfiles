@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 #brew install coreutils
 #$(brew --prefix coreutils)
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 source "$HOME/.profile"
@@ -49,7 +49,6 @@ RPROMPT='%F{yellow}$(rvm-prompt)%f$(git-prompt --zsh -l)'
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
-alias 'git log'='git l'
 
 # Reload the zshrc
 function reload {
