@@ -89,9 +89,9 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
-let &listchars='tab:│ '
+" let &listchars='tab:│ '
 " let &listchars='tab:│ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
-set list
+" set list
 set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
