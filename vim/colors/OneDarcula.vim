@@ -77,17 +77,15 @@ hi PreCondit term=bold cterm=bold ctermfg=045
 hi Identifier term=underline cterm=none ctermfg=084
 hi Function   term=underline cterm=none ctermfg=051
 
-
-hi StatusLine   cterm=bold ctermfg=045 ctermbg=235
-hi StatusLineNC cterm=bold ctermfg=214 ctermbg=235
-
-hi Error   term=standout ctermbg=235 ctermfg=196
-
+hi Error    term=standout cterm=none ctermbg=235 ctermfg=196
 hi ErrorMsg term=standout cterm=none ctermfg=255 ctermbg=160
-
 hi Underlined term=underline cterm=underline
+" hi Question  term=standout  cterm=bold ctermfg=lightgreen ctermbg=lightcyan
+" hi Ignore          ctermfg=lightgreen ctermbg=lightcyan
 
 hi NonText    term=bold cterm=bold ctermfg=245 ctermbg=none
+hi SpecialKey term=none cterm=none ctermfg=240 ctermbg=none
+
 hi ModeMsg    term=bold cterm=bold ctermfg=045 ctermbg=none
 hi MoreMsg    term=none cterm=none ctermfg=232 ctermbg=083
 hi WarningMsg term=none cterm=none ctermfg=232 ctermbg=216
@@ -96,12 +94,11 @@ hi SpellCap   term=underline cterm=underline      ctermfg=none ctermbg=none
 hi link SpellRare SpellCap
 hi SpellLocal term=none cterm=none ctermfg=none ctermbg=none
 
-" hi SpecialKey term=bold   cterm=bold ctermfg=lightgreen ctermbg=lightcyan
-" hi Question  term=standout  cterm=bold ctermfg=lightgreen ctermbg=lightcyan
+hi StatusLine   cterm=bold ctermfg=045 ctermbg=235
+hi StatusLineNC cterm=bold ctermfg=214 ctermbg=235
 " hi TabLine  term=bold,reverse cterm=bold ctermfg=lightgreen ctermbg=lightcyan
 " hi TabLineFill term=bold,reverse cterm=bold ctermfg=lightgreen ctermbg=lightcyan
 " hi TabLineSel term=reverse     ctermfg=lightgreen ctermbg=lightcyan
-" hi Ignore          ctermfg=lightgreen ctermbg=lightcyan
 
 " Syntastic Coloring
 hi SyntasticError       term=underline cterm=underline,bold ctermfg=196 ctermbg=none

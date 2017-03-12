@@ -28,9 +28,9 @@ set background=light
 set mouse=a
 " Mouse fix for tmux
 if has("mouse_sgr")
-    set ttymouse=sgr
+	set ttymouse=sgr
 else
-    set ttymouse=xterm2
+	set ttymouse=xterm2
 endif
 " Smooth scroll
 nnoremap <ScrollWheelUp> <C-Y>
@@ -49,7 +49,7 @@ set autoindent
 
 " Use system clipboard
 if !exists('$TMUX')
-    set clipboard=unnamed "unnamedplus
+	set clipboard=unnamed "unnamedplus
 endif
 
 " Vim popup for omnicomplete
@@ -89,6 +89,9 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
+let &listchars='tab:│ '
+" let &listchars='tab:│ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
+set list
 set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
