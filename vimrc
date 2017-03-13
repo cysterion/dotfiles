@@ -96,7 +96,7 @@ set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
 "------   Plugin Settings   ------"
-" Enable pathogen
+" Enable vim-plug
 execute plug#begin()
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
