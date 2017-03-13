@@ -89,9 +89,9 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
-let &listchars='tab:│ '
+" let &listchars='tab:│ '
 " let &listchars='tab:│ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
-set list
+" set list
 set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
@@ -99,7 +99,7 @@ set spellfile=~/.vim/spell/en.utf-8.add
 " Enable vim-plug
 execute plug#begin()
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 " Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -109,10 +109,15 @@ Plug 'airblade/vim-gitgutter'
 " Syntax
 Plug 'vim-syntastic/syntastic'
 " Languages
-Plug 'keith/swift.vim'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
+Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
+Plug 'Yggdroot/indentLine'
 execute plug#end()
+
+let g:indentLine_char = '│'
+let g:indentLine_setConceal = 1
+
 
 " Maps nerd tree for easy access
 inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
