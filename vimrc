@@ -97,8 +97,22 @@ set spellfile=~/.vim/spell/en.utf-8.add
 
 "------   Plugin Settings   ------"
 " Enable pathogen
-execute pathogen#infect()
-execute pathogen#helptags()
+execute plug#begin()
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" Git
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+" Syntax
+Plug 'vim-syntastic/syntastic'
+" Languages
+Plug 'keith/swift.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+execute plug#end()
 
 " Maps nerd tree for easy access
 inoremap <silent> <C-\> <C-o>:NERDTreeToggle<cr>
