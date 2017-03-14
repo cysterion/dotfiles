@@ -157,6 +157,7 @@ Plug 'vim-syntastic/syntastic'
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
+Plug 'othree/html5.vim', { 'for' : 'html' }
 execute plug#end()
 
 "------   Plugin Settings   ------"
