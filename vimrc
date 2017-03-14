@@ -131,7 +131,7 @@ func! ChangeStatuslineColor()
 endfunc
 hi User2 term=none cterm=none ctermbg=235 ctermfg=254
 hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
-hi User4 term=none cterm=none ctermbg=235 ctermfg=196
+hi User4 term=bold cterm=bold ctermbg=235 ctermfg=196
 
 set noshowmode
 set statusline=%{ChangeStatuslineColor()}%1* " Changing the statusline color
@@ -174,9 +174,7 @@ let g:NERDTrimTrailingWhitespace=1
 " Synastic java fix
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
 " Syntastic Basic setup removing the list
-set statusline+=%#errormsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+set statusline+=%4*%{SyntasticStatuslineFlag()}\ %*
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
