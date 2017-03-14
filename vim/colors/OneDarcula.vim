@@ -95,7 +95,7 @@ hi link SpellRare SpellCap
 hi SpellLocal term=none cterm=none ctermfg=none ctermbg=none
 
 hi StatusLine   cterm=bold ctermfg=045 ctermbg=235
-hi StatusLineNC cterm=bold ctermfg=214 ctermbg=235
+hi StatusLineNC cterm=none ctermfg=245 ctermbg=235
 " hi TabLine  term=bold,reverse cterm=bold ctermfg=lightgreen ctermbg=lightcyan
 " hi TabLineFill term=bold,reverse cterm=bold ctermfg=lightgreen ctermbg=lightcyan
 " hi TabLineSel term=reverse     ctermfg=lightgreen ctermbg=lightcyan

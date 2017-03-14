@@ -65,7 +65,7 @@ let g:omni_sql_no_default_maps=1
 for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
 	execute "inoremap <silent><expr> " . key . " \"" . key . "\" . OpenAutocomp() "
 endfor
-func OpenAutocomp()
+func! OpenAutocomp()
 	return pumvisible() ? "" : "\<c-x>\<c-o>"
 endfunc
 
@@ -95,14 +95,62 @@ set list
 set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
+"---------- Statusline ----------"
+let g:currentmode={
+			\ 'n'  : 'NORMAL',
+			\ 'no' : 'N·Operator Pending',
+			\ 'v'  : 'VISUAL',
+			\ 'V'  : 'V·Line',
+			\ '^V' : 'V·Block',
+			\ 's'  : 'Select',
+			\ 'S'  : 'S·Line',
+			\ '^S' : 'S·Block',
+			\ 'i'  : 'INSERT',
+			\ 'R'  : 'REPLACE',
+			\ 'Rv' : 'V·Replace',
+			\ 'c'  : 'Command',
+			\ 'cv' : 'Vim Ex',
+			\ 'ce' : 'Ex',
+			\ 'r'  : 'Prompt',
+			\ 'rm' : 'More',
+			\ 'r?' : 'Confirm',
+			\ '!'  : 'Shell',
+			\ 't'  : 'Terminal '
+			\}
+
+" Automatically change the statusline color depending on mode
+hi User1 term=none cterm=none ctermbg=235 ctermfg=207
+hi User2 term=none cterm=none ctermbg=235 ctermfg=254
+hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
+func! ChangeStatuslineColor()
+	if (mode() =~# '\v(n|no)')
+		exe 'hi! User1 cterm=bold ctermfg=207'
+	elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
+		exe 'hi! User1 cterm=bold ctermfg=045'
+	elseif (mode() ==# 'i')
+		exe 'hi! User1 cterm=bold ctermfg=220'
+	else
+		exe 'hi! User1 cterm=bold ctermfg=082'
+	endif
+	return ''
+endfunc
+
+set noshowmode
+set statusline=%{ChangeStatuslineColor()}%1* " Changing the statusline color
+set statusline+=\ %{g:currentmode[mode()]}%m\ %< " Current mode and modified flag
+set statusline+=%h "help file flag
+set statusline+=%r "read only flag
+set statusline+=%2*%y\ %0*%F
+" set statusline+=\ %1*[%n] " buffernr
+set statusline+=\ %= " Left and right divide
+set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}] "file encoding
+set statusline+=%3*%3p%%\ ␤\ %l/%L☰\ :\ %3v\  " end
+
 "------   Plugin Setup   ------"
 " Enable vim-plug
 execute plug#begin()
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
@@ -137,26 +185,8 @@ let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
 let g:syntastic_cpp_compiler='clang++'
 let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
-" AirLine configuration
-set noshowmode
-let g:airline_theme='wombat'
-" setup custom symbols
-let g:airline_symbols={}
-" compatible without powerline fonts
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-let g:airline_symbols.crypt='🔒'
-let g:airline_symbols.linenr='␤' " Original symbol
-"let g:airline_symbols.linenr='¶'
-let g:airline_symbols.maxlinenr='☰'
-let g:airline_symbols.branch='⎇'
-"let g:airline_symbols.paste='ρ'
-"let g:airline_symbols.paste='Þ'
-let g:airline_symbols.paste='∥'
-let g:airline_symbols.spell='Ꞩ'
-let g:airline_symbols.notexists='∄'
-let g:airline_symbols.whitespace='Ξ'
 
+" Gitgutter signs
 let g:gitgutter_sign_added='┃'
 let g:gitgutter_sign_modified='┃'
 let g:gitgutter_sign_removed='﹍'
