@@ -10,6 +10,10 @@ set ttyfast
 set lazyredraw
 " Always show the statusline
 set laststatus=2
+" Load a file if edited by an external source
+set autoread
+" Allow the backspace to delete anything
+set backspace=2
 " Show line numbers
 set number
 " Soft wrap
@@ -40,7 +44,7 @@ nnoremap <Up> gk
 nnoremap <Down> gj
 
 " Spacing
-set backspace=2
+set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -170,7 +174,7 @@ let g:NERDTrimTrailingWhitespace=1
 " Synastic java fix
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
 " Syntastic Basic setup removing the list
-set statusline+=%#warningmsg#
+set statusline+=%#errormsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_check_on_open=1
