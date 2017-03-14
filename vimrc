@@ -66,7 +66,7 @@ for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E 
 	execute "inoremap <silent><expr> " . key . " \"" . key . "\" . OpenAutocomp() "
 endfor
 func! OpenAutocomp()
-	return pumvisible() ? "" : "\<c-x>\<c-o>"
+	return pumvisible() ? "" : "\<C-X>\<C-O>"
 endfunc
 
 inoremap <silent><expr> . ".\<C-X>\<C-O>"
@@ -96,51 +96,44 @@ set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
 
 "---------- Statusline ----------"
-let g:currentmode={
+let g:mode_map = {
+			\ '__' : '------',
 			\ 'n'  : 'NORMAL',
-			\ 'no' : 'N·Operator Pending',
-			\ 'v'  : 'VISUAL',
-			\ 'V'  : 'V·Line',
-			\ '^V' : 'V·Block',
-			\ 's'  : 'Select',
-			\ 'S'  : 'S·Line',
-			\ '^S' : 'S·Block',
 			\ 'i'  : 'INSERT',
 			\ 'R'  : 'REPLACE',
-			\ 'Rv' : 'V·Replace',
-			\ 'c'  : 'Command',
-			\ 'cv' : 'Vim Ex',
-			\ 'ce' : 'Ex',
-			\ 'r'  : 'Prompt',
-			\ 'rm' : 'More',
-			\ 'r?' : 'Confirm',
-			\ '!'  : 'Shell',
-			\ 't'  : 'Terminal '
-			\}
+			\ 'v'  : 'VISUAL',
+			\ 'V'  : 'V-LINE',
+			\ 'c'  : 'COMMAND',
+			\ '' : 'V-BLOCK',
+			\ 's'  : 'SELECT',
+			\ 'S'  : 'S-LINE',
+			\ '' : 'S-BLOCK',
+			\ 't'  : 'TERMINAL',
+			\ }
 
 " Automatically change the statusline color depending on mode
-hi User1 term=none cterm=none ctermbg=235 ctermfg=207
-hi User2 term=none cterm=none ctermbg=235 ctermfg=254
-hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
+hi User1 term=bold cterm=bold ctermbg=235 ctermfg=207
 func! ChangeStatuslineColor()
 	if (mode() =~# '\v(n|no)')
-		exe 'hi! User1 cterm=bold ctermfg=207'
-	elseif (mode() =~# '\v(v|V)' || g:currentmode[mode()] ==# 'V·Block' || get(g:currentmode, mode(), '') ==# 't')
-		exe 'hi! User1 cterm=bold ctermfg=045'
+		exe 'hi! User1 ctermfg=207'
+	elseif (mode() =~# '\v(v|V|)')
+		exe 'hi! User1 ctermfg=082'
 	elseif (mode() ==# 'i')
-		exe 'hi! User1 cterm=bold ctermfg=220'
+		exe 'hi! User1 ctermfg=220'
 	else
-		exe 'hi! User1 cterm=bold ctermfg=082'
+		exe 'hi! User1 ctermfg=045'
 	endif
 	return ''
 endfunc
+hi User2 term=none cterm=none ctermbg=235 ctermfg=254
+hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
+hi User4 term=none cterm=none ctermbg=235 ctermfg=196
 
 set noshowmode
 set statusline=%{ChangeStatuslineColor()}%1* " Changing the statusline color
-set statusline+=\ %{g:currentmode[mode()]}%m\ %< " Current mode and modified flag
-set statusline+=%h "help file flag
-set statusline+=%r "read only flag
-set statusline+=%2*%y\ %0*%F
+set statusline+=\ %{g:mode_map[mode()]}%m\ %< " Current mode and modified flag
+set statusline+=%4*%h%r "help file flag and read only flag
+set statusline+=%2*%y\ %0*%F " Language and file path
 " set statusline+=\ %1*[%n] " buffernr
 set statusline+=\ %= " Left and right divide
 set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}] "file encoding
