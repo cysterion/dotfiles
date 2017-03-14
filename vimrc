@@ -136,8 +136,8 @@ set statusline+=%4*%h%r "help file flag and read only flag
 set statusline+=%2*%y\ %0*%F " Language and file path
 " set statusline+=\ %1*[%n] " buffernr
 set statusline+=\ %= " Left and right divide
-set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}] "file encoding
-set statusline+=%3*%3p%%\ ␤\ %l/%L☰\ :\ %3v\  " end
+set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}]\  "file encoding
+set statusline+=%3*%3P\ ␤\ %l/%L☰\ :\ %3v\  " end
 
 "------   Plugin Setup   ------"
 " Enable vim-plug
