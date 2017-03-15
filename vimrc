@@ -56,26 +56,6 @@ if !exists('$TMUX')
 	set clipboard=unnamed "unnamedplus
 endif
 
-" Vim popup for omnicomplete
-set omnifunc=syntaxcomplete#Complete
-set completeopt=noinsert,menuone
-let g:rubycomplete_buffer_loading=1
-let g:rubycomplete_classes_in_global=1
-let g:rubycomplete_rails=1
-let g:loaded_sql_completion=0
-let g:omni_sql_no_default_maps=1
-
-" Keys that trigger completeopt
-for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
-	execute "inoremap <silent><expr> " . key . " \"" . key . "\" . OpenAutocomp() "
-endfor
-func! OpenAutocomp()
-	return pumvisible() ? "" : "\<C-X>\<C-O>"
-endfunc
-
-inoremap <silent><expr> . ".\<C-X>\<C-O>"
-inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
-
 set display+=lastline
 
 autocmd BufWritePre * :%s/\s\+$//e
@@ -96,8 +76,31 @@ let &showbreak='↳ '
 let &listchars='tab:│ '
 " let &listchars='tab:│ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
 set list
+
+" Spellcheck
 set spell spelllang=en
 set spellfile=~/.vim/spell/en.utf-8.add
+
+"---------- OmniComplete on keypress ----------"
+set omnifunc=syntaxcomplete#Complete
+set completeopt=noinsert,menuone
+let g:rubycomplete_buffer_loading=1
+let g:rubycomplete_classes_in_global=1
+let g:rubycomplete_rails=1
+let g:loaded_sql_completion=0
+let g:omni_sql_no_default_maps=1
+
+" Keys that trigger completeopt
+for key in split("a b c d e f g h i j k l m n o p q r s t u v w x y z " .
+			\ "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z")
+	execute "inoremap <silent><expr> ".key." \"".key."\" . OpenAutocomp()"
+endfor
+func! OpenAutocomp()
+	return pumvisible() ? "" : "\<C-X>\<C-O>"
+endfunc
+
+inoremap <silent><expr> . ".\<C-X>\<C-O>"
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
 
 "---------- Statusline ----------"
 let g:mode_map = {
@@ -137,8 +140,8 @@ set noshowmode
 set statusline=%{ChangeStatuslineColor()}%1* " Changing the statusline color
 set statusline+=\ %{g:mode_map[mode()]}%m\ %< " Current mode and modified flag
 set statusline+=%4*%h%r "help file flag and read only flag
+" set statusline+=\ %2*%n\  " buffernr
 set statusline+=%2*%y\ %0*%F " Language and file path
-" set statusline+=\ %1*[%n] " buffernr
 set statusline+=\ %= " Left and right divide
 set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}]\  "file encoding
 set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %3v\  " end
@@ -172,10 +175,9 @@ let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
 
-" Synastic java fix
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
-" Syntastic Basic setup removing the list
+" Syntastic Setup
 set statusline+=%4*%{SyntasticStatuslineFlag()}\ %*
+let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
 let g:syntastic_check_on_open=1
 let g:syntastic_check_on_wq=0
 let g:syntastic_aggregate_errors=1
