@@ -6,7 +6,7 @@
  | (_| | (_) | |_|  _| | |  __/\__ \
 (_)__,_|\___/ \__|_| |_|_|\___||___/
 ```
-My personal dot files
+![Showcase](showcase.gif?raw=true)
 ## Cloning
 ### The easy setting
 What I use for all computers
