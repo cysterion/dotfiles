@@ -150,17 +150,14 @@ set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %3v\  " end
 " Enable vim-plug
 execute plug#begin()
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
-" Git
+Plug 'scrooloose/nerdtree', { 'on':
+			\ [ 'NERDTreeToggle', 'NERDTree', 'NERDTreeFind' ] }
+Plug 'sjl/gundo.vim', { 'on':
+			\ ['GundoHide', 'GundoRenderGraph', 'GundoShow', 'GundoToggle'] }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" Syntax
 Plug 'vim-syntastic/syntastic'
-" Languages
-Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
-Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
-Plug 'othree/html5.vim', { 'for' : 'html' }
+Plug 'sheerun/vim-polyglot'
 execute plug#end()
 
 "------   Plugin Settings   ------"
