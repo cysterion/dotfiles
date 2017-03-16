@@ -155,7 +155,11 @@ Plug 'sjl/gundo.vim', { 'on': ['GundoHide', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'vim-syntastic/syntastic'
-Plug 'sheerun/vim-polyglot'
+" Languages
+Plug 'keith/swift.vim', { 'for': 'swift' }
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
+Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
+Plug 'othree/html5.vim', { 'for' : 'html' }
 execute plug#end()
 
 "------   Plugin Settings   ------"
