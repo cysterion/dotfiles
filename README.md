@@ -29,8 +29,7 @@ git submodule update --recursive
 ```
 ## Making it yours
 1. [Fork it](https://github.com/BrandonRoehl/dotfiles/fork)
-2. Clone other vim plugins as submodules by using `git submodule add`
-3. Commit change and share!
+2. Commit change and share!
 ```bash
 cd $DOTDIR # Works if installed
 git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
