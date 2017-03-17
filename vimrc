@@ -151,7 +151,7 @@ set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %3v\  " end
 execute plug#begin()
 Plug 'vim-syntastic/syntastic'
 Plug 'scrooloose/nerdcommenter'
-Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTreeFind' ] }
+Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
