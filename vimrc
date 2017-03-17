@@ -156,12 +156,14 @@ Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
-Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 " Languages
 Plug 'keith/swift.vim', { 'for': 'swift' }
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
+Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby'] }
 Plug 'othree/html5.vim', { 'for' : 'html' }
+Plug 'ap/vim-css-color', { 'for': ['css', 'sass'] }
+Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'c++' }
 execute plug#end()
 
 "------   Plugin Settings   ------"
@@ -192,7 +194,6 @@ let g:gitgutter_sign_removed='﹍'
 let g:gitgutter_sign_removed_first_line='﹉'
 let g:gitgutter_sign_modified_removed='┃'
 
-nmap <F8> :TagbarToggle<CR>
 " let g:NERDTreeIndicatorMapCustom = {
     " \ "Modified"  : "✹",
     " \ "Staged"    : "✚",
