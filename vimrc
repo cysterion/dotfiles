@@ -60,6 +60,18 @@ set display+=lastline
 
 autocmd BufWritePre * :%s/\s\+$//e
 
+
+" Use Template Files
+autocmd BufNewFile *
+\ let templatefile = expand("~/.vim/templates/") . expand("%:e")|
+\ if filereadable(templatefile)|
+\   execute "silent! 0r " . templatefile|
+\   execute "normal Gdd/CURSOR\<CR>dw"|
+\ endif|
+\ startinsert!
+
+
+
 " Remove splash
 " set shortmess=I
 
