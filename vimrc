@@ -142,12 +142,12 @@ Plug 'tpope/vim-tbone'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'roxma/vim-tmux-clipboard'
 " Languages
-Plug 'keith/swift.vim', { 'for': 'swift' }
-Plug 'vim-ruby/vim-ruby', { 'for': ['ruby', 'eruby'] }
-Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby'] }
-Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby'] }
-Plug 'othree/html5.vim', { 'for' : 'html' }
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': 'c++' }
+Plug 'keith/swift.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'othree/html5.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
 execute plug#end()
 
 "------   Plugin Settings   ------"
