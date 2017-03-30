@@ -5,7 +5,7 @@
 
 " hi clear
 set t_Co=256
-set background=dark
+set background=light
 if exists("syntax_on")
 	syntax reset
 endif
@@ -90,7 +90,7 @@ hi ModeMsg    term=bold cterm=bold ctermfg=045 ctermbg=none
 hi MoreMsg    term=none cterm=none ctermfg=232 ctermbg=083
 hi WarningMsg term=none cterm=none ctermfg=232 ctermbg=216
 hi SpellBad   term=underline cterm=underline,bold ctermfg=none ctermbg=none
-hi SpellCap   term=underline cterm=underline      ctermfg=none ctermbg=none
+hi SpellCap   term=underline cterm=bold           ctermfg=none ctermbg=none
 hi link SpellRare SpellCap
 hi SpellLocal term=none cterm=none ctermfg=none ctermbg=none
 
