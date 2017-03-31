@@ -5,7 +5,7 @@
 
 " hi clear
 set t_Co=256
-set background=light
+set background=dark
 if exists("syntax_on")
 	syntax reset
 endif
