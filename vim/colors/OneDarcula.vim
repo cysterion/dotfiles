@@ -105,6 +105,10 @@ hi SyntasticError       term=underline cterm=underline,bold ctermfg=196 ctermbg=
 hi SyntasticWarning     term=underline cterm=underline,bold ctermfg=226 ctermbg=none
 hi SyntasticErrorSign   term=standout  cterm=bold           ctermbg=235 ctermfg=196
 hi SyntasticWarningSign term=standout  cterm=bold           ctermbg=235 ctermfg=226
+hi link ALEError       SyntasticError
+hi link ALEWarning     SyntasticWarning
+hi link ALEErrorSign   SyntasticErrorSign
+hi link ALEWarningSign SyntasticWarningSign
 
 " Gitgutter coloring
 hi GitGutterAdd    cterm=none ctermbg=235 ctermfg=077

@@ -50,6 +50,7 @@ set softtabstop=4
 set shiftwidth=4
 set noexpandtab
 set autoindent
+autocmd Filetype haskell setlocal expandtab
 
 " Use system clipboard
 if !exists('$TMUX')
@@ -113,7 +114,7 @@ func! ChangeStatuslineColor()
 endfunc
 hi User2 term=none cterm=none ctermbg=235 ctermfg=254
 hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
-hi User4 term=bold cterm=bold ctermbg=235 ctermfg=196
+hi User4 term=none cterm=none ctermbg=235 ctermfg=203
 
 set noshowmode
 set statusline=%{ChangeStatuslineColor()}%1* " Changing the statusline color
@@ -123,14 +124,15 @@ set statusline+=%4*%h%r "help file flag and read only flag
 set statusline+=%2*%y\ %0*%F " Language and file path
 set statusline+=\ %= " Left and right divide
 set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}]\  "file encoding
-set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %3v\  " end
+set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %2v\  " end
 
 "------   Plugin Setup   ------"
 " Enable vim-plug
 execute plug#begin()
-Plug 'vim-syntastic/syntastic'
-Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
+Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'ap/vim-css-color'
 " Git
@@ -162,14 +164,27 @@ let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
 
+" Ale Setup
+let g:ale_sign_column_always = 1
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_sign_error = '>>'
+let g:ale_sign_warning = '--'
+set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
+
+" YCM
+let g:ycm_min_num_of_chars_for_completion = 0
+let g:ycm_auto_trigger = 1
+let g:ycm_error_symbol = g:ale_sign_error
+let g:ycm_warning_symbol = g:ale_sign_warning
+
 " Syntastic Setup
-set statusline+=%4*%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}\ %*
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_aggregate_errors=1
-let g:syntastic_cpp_compiler='clang++'
-let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
+" set statusline+=%4*%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}\ %*
+" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
+" let g:syntastic_check_on_open=1
+" let g:syntastic_check_on_wq=0
+" let g:syntastic_aggregate_errors=1
+" let g:syntastic_cpp_compiler='clang++'
+" let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
 
 " Gitgutter signs
 let g:gitgutter_sign_added='┃'

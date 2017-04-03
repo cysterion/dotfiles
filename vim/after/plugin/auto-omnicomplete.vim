@@ -1,4 +1,7 @@
 "---------- OmniComplete on keypress ----------"
+if exists( "g:loaded_youcompleteme" )
+	finish
+endif
 set omnifunc=syntaxcomplete#Complete
 set completeopt=noinsert,menuone
 let g:rubycomplete_buffer_loading=1
