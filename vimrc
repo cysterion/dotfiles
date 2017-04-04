@@ -185,9 +185,9 @@ let g:ale_sign_warning = '--'
 set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
 
 " YCM
+let g:ycm_auto_trigger = 1
 let g:ycm_min_num_of_chars_for_completion = 0
 let g:ycm_show_diagnostics_ui = 0
-let g:ycm_auto_trigger = 1
 let g:ycm_error_symbol = g:ale_sign_error
 let g:ycm_warning_symbol = g:ale_sign_warning
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
