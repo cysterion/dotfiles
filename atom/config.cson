@@ -22,5 +22,8 @@
     style: {}
     toggles:
       autoClose: true
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    useClipboardAsDefaultRegister: true
   welcome:
     showOnStartup: false
