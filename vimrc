@@ -151,10 +151,6 @@ Plug 'gregsexton/matchtag'
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-" TMUX
-Plug 'tpope/vim-tbone'
-Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'roxma/vim-tmux-clipboard'
 " Languages
 Plug 'keith/swift.vim'
 Plug 'vim-ruby/vim-ruby'
@@ -163,6 +159,12 @@ Plug 'tpope/vim-bundler'
 Plug 'othree/html5.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-git'
+" TMUX
+if exists('$TMUX')
+	Plug 'tpope/vim-tbone'
+	Plug 'tmux-plugins/vim-tmux-focus-events'
+	Plug 'roxma/vim-tmux-clipboard'
+endif
 execute plug#end()
 
 "------   Plugin Settings   ------"
