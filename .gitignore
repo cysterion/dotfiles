@@ -4,3 +4,4 @@ installed.txt
 vim/plugged
 atom/packages
 atom/storage
+atom/.apm
