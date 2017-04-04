@@ -178,28 +178,20 @@ let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
 
 " Ale Setup
-let g:ale_sign_column_always = 1
-let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '⬥ ok']
-let g:ale_sign_error = '>>'
-let g:ale_sign_warning = '--'
+let g:ale_sign_column_always=1
+let g:ale_statusline_format=['⨉ %d', '⚠ %d', '⬥ ok']
+let g:ale_sign_error='>>'
+let g:ale_sign_warning='--'
+let g:ale_lint_delay=250
 set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
 
 " YCM
-let g:ycm_auto_trigger = 1
-let g:ycm_min_num_of_chars_for_completion = 0
-let g:ycm_show_diagnostics_ui = 0
-let g:ycm_error_symbol = g:ale_sign_error
-let g:ycm_warning_symbol = g:ale_sign_warning
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-
-" Syntastic Setup
-" set statusline+=%4*%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}\ %*
-" let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
-" let g:syntastic_check_on_open=1
-" let g:syntastic_check_on_wq=0
-" let g:syntastic_aggregate_errors=1
-" let g:syntastic_cpp_compiler='clang++'
-" let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
+let g:ycm_auto_trigger=1
+let g:ycm_min_num_of_chars_for_completion=0
+let g:ycm_show_diagnostics_ui=0
+let g:ycm_error_symbol=g:ale_sign_error
+let g:ycm_warning_symbol=g:ale_sign_warning
+let g:ycm_global_ycm_extra_conf='~/.vim/ycm_extra_conf.py'
 
 " Gitgutter signs
 let g:gitgutter_sign_added='┃'
@@ -209,14 +201,14 @@ let g:gitgutter_sign_removed_first_line='﹉'
 let g:gitgutter_sign_modified_removed='┃'
 
 " let g:NERDTreeIndicatorMapCustom = {
-    " \ "Modified"  : "✹",
-    " \ "Staged"    : "✚",
-    " \ "Untracked" : "✭",
-    " \ "Renamed"   : "➜",
-    " \ "Unmerged"  : "═",
-    " \ "Deleted"   : "✖",
-    " \ "Dirty"     : "✗",
-    " \ "Clean"     : "✔︎",
+    " \ 'Modified'  : '✹',
+    " \ 'Staged'    : '✚',
+    " \ 'Untracked' : '✭',
+    " \ 'Renamed'   : '➜',
+    " \ 'Unmerged'  : '═',
+    " \ 'Deleted'   : '✖',
+    " \ 'Dirty'     : '✗',
+    " \ 'Clean'     : '✔︎',
     " \ 'Ignored'   : '☒',
-    " \ "Unknown"   : "?"
+    " \ 'Unknown'   : '?'
     " \ }
