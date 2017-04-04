@@ -24,6 +24,8 @@ set ruler
 set report=0
 " Autocomplete commands menu
 set wildmenu
+" Quick timer
+set updatetime=250
 " give support for 256bit coloring
 set t_Co=256
 set background=light
@@ -184,6 +186,7 @@ set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
 
 " YCM
 let g:ycm_min_num_of_chars_for_completion = 0
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_auto_trigger = 1
 let g:ycm_error_symbol = g:ale_sign_error
 let g:ycm_warning_symbol = g:ale_sign_warning
