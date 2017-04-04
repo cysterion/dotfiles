@@ -174,7 +174,6 @@ noremap <silent> // :call NERDComment(0,"toggle")<cr>
 let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
-let NERDTreeShowHidden=1
 
 " Ale Setup
 let g:ale_sign_column_always = 1
