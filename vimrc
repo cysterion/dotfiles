@@ -141,8 +141,7 @@ set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %2v\  " end
 " Enable vim-plug
 execute plug#begin()
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
-" Plug 'w0rp/ale'
-Plug 'vim-syntastic/syntastic'
+Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
@@ -179,15 +178,6 @@ noremap <silent> // :call NERDComment(0,"toggle")<cr>
 let g:NERDSpaceDelims=1
 let g:NERDCommentEmptyLines=1
 let g:NERDTrimTrailingWhitespace=1
-
-" Syntastic Setup
-set statusline+=%4*%{exists('*SyntasticStatuslineFlag')?SyntasticStatuslineFlag():''}\ %*
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['java'] }
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
-let g:syntastic_aggregate_errors=1
-let g:syntastic_cpp_compiler='clang++'
-let g:syntastic_cpp_compiler_options=' -std=c++11 -stdlib=libc++'
 
 " Ale Setup
 let g:ale_sign_column_always=1
