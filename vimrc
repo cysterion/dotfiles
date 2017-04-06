@@ -202,17 +202,6 @@ let g:gitgutter_sign_removed='﹍'
 let g:gitgutter_sign_removed_first_line='﹉'
 let g:gitgutter_sign_modified_removed='┃'
 
-func! TestRegex()
-	let column = '\v^(\s+)\^$'
-	let line=getline(".")
-	echo line
-	let col = matchlist(line, column)
-	echo col
-	echo len(col[1])
-	"do sth. here -- construct the external command and so on
-	let line=getline("*")
-endfunc
-
 " let g:NERDTreeIndicatorMapCustom = {
     " \ 'Modified'  : '✹',
     " \ 'Staged'    : '✚',
