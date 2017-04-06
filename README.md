@@ -1,12 +1,5 @@
+![Showcase](_images/computer.png?raw=true)
 # .dotfiles
-```
-      _       _    __ _ _
-   __| | ___ | |_ / _(_) | ___  ___
-  / _` |/ _ \| __| |_| | |/ _ \/ __|
- | (_| | (_) | |_|  _| | |  __/\__ \
-(_)__,_|\___/ \__|_| |_|_|\___||___/
-```
-![Showcase](showcase.gif?raw=true)
 ## Cloning
 ### The easy setting
 What I use for all computers
@@ -38,6 +31,8 @@ vim +PlugInstall
 ```bash
 sudo ./installLinuxBrew
 ```
+## Demo
+![Showcase](_images/showcase.gif?raw=true)
 
 # Contact
 [BrandonRoehl@gmail.com](mailto://brandonroehl@gmail.com)
