@@ -35,9 +35,7 @@ function! ale_linters#ruby#mri#Handle(buffer, lines) abort
 endfunction
 
 function! ale_linters#ruby#mri#GetCommand(buffer) abort
-	return 'ruby -w -c -T1 ' .
-				\ g:ale_ruby_options . ' ' .
-				\ bufname(a:buffer)
+	return 'ruby -w -c -T1 ' . bufname(a:buffer)
 endfunction
 
 call ale#linter#Define('ruby', {
