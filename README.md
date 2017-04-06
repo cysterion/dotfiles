@@ -17,6 +17,8 @@ git clone https://github.com/BrandonRoehl/dotfiles.git
 # The folder just made
 cd dotfiles
 ./init
+# Plug Install
+vim +PlugInstall
 ```
 ### Custom or trial / browsing
 ```bash
@@ -26,14 +28,11 @@ Or remember to after cloning for the submodules
 ```bash
 git submodule init
 git submodule update --recursive
+vim +PlugInstall
 ```
 ## Making it yours
 1. [Fork it](https://github.com/BrandonRoehl/dotfiles/fork)
 2. Commit change and share!
-```bash
-cd $DOTDIR # Works if installed
-git submodule add https://github.com/scrooloose/nerdtree.git ./vim/bundle/
-```
 
 ## Linuxbrew the right way
 ```bash
