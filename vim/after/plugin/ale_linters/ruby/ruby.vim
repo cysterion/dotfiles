@@ -33,16 +33,10 @@ function! ale_linters#ruby#ruby#Handle(buffer, lines) abort
 	return l:output
 endfunction
 
-function! ale_linters#ruby#ruby#GetCommand(buffer) abort
-	return 'ruby -w -c -T1 -I' .
-				\ fnameescape(expand('#'.a:buffer.':p:h')) .
-				\ ' %t',
-endfunction
-
 call ale#linter#Define('ruby', {
 			\   'name': 'ruby',
 			\   'executable': 'ruby',
 			\   'output_stream': 'stderr',
-			\   'command_callback': 'ale_linters#ruby#ruby#GetCommand',
+			\   'command': 'ruby -w -c -T1 %t',
 			\   'callback': 'ale_linters#ruby#ruby#Handle',
 			\})
