@@ -147,6 +147,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'ap/vim-css-color'
 Plug 'gregsexton/matchtag'
+Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
 " Git
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
