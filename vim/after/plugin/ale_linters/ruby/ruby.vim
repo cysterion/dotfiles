@@ -33,18 +33,16 @@ function! ale_linters#ruby#ruby#Handle(buffer, lines) abort
 	return l:output
 endfunction
 
-" function! ale_linters#ruby#ruby#GetCommand(buffer) abort
-	" return 'ruby -w -c -T1 .'
-				" \ fnameescape(fnamemodify(bufname(a:buffer), ':p:h'))
-" endfunction
+function! ale_linters#ruby#ruby#GetCommand(buffer) abort
+	return 'ruby -w -c -T1 -I' .
+				\ fnameescape(expand('#'.a:buffer.':p:h')) .
+				\ ' %t',
+endfunction
 
 call ale#linter#Define('ruby', {
 			\   'name': 'ruby',
 			\   'executable': 'ruby',
 			\   'output_stream': 'stderr',
-			\   'command': 'ruby -w -c -T1 -I' .
-				\ fnameescape(expand('#'.a:buffer.':p:h')) .
-				\ ' %t',
+			\   'command_callback': 'ale_linters#ruby#ruby#GetCommand',
 			\   'callback': 'ale_linters#ruby#ruby#Handle',
 			\})
-			" \   'command_callback': 'ale_linters#ruby#ruby#GetCommand',
