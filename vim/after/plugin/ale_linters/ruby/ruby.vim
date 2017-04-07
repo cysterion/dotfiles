@@ -42,7 +42,9 @@ call ale#linter#Define('ruby', {
 			\   'name': 'ruby',
 			\   'executable': 'ruby',
 			\   'output_stream': 'stderr',
-			\   'command': 'ruby -w -c -T1 %t',
+			\   'command': 'ruby -w -c -T1 -I' .
+				\ fnameescape(expand('#'.a:buffer.':p:h')) .
+				\ ' %t',
 			\   'callback': 'ale_linters#ruby#ruby#Handle',
 			\})
 			" \   'command_callback': 'ale_linters#ruby#ruby#GetCommand',
