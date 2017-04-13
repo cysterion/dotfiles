@@ -5,7 +5,9 @@
       predefinedColor: "Blue"
     tabs: {}
     treeView: {}
-    ui: {}
+    ui:
+      panelContrast: true
+      panelShadows: true
   autosave:
     enabled: true
   core:
