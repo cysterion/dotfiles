@@ -116,15 +116,15 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>445 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 195 918 498 0 0 1440 878 </string>
+	<string>273 243 918 381 0 0 1440 878 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame com.apple.typography_panel_UbuntuMono-Regular</key>
 	<string>246 464 260 96 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>391 314 570 427 0 0 1440 878 </string>
+	<string>140 422 570 427 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>98 409 570 427 0 0 1440 878 </string>
+	<string>341 324 570 427 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -836,13 +836,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.11500217765569687</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.061998210847377777</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.77625435590744019</real>
 			</dict>
 			<key>Tags</key>
 			<array/>
@@ -1032,7 +1032,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-16T00:24:04Z</date>
+	<date>2017-04-09T16:33:01Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
@@ -1091,7 +1091,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.14</string>
+	<string>3.0.15</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

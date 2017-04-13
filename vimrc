@@ -142,7 +142,7 @@ set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %2v\ %* " end
 execute plug#begin()
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'w0rp/ale'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
 Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'ap/vim-css-color'
