@@ -1,5 +1,5 @@
 "---------- OmniComplete on keypress ----------"
-if exists('g:loaded_youcompleteme') || exists('g:loaded_neocomplete')
+if exists('g:loaded_youcompleteme')
 	finish
 endif
 
