@@ -1,4 +1,11 @@
 "*":
+  "atom-material-ui":
+    colors:
+      abaseColor: "#2196f3"
+      predefinedColor: "Blue"
+    tabs: {}
+    treeView: {}
+    ui: {}
   autosave:
     enabled: true
   core:
