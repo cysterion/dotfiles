@@ -163,7 +163,6 @@ Plug 'tpope/vim-git'
 " TMUX
 if exists('$TMUX')
 	Plug 'tpope/vim-tbone'
-	Plug 'tmux-plugins/vim-tmux-focus-events'
 	Plug 'roxma/vim-tmux-clipboard'
 endif
 execute plug#end()
