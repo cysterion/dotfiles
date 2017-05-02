@@ -1,10 +1,10 @@
 "*":
   "atom-material-ui":
-    colors:
-      abaseColor: "#2196f3"
-      predefinedColor: "Blue"
-    tabs: {}
-    treeView: {}
+    colors: {}
+    tabs:
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
     ui:
       panelContrast: true
       panelShadows: true
