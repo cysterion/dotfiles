@@ -58,3 +58,5 @@ function mkmainJava {
     fi
 }
 
+# added by travis gem
+[ -f /Users/BrandonRoehl/.travis/travis.sh ] && source /Users/BrandonRoehl/.travis/travis.sh

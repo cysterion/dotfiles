@@ -64,3 +64,6 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
+
+# added by travis gem
+[ -f /Users/BrandonRoehl/.travis/travis.sh ] && source /Users/BrandonRoehl/.travis/travis.sh

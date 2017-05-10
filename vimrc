@@ -143,6 +143,7 @@ execute plug#begin()
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer', 'for': ['c', 'cpp'] }
+Plug 'artur-shaik/vim-javacomplete2'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'ap/vim-css-color'
@@ -166,6 +167,7 @@ if exists('$TMUX')
 	Plug 'roxma/vim-tmux-clipboard'
 endif
 execute plug#end()
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 "------   Plugin Settings   ------"
 " Maps nerd tree for easy access
