@@ -17,7 +17,7 @@ endfunc
 
 " Completion of . and :
 inoremap <silent><expr> . ".\<C-X>\<C-O>"
-inoremap <silent><expr> : ".\<C-X>\<C-O>"
+inoremap <silent><expr> : ":\<C-X>\<C-O>"
 
 " Tab insert
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-N>" : "\<Tab>"
