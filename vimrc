@@ -34,9 +34,9 @@ set background=light
 set mouse=a
 " Mouse fix for tmux
 if has("mouse_sgr")
-	set ttymouse=sgr
+    set ttymouse=sgr
 else
-	set ttymouse=xterm2
+    set ttymouse=xterm2
 endif
 " Smooth scroll
 nnoremap <ScrollWheelUp> <C-Y>
@@ -50,13 +50,12 @@ set smarttab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set autoindent
-autocmd Filetype haskell setlocal expandtab
 
 " Use system clipboard
 if !exists('$TMUX')
-	set clipboard=unnamed "unnamedplus
+    set clipboard=unnamed "unnamedplus
 endif
 
 set display+=lastline
@@ -76,9 +75,9 @@ set incsearch
 colorscheme OneDarcula
 let &fillchars=''
 let &showbreak='↳ '
-let &listchars='tab:│ '
+" let &listchars='tab:│ '
 " let &listchars='tab:│ ,eol:¬,nbsp:␣,trail:•,extends:⟩,precedes:⟨'
-set list
+" set list
 
 " Omnicomplete
 set omnifunc=syntaxcomplete#Complete
@@ -95,33 +94,33 @@ set spellfile=~/.vim/spell/en.utf-8.add
 
 "---------- Statusline ----------"
 let g:mode_map = {
-			\ '__' : '------',
-			\ 'n'  : 'NORMAL',
-			\ 'i'  : 'INSERT',
-			\ 'R'  : 'REPLACE',
-			\ 'v'  : 'VISUAL',
-			\ 'V'  : 'V-LINE',
-			\ 'c'  : 'COMMAND',
-			\ '' : 'V-BLOCK',
-			\ 's'  : 'SELECT',
-			\ 'S'  : 'S-LINE',
-			\ '' : 'S-BLOCK',
-			\ 't'  : 'TERMINAL',
-			\ }
+            \ '__' : '------',
+            \ 'n'  : 'NORMAL',
+            \ 'i'  : 'INSERT',
+            \ 'R'  : 'REPLACE',
+            \ 'v'  : 'VISUAL',
+            \ 'V'  : 'V-LINE',
+            \ 'c'  : 'COMMAND',
+            \ '' : 'V-BLOCK',
+            \ 's'  : 'SELECT',
+            \ 'S'  : 'S-LINE',
+            \ '' : 'S-BLOCK',
+            \ 't'  : 'TERMINAL',
+            \ }
 
 " Automatically change the statusline color depending on mode
 hi User1 term=bold cterm=bold ctermbg=235 ctermfg=207
 func! ChangeStatuslineColor()
-	if (mode() =~# '\v(n|no)')
-		exe 'hi! User1 ctermfg=207'
-	elseif (mode() =~# '\v(v|V|)')
-		exe 'hi! User1 ctermfg=082'
-	elseif (mode() ==# 'i')
-		exe 'hi! User1 ctermfg=220'
-	else
-		exe 'hi! User1 ctermfg=045'
-	endif
-	return ''
+    if (mode() =~# '\v(n|no)')
+        exe 'hi! User1 ctermfg=207'
+    elseif (mode() =~# '\v(v|V|)')
+        exe 'hi! User1 ctermfg=082'
+    elseif (mode() ==# 'i')
+        exe 'hi! User1 ctermfg=220'
+    else
+        exe 'hi! User1 ctermfg=045'
+    endif
+    return ''
 endfunc
 hi User2 term=none cterm=none ctermbg=235 ctermfg=254
 hi User3 term=bold cterm=bold ctermbg=235 ctermfg=082
@@ -163,8 +162,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'tpope/vim-git'
 " TMUX
 if exists('$TMUX')
-	Plug 'tpope/vim-tbone'
-	Plug 'roxma/vim-tmux-clipboard'
+    Plug 'tpope/vim-tbone'
+    Plug 'roxma/vim-tmux-clipboard'
 endif
 execute plug#end()
 " autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -205,14 +204,14 @@ let g:gitgutter_sign_removed_first_line='﹉'
 let g:gitgutter_sign_modified_removed='┃'
 
 " let g:NERDTreeIndicatorMapCustom = {
-    " \ 'Modified'  : '✹',
-    " \ 'Staged'    : '✚',
-    " \ 'Untracked' : '✭',
-    " \ 'Renamed'   : '➜',
-    " \ 'Unmerged'  : '═',
-    " \ 'Deleted'   : '✖',
-    " \ 'Dirty'     : '✗',
-    " \ 'Clean'     : '✔︎',
-    " \ 'Ignored'   : '☒',
-    " \ 'Unknown'   : '?'
-    " \ }
+" \ 'Modified'  : '✹',
+" \ 'Staged'    : '✚',
+" \ 'Untracked' : '✭',
+" \ 'Renamed'   : '➜',
+" \ 'Unmerged'  : '═',
+" \ 'Deleted'   : '✖',
+" \ 'Dirty'     : '✗',
+" \ 'Clean'     : '✔︎',
+" \ 'Ignored'   : '☒',
+" \ 'Unknown'   : '?'
+" \ }
