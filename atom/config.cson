@@ -37,5 +37,7 @@
   "vim-mode-plus":
     clearHighlightSearchOnResetNormalMode: true
     useClipboardAsDefaultRegister: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
   welcome:
     showOnStartup: false
