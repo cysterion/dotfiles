@@ -7,7 +7,7 @@
 set t_Co=256
 set background=dark
 if exists("syntax_on")
-	syntax reset
+    syntax reset
 endif
 let g:colors_name = "OneDarcula"
 
