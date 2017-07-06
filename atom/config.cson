@@ -26,7 +26,8 @@
     userId: "d5cac5a7-3131-ea39-89d0-21be943bab7d"
   "markdown-preview": {}
   "platformio-ide-terminal":
-    style: {}
+    style:
+      theme: "one-dark"
     toggles:
       autoClose: true
   "terminal-plus":

@@ -11,6 +11,8 @@ if exists("syntax_on")
 endif
 let g:colors_name = "OneDarcula"
 
+hi Normal ctermfg=255 ctermbg=016
+
 hi CursorLine   term=bold cterm=bold ctermbg=235 ctermfg=none
 hi CursorLineNr term=bold cterm=bold ctermbg=235 ctermfg=226
 hi LineNr       term=none cterm=none ctermbg=235 ctermfg=250
@@ -33,9 +35,9 @@ hi Search    term=standout cterm=reverse ctermbg=none ctermfg=none
 hi IncSearch term=standout cterm=reverse ctermbg=232  ctermfg=226
 hi Todo      term=standout cterm=reverse ctermfg=226  ctermbg=232
 
-hi Title     term=bold cterm=bold ctermfg=green ctermbg=none
-hi Directory term=bold cterm=bold ctermfg=blue  ctermbg=none
-hi Macro     term=bold cterm=bold ctermfg=cyan
+hi Title     term=bold cterm=bold ctermfg=040 ctermbg=none
+hi Directory term=bold cterm=bold ctermfg=032  ctermbg=none
+hi Macro     term=bold cterm=bold ctermfg=37
 
 " Other stuff
 hi Comment term=none cterm=none ctermfg=243
