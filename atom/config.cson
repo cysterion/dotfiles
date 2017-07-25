@@ -35,6 +35,8 @@
     style: {}
     toggles:
       autoClose: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
   "vim-mode-plus":
     clearHighlightSearchOnResetNormalMode: true
     useClipboardAsDefaultRegister: true
