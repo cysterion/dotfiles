@@ -15,7 +15,10 @@ setopt correct
 # Enable colors in prompt
 export TERM=xterm-256color
 export CLICOLOR=1
-alias ls='ls --color=auto --classify'
+if [[ "$(which ls)" =~ 'gnu' ]]
+then
+    alias ls='ls --color=auto --classify'
+fi
 autoload -U colors
 colors
 eval $(dircolors)
@@ -66,8 +69,15 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 
-source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
-source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
+plugins=('zsh-syntax-highlighting' 'zsh-autosuggestions')
+for plugin in $plugins
+do
+    file="$HOME/.zsh/$plugin/$plugin.zsh"
+    if [[ -e $file ]]
+    then
+        source $file
+    fi
+done
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
 
