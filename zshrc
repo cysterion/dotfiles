@@ -5,10 +5,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
 # detect coreutils
-if [[ "$(which ls)" =~ 'gnu' ]]
-then
-    coreutils=1
-fi
+coreutils=$([[ "$(which ls)" =~ 'gnu' ]])
 
 export ADOTDIR="$HOME/.zsh/antigen"
 source "$HOME/.zsh/autoload/antigen.zsh"
@@ -40,7 +37,7 @@ setopt correct
 # Enable colors in prompt
 export TERM=xterm-256color
 export CLICOLOR=1
-if [[ $coreutils -eq 1 ]]
+if $coreutils
 then
     alias ls='ls --color=auto --classify'
     autoload -U colors
