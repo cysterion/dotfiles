@@ -4,6 +4,24 @@
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+source "$HOME/.antigen/antigen.zsh"
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundle git
+antigen bundle brew
+antigen bundle rails
+antigen bundle command-not-found
+
+# Syntax highlighting bundle like fish.
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-autosuggestions
+
+# Tell Antigen that you're done.
+antigen apply
+
 source "$HOME/.profile"
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
@@ -67,16 +85,6 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
-
-plugins=('zsh-syntax-highlighting' 'zsh-autosuggestions')
-for plugin in $plugins
-do
-    file="$HOME/.zsh/$plugin/$plugin.zsh"
-    if [[ -e $file ]]
-    then
-        source $file
-    fi
-done
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
 

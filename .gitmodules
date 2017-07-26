@@ -1,9 +1,6 @@
-[submodule "zsh-syntax-highlighting"]
-	path = zsh/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
 [submodule "vim/autoload"]
 	path = vim/autoload
 	url = https://github.com/junegunn/vim-plug.git
-[submodule "zsh/zsh-autosuggestions"]
-	path = zsh/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions.git
+[submodule "antigen"]
+	path = antigen
+	url = https://github.com/zsh-users/antigen.git
