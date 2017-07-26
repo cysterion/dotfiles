@@ -2,6 +2,36 @@
 set nocompatible
 filetype plugin indent on
 
+"------   Plugin Setup   ------"
+" Enable vim-plug
+execute plug#begin()
+Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
+Plug 'w0rp/ale'
+Plug 'scrooloose/nerdcommenter'
+Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
+Plug 'ap/vim-css-color'
+Plug 'gregsexton/matchtag'
+Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
+" Git
+Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+" Languages
+Plug 'keith/swift.vim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'othree/html5.vim'
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'tpope/vim-git'
+" TMUX
+if exists('$TMUX')
+    Plug 'tpope/vim-tbone'
+    Plug 'roxma/vim-tmux-clipboard'
+endif
+execute plug#end()
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 " Syntax coloring
 syntax enable
 " Faster redraw
@@ -136,36 +166,6 @@ set statusline+=%2*%y\ %0*%F " Language and file path
 set statusline+=\ %= " Left and right divide
 set statusline+=%2*%{strlen(&fenc)?&fenc:'none'}[%{&ff}]\  "file encoding
 set statusline+=%3*%P\ ␤\ %l/%L☰\ :\ %2v\ %* " end
-
-"------   Plugin Setup   ------"
-" Enable vim-plug
-execute plug#begin()
-Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
-Plug 'w0rp/ale'
-Plug 'scrooloose/nerdcommenter'
-Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
-Plug 'ap/vim-css-color'
-Plug 'gregsexton/matchtag'
-Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
-" Git
-Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-" Languages
-Plug 'keith/swift.vim'
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-bundler'
-Plug 'othree/html5.vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'tpope/vim-git'
-" TMUX
-if exists('$TMUX')
-    Plug 'tpope/vim-tbone'
-    Plug 'roxma/vim-tmux-clipboard'
-endif
-execute plug#end()
-" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 "------   Plugin Settings   ------"
 " Maps nerd tree for easy access
