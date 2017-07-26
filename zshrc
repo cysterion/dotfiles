@@ -18,11 +18,10 @@ export CLICOLOR=1
 if [[ "$(which ls)" =~ 'gnu' ]]
 then
     alias ls='ls --color=auto --classify'
+    autoload -U colors
+    colors
+    eval $(dircolors)
 fi
-autoload -U colors
-colors
-eval $(dircolors)
-
 # The following lines were added by compinstall
 
 zstyle ':completion:*' auto-description '%d'
