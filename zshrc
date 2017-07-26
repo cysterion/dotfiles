@@ -45,7 +45,14 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 PROMPT='%b%f%~ %B%(?:%F{green}:%F{red})%(!.#.❯)%f%b '
-RPROMPT='%F{yellow}$(rvm-prompt)%f'
+
+RPROMPT=''
+# Add the rvm to the prompt if it exists
+if (( $+commands[rvm-prompt] ))
+then
+    RPROMPT="$RPROMPT%F{yellow}\$(rvm-prompt)%f"
+fi
+# Add my custom git-prompt to the prompt if it exists
 if (( $+commands[git-prompt] ))
 then
     RPROMPT="$RPROMPT\$(git-prompt --zsh -l)"
