@@ -4,7 +4,14 @@
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-source "$HOME/.antigen/antigen.zsh"
+# detect coreutils
+if [[ "$(which ls)" =~ 'gnu' ]]
+then
+    coreutils=1
+fi
+
+export ADOTDIR="$HOME/.zsh/antigen"
+source "$HOME/.zsh/autoload/antigen.zsh"
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -23,9 +30,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen apply
 
 source "$HOME/.profile"
-if [ -f 'brew --prefix'/etc/bash_completion ]; then
-    . 'brew --prefix'/etc/bash_completion
-fi
+# if [ -f 'brew --prefix'/etc/bash_completion ]; then
+    # . 'brew --prefix'/etc/bash_completion
+# fi
 
 setopt prompt_subst
 setopt correct
@@ -33,7 +40,7 @@ setopt correct
 # Enable colors in prompt
 export TERM=xterm-256color
 export CLICOLOR=1
-if [[ "$(which ls)" =~ 'gnu' ]]
+if [[ $coreutils -eq 1 ]]
 then
     alias ls='ls --color=auto --classify'
     autoload -U colors
