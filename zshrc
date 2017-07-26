@@ -45,16 +45,14 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 PROMPT='%b%f%~ %B%(?:%F{green}:%F{red})%(!.#.❯)%f%b '
-RPROMPT='%F{yellow}$(rvm-prompt)%f$(git-prompt --zsh -l)'
+RPROMPT='%F{yellow}$(rvm-prompt)%f'
+if (( $+commands[git-prompt] ))
+then
+    RPROMPT="$RPROMPT\$(git-prompt --zsh -l)"
+fi
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
-
-# Reload the zshrc
-function reload {
-    source "$HOME/.zshrc"
-    echo 'reloaded'
-}
 
 # Attached a session if it has been detached from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
@@ -62,6 +60,7 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 # if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
 
 source "$HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$HOME/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
 
