@@ -4,9 +4,6 @@
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-# detect coreutils
-coreutils=$([[ "$(which ls)" =~ 'gnu' ]])
-
 export ADOTDIR="$HOME/.zsh/antigen"
 source "$HOME/.zsh/autoload/antigen.zsh"
 
@@ -15,11 +12,6 @@ source "$HOME/.zsh/autoload/antigen.zsh"
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 # antigen bundle command-not-found
-# antigen bundle git
-# antigen bundle brew
-# antigen bundle rails
-# antigen bundle bower
-# antigen bundle bundler
 # antigen bundle colored-man-pages
 # antigen bundle osx
 
@@ -42,7 +34,9 @@ setopt correct
 # Enable colors in prompt
 export TERM=xterm-256color
 export CLICOLOR=1
-if $coreutils
+
+# detect coreutils
+if [[ `which ls` =~ 'gnu' ]]
 then
     alias ls='ls --color=auto --classify'
     autoload -U colors
