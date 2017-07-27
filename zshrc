@@ -87,9 +87,5 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 # Attached a session if it has been detached from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
-# if brew command command-not-found-init > /dev/null 2>&1; then eval "$(brew command-not-found-init)"; fi
-
 export PATH="$PATH:$HOME/workspace/universe/bin"
 
-# added by travis gem
-[ -f /Users/BrandonRoehl/.travis/travis.sh ] && source /Users/BrandonRoehl/.travis/travis.sh
