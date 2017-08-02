@@ -15,13 +15,15 @@ source "$HOME/.zsh/autoload/antigen.zsh"
 # antigen bundle colored-man-pages
 # antigen bundle osx
 
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-history-substring-search
+zplug zsh-users/zsh-syntax-highlighting
+zplug zsh-users/zsh-autosuggestions
+zplug zsh-users/zsh-completions
+zplug zsh-users/zsh-history-substring-search
+zplug mafredri/zsh-async
+zplug sindresorhus/pure, use:pure.zsh, as:theme
 
 # Tell Antigen that you're done.
-antigen apply
+zplug load
 
 source "$HOME/.profile"
 # if [ -f 'brew --prefix'/etc/bash_completion ]; then
@@ -66,20 +68,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 bindkey -v
 # End of lines configured by zsh-newuser-install
-
-PROMPT='%b%f%~ %B%(?:%F{green}:%F{red})%(!.#.❯)%f%b '
-
-RPROMPT=''
-# Add the rvm to the prompt if it exists
-if (( $+commands[rvm-prompt] ))
-then
-    RPROMPT="$RPROMPT%F{yellow}\$(rvm-prompt)%f"
-fi
-# Add my custom git-prompt to the prompt if it exists
-if (( $+commands[git-prompt] ))
-then
-    RPROMPT="$RPROMPT\$(git-prompt --zsh -l)"
-fi
 
 # Copies the current path to the clipboard
 alias cpdir="pwd | tr -d '\n' | pbcopy"
