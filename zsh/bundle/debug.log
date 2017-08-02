@@ -1,0 +1,685 @@
+[WRN][1501705287.1149749756] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:246
+[WRN][1501705287.1149749756] -antigen-interactive-mode: file:file:filecode:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1501705287.1155359745] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1554
+[WRN][1501705287.1155359745] -antigen-lock-init return code was 0
+[LOG][1501705287.1169331074] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1556
+[LOG][1501705287.1169331074] LOADED EXTENSION lock EXT
+[WRN][1501705287.1189699173] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1666
+[WRN][1501705287.1189699173] Init parallel extension PARALLEL
+[WRN][1501705287.1191310883] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:246
+[WRN][1501705287.1191310883] -antigen-interactive-mode: file:file:filecode:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1501705287.1192889214] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1554
+[WRN][1501705287.1192889214] -antigen-parallel-init return code was 0
+[LOG][1501705287.1194100380] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1556
+[LOG][1501705287.1194100380] LOADED EXTENSION parallel EXT
+[WRN][1501705287.1195559502] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1674
+[WRN][1501705287.1195559502] Exec parallel extension PARALLEL
+[WRN][1501705287.1199450493] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:246
+[WRN][1501705287.1199450493] -antigen-interactive-mode: file:file:filecode:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1501705287.1200940609] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1554
+[WRN][1501705287.1200940609] -antigen-defer-init return code was 0
+[LOG][1501705287.1202239990] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1556
+[LOG][1501705287.1202239990] LOADED EXTENSION defer EXT
+[WRN][1501705287.1217019558] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:246
+[WRN][1501705287.1217019558] -antigen-interactive-mode: file:file:filecode:shfunc:shfunc:shfunc:eval:shfunc:shfunc $_ANTIGEN_INTERACTIVE = 
+[WRN][1501705287.1219611168] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1554
+[WRN][1501705287.1219611168] -antigen-cache-init return code was 0
+[LOG][1501705287.1220929623] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1556
+[LOG][1501705287.1220929623] LOADED EXTENSION cache EXT
+[WRN][1501705287.1242330074] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1242330074] Updated meta: target antigen mode once type pre called 1
+[WRN][1501705287.1243538857] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1243538857] Processing hooks: antigen-lock
+[WRN][1501705287.1244599819] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1244599819] Pre hook: antigen-lock bundle zsh-users/zsh-syntax-highlighting
+[LOG][1501705287.1245689392] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:4
+[LOG][1501705287.1245689392] antigen-lock called
+[WRN][1501705287.1246850491] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:15
+[WRN][1501705287.1246850491] Creating antigen-lock file at /Users/BrandonRoehl/.zsh/bundle/.lock
+[WRN][1501705287.1294689178] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1294689178] -antigen-hook-antigen bundle zsh-users/zsh-syntax-highlighting
+[WRN][1501705287.1297440529] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1297440529] Updated meta: target antigen-bundle mode repeat type replace called 1
+[WRN][1501705287.1299159527] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1299159527] Updated meta: target antigen-bundle mode repeat type pre called 1
+[WRN][1501705287.1300539970] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1300539970] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1302471161] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1302471161] Pre hook: antigen-bundle-cached zsh-users/zsh-syntax-highlighting
+[WRN][1501705287.1304070950] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1304070950] Replace hook: antigen-bundle-defer zsh-users/zsh-syntax-highlighting
+[WRN][1501705287.1306009293] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1306009293] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1308779716] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1308779716] Return from hook antigen with 0
+[WRN][1501705287.1313209534] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1313209534] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1314949989] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1314949989] Processing hooks: antigen-lock
+[WRN][1501705287.1317160130] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1317160130] -antigen-hook-antigen bundle zsh-users/zsh-autosuggestions
+[WRN][1501705287.1319770813] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1319770813] Updated meta: target antigen-bundle mode repeat type replace called 2
+[WRN][1501705287.1322939396] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1322939396] Updated meta: target antigen-bundle mode repeat type pre called 2
+[WRN][1501705287.1324479580] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1324479580] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1326129436] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1326129436] Pre hook: antigen-bundle-cached zsh-users/zsh-autosuggestions
+[WRN][1501705287.1327800751] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1327800751] Replace hook: antigen-bundle-defer zsh-users/zsh-autosuggestions
+[WRN][1501705287.1329340935] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1329340935] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1331360340] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1331360340] Return from hook antigen with 0
+[WRN][1501705287.1334159374] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1334159374] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1335461140] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1335461140] Processing hooks: antigen-lock
+[WRN][1501705287.1336719990] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1336719990] -antigen-hook-antigen bundle zsh-users/zsh-completions
+[WRN][1501705287.1339139938] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1339139938] Updated meta: target antigen-bundle mode repeat type replace called 3
+[WRN][1501705287.1341030598] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1341030598] Updated meta: target antigen-bundle mode repeat type pre called 3
+[WRN][1501705287.1342530251] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1342530251] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1343901157] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1343901157] Pre hook: antigen-bundle-cached zsh-users/zsh-completions
+[WRN][1501705287.1345729828] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1345729828] Replace hook: antigen-bundle-defer zsh-users/zsh-completions
+[WRN][1501705287.1348431110] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1348431110] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1350030899] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1350030899] Return from hook antigen with 0
+[WRN][1501705287.1352000237] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1352000237] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1352989674] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1352989674] Processing hooks: antigen-lock
+[WRN][1501705287.1354010105] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1354010105] -antigen-hook-antigen bundle zsh-users/zsh-history-substring-search
+[WRN][1501705287.1355800629] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1355800629] Updated meta: target antigen-bundle mode repeat type replace called 4
+[WRN][1501705287.1357140541] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1357140541] Updated meta: target antigen-bundle mode repeat type pre called 4
+[WRN][1501705287.1358180046] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1358180046] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1359140873] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1359140873] Pre hook: antigen-bundle-cached zsh-users/zsh-history-substring-search
+[WRN][1501705287.1360409260] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1360409260] Replace hook: antigen-bundle-defer zsh-users/zsh-history-substring-search
+[WRN][1501705287.1361620426] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1361620426] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1362979412] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1362979412] Return from hook antigen with 0
+[WRN][1501705287.1365149021] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1365149021] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1366260052] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1366260052] Processing hooks: antigen-lock
+[WRN][1501705287.1367919445] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1367919445] -antigen-hook-antigen bundle mafredri/zsh-async
+[WRN][1501705287.1370050907] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1370050907] Updated meta: target antigen-bundle mode repeat type replace called 5
+[WRN][1501705287.1371591091] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1371591091] Updated meta: target antigen-bundle mode repeat type pre called 5
+[WRN][1501705287.1372709274] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1372709274] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1373701096] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1373701096] Pre hook: antigen-bundle-cached mafredri/zsh-async
+[WRN][1501705287.1375000477] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1375000477] Replace hook: antigen-bundle-defer mafredri/zsh-async
+[WRN][1501705287.1376249790] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1376249790] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1377570629] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1377570629] Return from hook antigen with 0
+[WRN][1501705287.1379458904] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1379458904] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1381258965] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1381258965] Processing hooks: antigen-lock
+[WRN][1501705287.1382429600] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1382429600] -antigen-hook-antigen bundle sindresorhus/pure
+[WRN][1501705287.1384270191] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1384270191] Updated meta: target antigen-bundle mode repeat type replace called 6
+[WRN][1501705287.1385719776] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1385719776] Updated meta: target antigen-bundle mode repeat type pre called 6
+[WRN][1501705287.1386890411] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1386890411] Processing hooks: antigen-bundle-defer antigen-bundle-cached
+[WRN][1501705287.1387870312] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1387870312] Pre hook: antigen-bundle-cached sindresorhus/pure
+[WRN][1501705287.1389229298] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1389229298] Replace hook: antigen-bundle-defer sindresorhus/pure
+[WRN][1501705287.1390390396] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1482
+[WRN][1501705287.1390390396] antigen-bundle-defer shortcircuited
+[LOG][1501705287.1391770840] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1391770840] Return from hook antigen with 0
+[WRN][1501705287.1393749714] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705287.1393749714] Ignoring hook due to mode once: antigen-lock
+[WRN][1501705287.1394829750] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1394829750] Processing hooks: antigen-lock
+[WRN][1501705287.1395869255] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705287.1395869255] -antigen-hook-antigen apply
+[WRN][1501705287.1397759914] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1397759914] Updated meta: target antigen-apply mode once type post called 1
+[WRN][1501705287.1399140358] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1399140358] Updated meta: target antigen-apply mode once type pre called 1
+[WRN][1501705287.1400499344] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1400499344] Updated meta: target antigen-apply mode once type replace called 1
+[WRN][1501705287.1401898861] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1401898861] Updated meta: target antigen-apply mode once type pre called 1
+[WRN][1501705287.1403288841] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1403288841] Updated meta: target antigen-apply mode once type post called 1
+[WRN][1501705287.1404409409] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1404409409] Processing hooks: antigen-apply-lock antigen-apply-parallel antigen-apply-parallel-execute antigen-apply-defer antigen-apply-cached
+[WRN][1501705287.1405448914] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1405448914] Pre hook: antigen-apply-parallel
+[WRN][1501705287.1406500340] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:53
+[WRN][1501705287.1406500340] Parallel pre-apply PARALLEL PRE-APPLY
+[WRN][1501705287.1408329010] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1408329010] Pre hook: antigen-apply-defer
+[WRN][1501705287.1409440041] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:10
+[WRN][1501705287.1409440041] Defer pre-apply DEFER PRE-APPLY
+[LOG][1501705287.1412220001] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1412220001] Processing deferred bundle: zsh-users/zsh-syntax-highlighting DEFER
+[WRN][1501705287.1413969994] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1413969994] Updated meta: target antigen-bundle mode repeat type pre called 7
+[WRN][1501705287.1415390968] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1415390968] Updated meta: target antigen-bundle mode repeat type replace called 1
+[WRN][1501705287.1416471004] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1416471004] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1417450905] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1417450905] Pre hook: antigen-bundle-cached zsh-users/zsh-syntax-highlighting
+[WRN][1501705287.1418809891] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1418809891] Replace hook: antigen-bundle-parallel zsh-users/zsh-syntax-highlighting
+[TRA][1501705287.1419870853] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1419870853] antigen-bundle-parallel: zsh-users/zsh-syntax-highlighting PARALLEL
+[TRA][1501705287.1419870853] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1421179771] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1421179771] Replaced hooked function.
+[LOG][1501705287.1422190666] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1422190666] Return from hook antigen-bundle with 0
+[LOG][1501705287.1423459053] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1423459053] Processing deferred bundle: zsh-users/zsh-autosuggestions DEFER
+[WRN][1501705287.1426229477] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1426229477] Updated meta: target antigen-bundle mode repeat type pre called 8
+[WRN][1501705287.1428420544] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1428420544] Updated meta: target antigen-bundle mode repeat type replace called 2
+[WRN][1501705287.1429729462] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1429729462] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1430809498] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1430809498] Pre hook: antigen-bundle-cached zsh-users/zsh-autosuggestions
+[WRN][1501705287.1432180405] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1432180405] Replace hook: antigen-bundle-parallel zsh-users/zsh-autosuggestions
+[TRA][1501705287.1433279514] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1433279514] antigen-bundle-parallel: zsh-users/zsh-autosuggestions PARALLEL
+[TRA][1501705287.1433279514] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1434769630] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1434769630] Replaced hooked function.
+[LOG][1501705287.1435780525] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1435780525] Return from hook antigen-bundle with 0
+[LOG][1501705287.1436970234] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1436970234] Processing deferred bundle: zsh-users/zsh-completions DEFER
+[WRN][1501705287.1438720226] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1438720226] Updated meta: target antigen-bundle mode repeat type pre called 9
+[WRN][1501705287.1440579891] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1440579891] Updated meta: target antigen-bundle mode repeat type replace called 3
+[WRN][1501705287.1441669464] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1441669464] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1443030834] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1443030834] Pre hook: antigen-bundle-cached zsh-users/zsh-completions
+[WRN][1501705287.1444931030] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1444931030] Replace hook: antigen-bundle-parallel zsh-users/zsh-completions
+[TRA][1501705287.1445980072] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1445980072] antigen-bundle-parallel: zsh-users/zsh-completions PARALLEL
+[TRA][1501705287.1445980072] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1447510719] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1447510719] Replaced hooked function.
+[LOG][1501705287.1448509693] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1448509693] Return from hook antigen-bundle with 0
+[LOG][1501705287.1449730396] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1449730396] Processing deferred bundle: zsh-users/zsh-history-substring-search DEFER
+[WRN][1501705287.1451420784] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1451420784] Updated meta: target antigen-bundle mode repeat type pre called 10
+[WRN][1501705287.1453170776] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1453170776] Updated meta: target antigen-bundle mode repeat type replace called 4
+[WRN][1501705287.1454319954] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1454319954] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1455299854] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1455299854] Pre hook: antigen-bundle-cached zsh-users/zsh-history-substring-search
+[WRN][1501705287.1456720829] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1456720829] Replace hook: antigen-bundle-parallel zsh-users/zsh-history-substring-search
+[TRA][1501705287.1457760334] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1457760334] antigen-bundle-parallel: zsh-users/zsh-history-substring-search PARALLEL
+[TRA][1501705287.1457760334] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1459250450] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1459250450] Replaced hooked function.
+[LOG][1501705287.1460449696] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1460449696] Return from hook antigen-bundle with 0
+[LOG][1501705287.1461739540] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1461739540] Processing deferred bundle: mafredri/zsh-async DEFER
+[WRN][1501705287.1463530064] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1463530064] Updated meta: target antigen-bundle mode repeat type pre called 11
+[WRN][1501705287.1464939117] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1464939117] Updated meta: target antigen-bundle mode repeat type replace called 5
+[WRN][1501705287.1466040611] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1466040611] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1467859745] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1467859745] Pre hook: antigen-bundle-cached mafredri/zsh-async
+[WRN][1501705287.1469509602] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1469509602] Replace hook: antigen-bundle-parallel mafredri/zsh-async
+[TRA][1501705287.1470780373] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1470780373] antigen-bundle-parallel: mafredri/zsh-async PARALLEL
+[TRA][1501705287.1470780373] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1472489834] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1472489834] Replaced hooked function.
+[LOG][1501705287.1473848820] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1473848820] Return from hook antigen-bundle with 0
+[LOG][1501705287.1475160122] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:16
+[LOG][1501705287.1475160122] Processing deferred bundle: sindresorhus/pure DEFER
+[WRN][1501705287.1477060318] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1477060318] Updated meta: target antigen-bundle mode repeat type pre called 12
+[WRN][1501705287.1478729248] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705287.1478729248] Updated meta: target antigen-bundle mode repeat type replace called 6
+[WRN][1501705287.1480469704] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705287.1480469704] Processing hooks: antigen-bundle-cached antigen-bundle-parallel
+[WRN][1501705287.1482439041] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705287.1482439041] Pre hook: antigen-bundle-cached sindresorhus/pure
+[WRN][1501705287.1484100819] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1484100819] Replace hook: antigen-bundle-parallel sindresorhus/pure
+[TRA][1501705287.1485269070] /Users/BrandonRoehl/.zshrc:5
+[TRA][1501705287.1485269070] antigen-bundle-parallel: sindresorhus/pure PARALLEL
+[TRA][1501705287.1485269070] TRACE
+antigen-bundle-parallel
+-antigen-hook-handler
+antigen-bundle
+antigen-apply-defer
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705287.1486570835] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705287.1486570835] Replaced hooked function.
+[LOG][1501705287.1487669945] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705287.1487669945] Return from hook antigen-bundle with 0
+[WRN][1501705287.1489241123] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705287.1489241123] Replace hook: antigen-apply-parallel-execute
+[WRN][1501705287.1490299702] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:65
+[WRN][1501705287.1490299702] Parallel replace-apply PARALLEL REPLACE-APPLY
+[WRN][1501705287.1492319107] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:4
+[WRN][1501705287.1492319107] Parallel antigen-bundle-parallel-execute PARALLEL
+[WRN][1501705287.1493430138] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:8
+[WRN][1501705287.1493430138] Gonna install in parallel 6 bundles. PARALLEL
+[WRN][1501705287.1494419575] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:10
+[WRN][1501705287.1494419575] zsh-users/zsh-syntax-highlighting zsh-users/zsh-autosuggestions zsh-users/zsh-completions zsh-users/zsh-history-substring-search mafredri/zsh-async sindresorhus/pure PARALLEL
+[WRN][1501705287.1501080990] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1501080990] Install in parallel zsh-users/zsh-syntax-highlighting. PARALLEL
+[WRN][1501705287.1513049603] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1513049603] Install in parallel zsh-users/zsh-autosuggestions. PARALLEL
+[WRN][1501705287.1527190208] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1527190208] Install in parallel zsh-users/zsh-completions. PARALLEL
+[WRN][1501705287.1543068886] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1543068886] Install in parallel zsh-users/zsh-history-substring-search. PARALLEL
+[WRN][1501705287.1557950974] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1557950974] Install in parallel mafredri/zsh-async. PARALLEL
+[WRN][1501705287.1573140621] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:17
+[WRN][1501705287.1573140621] Install in parallel sindresorhus/pure. PARALLEL
+[WRN][1501705289.3201351166] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3201351166] Updated meta: target antigen-bundle mode repeat type pre called 13
+[WRN][1501705289.3205130100] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3205130100] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3225769997] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3225769997] Pre hook: antigen-bundle-cached zsh-users/zsh-syntax-highlighting
+[WRN][1501705289.3229589462] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3229589462] -antigen-hook-antigen-bundle zsh-users/zsh-syntax-highlighting
+[TRA][1501705289.3232278824] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3232278824] Called antigen-bundle with zsh-users/zsh-syntax-highlighting BUNDLE
+[TRA][1501705289.3232278824] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3247780800] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3247780800] Updated meta: target -antigen-load-env mode repeat type replace called 1
+[WRN][1501705289.3250730038] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3250730038] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3254179955] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3254179955] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting btype plugin url https://github.com/zsh-users/zsh-syntax-highlighting.git loc / name zsh-users/zsh-syntax-highlighting make_local_clone true
+[WRN][1501705289.3257060051] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3257060051] Replaced hooked function.
+[LOG][1501705289.3258619308] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3258619308] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3261580467] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3261580467] Updated meta: target -antigen-load-source mode repeat type replace called 1
+[WRN][1501705289.3263270855] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3263270855] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3264970779] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3264970779] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting///zsh-syntax-highlighting.plugin.zsh
+[WRN][1501705289.3266739845] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3266739845] Replaced hooked function.
+[LOG][1501705289.3269269466] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3269269466] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3271379471] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3271379471] Return from hook antigen-bundle with 0
+[WRN][1501705289.3274090290] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3274090290] Updated meta: target antigen-bundle mode repeat type pre called 14
+[WRN][1501705289.3275671005] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3275671005] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3277080059] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3277080059] Pre hook: antigen-bundle-cached zsh-users/zsh-autosuggestions
+[WRN][1501705289.3278830051] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3278830051] -antigen-hook-antigen-bundle zsh-users/zsh-autosuggestions
+[TRA][1501705289.3280260563] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3280260563] Called antigen-bundle with zsh-users/zsh-autosuggestions BUNDLE
+[TRA][1501705289.3280260563] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3288540840] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3288540840] Updated meta: target -antigen-load-env mode repeat type replace called 2
+[WRN][1501705289.3290410042] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3290410042] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3292059898] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3292059898] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions btype plugin url https://github.com/zsh-users/zsh-autosuggestions.git loc / name zsh-users/zsh-autosuggestions make_local_clone true
+[WRN][1501705289.3294088840] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3294088840] Replaced hooked function.
+[LOG][1501705289.3295650482] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3295650482] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3298070431] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3298070431] Updated meta: target -antigen-load-source mode repeat type replace called 2
+[WRN][1501705289.3299660683] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3299660683] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3301169872] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3301169872] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions///zsh-autosuggestions.plugin.zsh
+[WRN][1501705289.3302719593] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3302719593] Replaced hooked function.
+[LOG][1501705289.3304040432] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3304040432] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3305931091] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3305931091] Return from hook antigen-bundle with 0
+[WRN][1501705289.3310360909] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3310360909] Updated meta: target antigen-bundle mode repeat type pre called 15
+[WRN][1501705289.3313019276] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3313019276] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3314530849] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3314530849] Pre hook: antigen-bundle-cached zsh-users/zsh-completions
+[WRN][1501705289.3316199780] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3316199780] -antigen-hook-antigen-bundle zsh-users/zsh-completions
+[TRA][1501705289.3317561150] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3317561150] Called antigen-bundle with zsh-users/zsh-completions BUNDLE
+[TRA][1501705289.3317561150] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3325350285] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3325350285] Updated meta: target -antigen-load-env mode repeat type replace called 3
+[WRN][1501705289.3327078819] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3327078819] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3328800201] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3328800201] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions btype plugin url https://github.com/zsh-users/zsh-completions.git loc / name zsh-users/zsh-completions make_local_clone true
+[WRN][1501705289.3331229687] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3331229687] Replaced hooked function.
+[LOG][1501705289.3332738876] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3332738876] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3335220814] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3335220814] Updated meta: target -antigen-load-source mode repeat type replace called 3
+[WRN][1501705289.3336689472] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3336689472] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3338170052] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3338170052] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions///zsh-completions.plugin.zsh
+[WRN][1501705289.3339679241] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3339679241] Replaced hooked function.
+[LOG][1501705289.3341069221] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3341069221] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3342890739] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3342890739] Return from hook antigen-bundle with 0
+[WRN][1501705289.3345079422] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3345079422] Updated meta: target antigen-bundle mode repeat type pre called 16
+[WRN][1501705289.3346331120] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3346331120] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3347539902] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3347539902] Pre hook: antigen-bundle-cached zsh-users/zsh-history-substring-search
+[WRN][1501705289.3348989487] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3348989487] -antigen-hook-antigen-bundle zsh-users/zsh-history-substring-search
+[TRA][1501705289.3350169659] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3350169659] Called antigen-bundle with zsh-users/zsh-history-substring-search BUNDLE
+[TRA][1501705289.3350169659] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3358230591] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3358230591] Updated meta: target -antigen-load-env mode repeat type replace called 4
+[WRN][1501705289.3359930515] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3359930515] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3367040157] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3367040157] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search btype plugin url https://github.com/zsh-users/zsh-history-substring-search.git loc / name zsh-users/zsh-history-substring-search make_local_clone true
+[WRN][1501705289.3369801044] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3369801044] Replaced hooked function.
+[LOG][1501705289.3371560574] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3371560574] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3374929428] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3374929428] Updated meta: target -antigen-load-source mode repeat type replace called 4
+[WRN][1501705289.3376929760] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3376929760] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3378241062] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3378241062] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search///zsh-history-substring-search.zsh
+[WRN][1501705289.3379569054] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3379569054] Replaced hooked function.
+[LOG][1501705289.3380789757] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3380789757] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3382360935] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3382360935] Return from hook antigen-bundle with 0
+[WRN][1501705289.3384299278] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3384299278] Updated meta: target antigen-bundle mode repeat type pre called 17
+[WRN][1501705289.3385469913] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3385469913] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3386509418] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3386509418] Pre hook: antigen-bundle-cached mafredri/zsh-async
+[WRN][1501705289.3387799263] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3387799263] -antigen-hook-antigen-bundle mafredri/zsh-async
+[TRA][1501705289.3388860226] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3388860226] Called antigen-bundle with mafredri/zsh-async BUNDLE
+[TRA][1501705289.3388860226] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3394830227] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3394830227] Updated meta: target -antigen-load-env mode repeat type replace called 5
+[WRN][1501705289.3396139145] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3396139145] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3398010731] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3398010731] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async btype plugin url https://github.com/mafredri/zsh-async.git loc / name mafredri/zsh-async make_local_clone true
+[WRN][1501705289.3399651051] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3399651051] Replaced hooked function.
+[LOG][1501705289.3400750160] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3400750160] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3402709961] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3402709961] Updated meta: target -antigen-load-source mode repeat type replace called 5
+[WRN][1501705289.3403899670] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3403899670] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3405110836] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3405110836] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async///async.plugin.zsh
+[WRN][1501705289.3406360149] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3406360149] Replaced hooked function.
+[LOG][1501705289.3407421112] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3407421112] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3409988880] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3409988880] Return from hook antigen-bundle with 0
+[WRN][1501705289.3413550854] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3413550854] Updated meta: target antigen-bundle mode repeat type pre called 18
+[WRN][1501705289.3415429592] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3415429592] Processing hooks: antigen-bundle-cached
+[WRN][1501705289.3417110443] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1469
+[WRN][1501705289.3417110443] Pre hook: antigen-bundle-cached sindresorhus/pure
+[WRN][1501705289.3419198990] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3419198990] -antigen-hook-antigen-bundle sindresorhus/pure
+[TRA][1501705289.3420860767] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[TRA][1501705289.3420860767] Called antigen-bundle with sindresorhus/pure BUNDLE
+[TRA][1501705289.3420860767] TRACE
+-antigen-hook-antigen-bundle
+-antigen-hook-handler
+antigen-bundle
+antigen-bundle-parallel-execute
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[WRN][1501705289.3430149555] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3430149555] Updated meta: target -antigen-load-env mode repeat type replace called 6
+[WRN][1501705289.3431630135] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3431630135] Processing hooks: -antigen-load-env-cached
+[WRN][1501705289.3433771133] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3433771133] Replace hook: -antigen-load-env-cached dir /Users/BrandonRoehl/.zsh/bundle/bundles/sindresorhus/pure btype plugin url https://github.com/sindresorhus/pure.git loc / name sindresorhus/pure make_local_clone true
+[WRN][1501705289.3436639309] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3436639309] Replaced hooked function.
+[LOG][1501705289.3438379765] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3438379765] Return from hook -antigen-load-env with 0
+[WRN][1501705289.3441979885] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1451
+[WRN][1501705289.3441979885] Updated meta: target -antigen-load-source mode repeat type replace called 6
+[WRN][1501705289.3443799019] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3443799019] Processing hooks: -antigen-load-source-cached
+[WRN][1501705289.3445088863] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1480
+[WRN][1501705289.3445088863] Replace hook: -antigen-load-source-cached /Users/BrandonRoehl/.zsh/bundle/bundles/sindresorhus/pure///pure.plugin.zsh
+[WRN][1501705289.3446381092] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.3446381092] Replaced hooked function.
+[LOG][1501705289.3447480202] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3447480202] Return from hook -antigen-load-source with 0
+[LOG][1501705289.3449039459] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.3449039459] Return from hook antigen-bundle with 0
+[WRN][1501705289.3450510502] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:48
+[WRN][1501705289.3450510502] Parallel install done PARALLEL
+[WRN][1501705289.3453280926] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705289.3453280926] Ignoring hook due to mode once: antigen-apply-lock
+[WRN][1501705289.3454558849] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705289.3454558849] Ignoring hook due to mode once: antigen-apply-parallel
+[WRN][1501705289.3455789089] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705289.3455789089] Ignoring hook due to mode once: antigen-apply-defer
+[WRN][1501705289.3456990719] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1444
+[WRN][1501705289.3456990719] Ignoring hook due to mode once: antigen-apply-cached
+[WRN][1501705289.3458039761] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1466
+[WRN][1501705289.3458039761] Processing hooks: antigen-apply-lock antigen-apply-parallel antigen-apply-defer antigen-apply-cached
+[WRN][1501705289.3459150791] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1487
+[WRN][1501705289.3459150791] -antigen-hook-antigen-apply 
+[LOG][1501705289.3460199833] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:2
+[LOG][1501705289.3460199833] Called antigen-apply
+[TRA][1501705289.3461380005] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:3
+[TRA][1501705289.3461380005] Gonna create compdump file @ apply COMPDUMP
+[TRA][1501705289.3461380005] TRACE
+-antigen-hook-antigen-apply
+-antigen-hook-handler
+antigen-apply
+antigen-apply-parallel-execute
+-antigen-hook-handler
+antigen-apply
+-antigen-hook-antigen
+-antigen-hook-handler
+antigen
+/Users/BrandonRoehl/.zshrc
+[LOG][1501705289.7308459282] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.7308459282] Return from hook antigen-apply with 0
+[WRN][1501705289.7311880589] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1491
+[WRN][1501705289.7311880589] Replaced hooked function.
+[WRN][1501705289.7313799858] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1495
+[WRN][1501705289.7313799858] Post hook: antigen-apply-lock
+[WRN][1501705289.7315700054] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:22
+[WRN][1501705289.7315700054] Freeing antigen-lock file at /Users/BrandonRoehl/.zsh/bundle/.lock
+[WRN][1501705289.7359759808] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1495
+[WRN][1501705289.7359759808] Post hook: antigen-apply-cached
+[LOG][1501705289.7363290787] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1769
+[LOG][1501705289.7363290787] Gonna generate cache for /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting// /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting///zsh-syntax-highlighting.plugin.zsh /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions// /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions///zsh-autosuggestions.plugin.zsh /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions// /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions///zsh-completions.plugin.zsh /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search// /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search///zsh-history-substring-search.zsh /Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async// /Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async///async.plugin.zsh /Users/BrandonRoehl/.zsh/bundle/bundles/sindresorhus/pure// /Users/BrandonRoehl/.zsh/bundle/bundles/sindresorhus/pure///pure.plugin.zsh
+[LOG][1501705289.8378190994] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.8378190994] Return from hook antigen-apply with 0
+[LOG][1501705289.8380610943] /Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/bin/antigen.zsh:1500
+[LOG][1501705289.8380610943] Return from hook antigen with 0
