@@ -20,7 +20,8 @@ antigen bundle BrandonRoehl/pure
 antigen apply
 
 export PURE_PATH_COLOR=045
-export PURE_GIT_ARROW_COLOR=82
+export PURE_GIT_ARROW_COLOR=87
+export PURE_GIT_COLOR=245
 export PURE_PROMPT_COLOR=177
 export PURE_PROMPT_ERROR_COLOR=203
 
