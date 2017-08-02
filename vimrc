@@ -5,6 +5,9 @@ filetype plugin indent on
 "------   Plugin Setup   ------"
 " Enable vim-plug
 execute plug#begin()
+" Mine
+Plug 'BrandonRoehl/auto-omni'
+" Common
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdcommenter'
@@ -214,3 +217,4 @@ let g:gitgutter_sign_modified_removed='┃'
 " \ 'Ignored'   : '☒',
 " \ 'Unknown'   : '?'
 " \ }
+
