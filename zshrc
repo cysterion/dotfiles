@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 #brew install coreutils
 #$(brew --prefix coreutils)
+
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
@@ -10,11 +11,18 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
+
 antigen bundle mafredri/zsh-async
-antigen bundle sindresorhus/pure
+antigen bundle BrandonRoehl/pure
+# antigen bundle "$HOME/workspace/pure" --no-local-clone
 
 # Tell Antigen that you're done.
 antigen apply
+
+export PURE_PATH_COLOR=045
+export PURE_GIT_ARROW_COLOR=82
+export PURE_PROMPT_COLOR=177
+export PURE_PROMPT_ERROR_COLOR=203
 
 source "$HOME/.profile"
 # if [ -f 'brew --prefix'/etc/bash_completion ]; then

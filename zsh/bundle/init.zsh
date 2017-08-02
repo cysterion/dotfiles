@@ -1,6 +1,6 @@
 #-- START ZCACHE GENERATED FILE
-#-- GENERATED: Wed Aug  2 15:21:29 CDT 2017
-#-- ANTIGEN v2.2.1
+#-- GENERATED: Wed Aug  2 16:01:42 CDT 2017
+#-- ANTIGEN v2.0.2
 _antigen () {
 	local -a _1st_arguments
 	_1st_arguments=('apply:Load all bundle completions' 'bundle:Install and load the given plugin' 'bundles:Bulk define bundles' 'cleanup:Clean up the clones of repos which are not used by any bundles currently loaded' 'cache-gen:Generate cache' 'init:Load Antigen configuration from file' 'list:List out the currently loaded bundles' 'purge:Remove a cloned bundle from filesystem' 'reset:Clears cache' 'restore:Restore the bundles state as specified in the snapshot' 'revert:Revert the state of all bundles to how they were before the last antigen update' 'selfupdate:Update antigen itself' 'snapshot:Create a snapshot of all the active clones' 'theme:Switch the prompt theme' 'update:Update all bundles' 'use:Load any (supported) zsh pre-packaged framework') 
@@ -31,33 +31,23 @@ _antigen () {
 	esac
 }
 antigen () {
-  local MATCH MBEGIN MEND
   [[ "$ZSH_EVAL_CONTEXT" =~ "toplevel:*" || "$ZSH_EVAL_CONTEXT" =~ "cmdarg:*" ]] && source "/Users/BrandonRoehl/workspace/dotfiles/zsh/antigen/antigen.zsh" && eval antigen $@;
   return 0;
 }
-typeset -gaU fpath path
-fpath+=(/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-autosuggestions /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-completions /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-history-substring-search /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/mafredri/zsh-async /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/sindresorhus/pure) path+=(/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-autosuggestions /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-completions /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-history-substring-search /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/mafredri/zsh-async /Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/sindresorhus/pure)
+fpath+=(/Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions /Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search /Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async /Users/BrandonRoehl/workspace/pure); PATH="$PATH:"
 _antigen_compinit () {
-  autoload -Uz compinit; compinit -d "/Users/BrandonRoehl/.zsh/bundle/.zcompdump"; compdef _antigen antigen
+  autoload -Uz compinit; compinit -C -d "/Users/BrandonRoehl/.zsh/bundle/.zcompdump"; compdef _antigen antigen
   add-zsh-hook -D precmd _antigen_compinit
 }
 autoload -Uz add-zsh-hook; add-zsh-hook precmd _antigen_compinit
 compdef () {}
-
-if [[ -n "" ]]; then
-  ZSH=""; ZSH_CACHE_DIR=""
-fi
-#--- BUNDLES BEGIN
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh';
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh';
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-completions/zsh-completions.plugin.zsh';
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh';
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/mafredri/zsh-async/async.zsh';
-source '/Users/BrandonRoehl/workspace/dotfiles/zsh/bundle/bundles/sindresorhus/pure/pure.zsh';
-
-#--- BUNDLES END
-typeset -gaU _ANTIGEN_BUNDLE_RECORD; _ANTIGEN_BUNDLE_RECORD=('https://github.com/zsh-users/zsh-syntax-highlighting.git / plugin true' 'https://github.com/zsh-users/zsh-autosuggestions.git / plugin true' 'https://github.com/zsh-users/zsh-completions.git / plugin true' 'https://github.com/zsh-users/zsh-history-substring-search.git / plugin true' 'https://github.com/mafredri/zsh-async.git / plugin true' 'https://github.com/sindresorhus/pure.git / plugin true')
-typeset -g _ANTIGEN_CACHE_LOADED; _ANTIGEN_CACHE_LOADED=true
-typeset -g ANTIGEN_CACHE_VERSION; ANTIGEN_CACHE_VERSION='v2.2.1'
-
+source "/Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh";
+source "/Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh";
+source "/Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-completions/zsh-completions.plugin.zsh";
+source "/Users/BrandonRoehl/.zsh/bundle/bundles/zsh-users/zsh-history-substring-search/zsh-history-substring-search.zsh";
+source "/Users/BrandonRoehl/.zsh/bundle/bundles/mafredri/zsh-async/async.plugin.zsh";
+source "/Users/BrandonRoehl/workspace/pure/pure.plugin.zsh";
+typeset -aU _ANTIGEN_BUNDLE_RECORD;      _ANTIGEN_BUNDLE_RECORD=('https://github.com/zsh-users/zsh-syntax-highlighting.git / plugin true' 'https://github.com/zsh-users/zsh-autosuggestions.git / plugin true' 'https://github.com/zsh-users/zsh-completions.git / plugin true' 'https://github.com/zsh-users/zsh-history-substring-search.git / plugin true' 'https://github.com/mafredri/zsh-async.git / plugin true' '/Users/BrandonRoehl/workspace/pure / plugin false')
+_ANTIGEN_CACHE_LOADED=true ANTIGEN_CACHE_VERSION='v2.0.2'
 #-- END ZCACHE GENERATED FILE
+
