@@ -3,4 +3,4 @@
 	url = https://github.com/junegunn/vim-plug.git
 [submodule "zsh/autoload"]
 	path = zsh/autoload
-	url = https://github.com/zsh-users/antigen.git
+	url = https://github.com/zplug/zplug.git

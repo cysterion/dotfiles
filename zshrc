@@ -4,8 +4,8 @@
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
-export ADOTDIR="$HOME/.zsh/antigen"
-source "$HOME/.zsh/autoload/antigen.zsh"
+# export ADOTDIR="$HOME/.zsh/antigen"
+source "$HOME/.zsh/autoload/init.zsh"
 
 # Load the oh-my-zsh's library.
 # antigen use oh-my-zsh
