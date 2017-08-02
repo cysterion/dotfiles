@@ -23,8 +23,8 @@ export PURE_PATH_COLOR=045
 export PURE_GIT_ARROW_COLOR=87
 export PURE_GIT_COLOR=245
 export PURE_TIME_COLOR=215
-export PURE_PROMPT_COLOR=177
-export PURE_PROMPT_ERROR_COLOR=203
+PROMPT='%(12V.%F{242}%12v%f .)%(?.%F{177}.%F{203})❯%f '
+RPROMPT='%F{215}$(rvm-prompt)%f'
 
 source "$HOME/.profile"
 # if [ -f 'brew --prefix'/etc/bash_completion ]; then
