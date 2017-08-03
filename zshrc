@@ -19,6 +19,7 @@ antigen bundle BrandonRoehl/pure
 # Tell Antigen that you're done.
 antigen apply
 
+# My configuration for my zsh-pure prompt
 export PURE_PATH_COLOR=045
 export PURE_GIT_ARROW_COLOR=87
 export PURE_GIT_COLOR=245
