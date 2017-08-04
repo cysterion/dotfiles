@@ -23,7 +23,7 @@
 	<key>DimOnlyText</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
-	<false/>
+	<true/>
 	<key>DisableWindowSizeSnap</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
@@ -37,9 +37,9 @@
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabCloseButton</key>
-	<true/>
+	<false/>
 	<key>HideTabNumber</key>
-	<true/>
+	<false/>
 	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
@@ -116,13 +116,13 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>445 364 620 392 0 0 1440 878 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>273 243 918 381 0 0 1440 878 </string>
+	<string>218 292 918 498 0 0 1440 877 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>99 294 592 584 0 0 1440 878 </string>
 	<key>NSWindow Frame com.apple.typography_panel_UbuntuMono-Regular</key>
 	<string>246 464 260 96 0 0 1440 878 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>140 422 570 427 0 0 1440 878 </string>
+	<string>312 346 570 427 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>341 324 570 427 0 0 1440 878 </string>
 	<key>New Bookmarks</key>
@@ -851,7 +851,7 @@
 			<key>Thin Strokes</key>
 			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.2262897559171598</real>
+			<real>0.13688054733727811</real>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -1032,7 +1032,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-04-09T16:33:01Z</date>
+	<date>2017-08-03T21:22:09Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>Secure Input</key>
