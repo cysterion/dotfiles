@@ -29,8 +29,8 @@ Plug 'keith/swift.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
+Plug 'plasticboy/vim-markdown'
 Plug 'othree/html5.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'pangloss/vim-javascript'
@@ -196,10 +196,6 @@ let g:ale_sign_error='>>'
 let g:ale_sign_warning='--'
 let g:ale_lint_delay=250
 set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
-
-" Vim Markdown
-let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'html']
-" let g:vim_markdown_frontmatter = 1
 
 " YCM
 let g:ycm_auto_trigger=1
