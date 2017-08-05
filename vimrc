@@ -7,6 +7,8 @@ filetype plugin indent on
 execute plug#begin()
 " Mine
 Plug 'BrandonRoehl/auto-omni'
+" Plug '~/workspace/auto-omnicomplete'
+
 " Common
 Plug 'scrooloose/nerdtree', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'w0rp/ale'
@@ -15,6 +17,9 @@ Plug 'sjl/gundo.vim', { 'on': ['GundoShow', 'GundoRenderGraph', 'GundoToggle'] }
 Plug 'ap/vim-css-color'
 Plug 'gregsexton/matchtag'
 Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
+Plug 'raimondi/delimitmate'
+Plug 'tpope/vim-endwise'
+Plug 'terryma/vim-multiple-cursors'
 " Git
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
@@ -24,9 +29,11 @@ Plug 'keith/swift.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-git'
 Plug 'othree/html5.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'tpope/vim-git'
+Plug 'pangloss/vim-javascript'
 " TMUX
 if exists('$TMUX')
     Plug 'tpope/vim-tbone'
@@ -189,6 +196,10 @@ let g:ale_sign_error='>>'
 let g:ale_sign_warning='--'
 let g:ale_lint_delay=250
 set statusline+=%4*%{exists('*ALEGetStatusLine')?ALEGetStatusLine():''}\ %*
+
+" Vim Markdown
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh', 'ruby', 'html']
+" let g:vim_markdown_frontmatter = 1
 
 " YCM
 let g:ycm_auto_trigger=1
