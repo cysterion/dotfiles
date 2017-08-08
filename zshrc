@@ -39,8 +39,10 @@ setopt correct
 export TERM=xterm-256color
 export CLICOLOR=1
 
-# detect coreutils
-if [[ `which ls` =~ 'gnu' ]]
+# Enable colored output for ls
+export CLICOLOR=YES # MacOS
+# For Linux or mac with brew install coreutils
+if which dircolors &>/dev/null
 then
     alias ls='ls --color=auto --classify'
     autoload -U colors
