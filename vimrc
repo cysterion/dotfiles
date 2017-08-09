@@ -41,7 +41,6 @@ if exists('$TMUX')
     Plug 'roxma/vim-tmux-clipboard'
 endif
 execute plug#end()
-" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Syntax coloring
 syntax enable
