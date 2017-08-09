@@ -20,6 +20,7 @@ Plug 'junegunn/vader.vim',  { 'on': 'Vader', 'for': 'vader' }
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-endwise'
 Plug 'terryma/vim-multiple-cursors'
+Plug 'mattn/emmet-vim'
 " Git
 Plug 'xuyuanp/nerdtree-git-plugin', { 'on': [ 'NERDTreeToggle', 'NERDTree' ] }
 Plug 'airblade/vim-gitgutter'
@@ -69,6 +70,8 @@ set updatetime=250
 " give support for 256bit coloring
 set t_Co=256
 set background=light
+" No folding
+set nofoldenable
 
 " Enable mouse suppourt
 set mouse=a
@@ -224,4 +227,8 @@ let g:gitgutter_sign_modified_removed='┃'
 " \ 'Ignored'   : '☒',
 " \ 'Unknown'   : '?'
 " \ }
+
+
+" Close NerdTree and vim
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif")")
 
