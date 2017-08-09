@@ -12,20 +12,11 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-history-substring-search
 
-antigen bundle mafredri/zsh-async
-antigen bundle BrandonRoehl/pure
-# antigen bundle "$HOME/workspace/pure" --no-local-clone
+antigen bundle BrandonRoehl/zsh-clean
+# antigen bundle "$HOME/workspace/zsh-clean" --no-local-clone
 
 # Tell Antigen that you're done.
 antigen apply
-
-# My configuration for my zsh-pure prompt
-export PURE_PATH_COLOR=045
-export PURE_GIT_ARROW_COLOR=87
-export PURE_GIT_COLOR=245
-export PURE_TIME_COLOR=215
-PROMPT='%(12V.%F{242}%12v%f .)%(?.%F{177}.%F{203})❯%f '
-RPROMPT='%F{215}$(rvm-prompt)%f'
 
 source "$HOME/.profile"
 # if [ -f 'brew --prefix'/etc/bash_completion ]; then
