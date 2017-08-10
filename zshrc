@@ -19,9 +19,6 @@ antigen bundle BrandonRoehl/zsh-clean
 antigen apply
 
 source "$HOME/.profile"
-# if [ -f 'brew --prefix'/etc/bash_completion ]; then
-    # . 'brew --prefix'/etc/bash_completion
-# fi
 
 setopt prompt_subst
 setopt correct
@@ -71,4 +68,23 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
+
+# Plugin configuration
+
+# Declare the variable
+typeset -A ZSH_HIGHLIGHT_STYLES
+
+# Go to the full 256 bit colors
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=160,bold'
+ZSH_HIGHLIGHT_STYLES[command]='fg=41'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=135'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=215'
+ZSH_HIGHLIGHT_STYLES[globbing]='fg=99'
+ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=50'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=215'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=$ZSH_HIGHLIGHT_STYLES[single-hyphen-option]
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=221'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[single-quoted-argument]
+
+
 
