@@ -77,6 +77,8 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 # Go to the full 256 bit colors
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=160,bold'
 ZSH_HIGHLIGHT_STYLES[command]='fg=41'
+ZSH_HIGHLIGHT_STYLES[alias]=$ZSH_HIGHLIGHT_STYLES[command]
+ZSH_HIGHLIGHT_STYLES[function]=$ZSH_HIGHLIGHT_STYLES[command]
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=135'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=215'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=99'
