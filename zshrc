@@ -85,6 +85,7 @@ ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=215'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=$ZSH_HIGHLIGHT_STYLES[single-hyphen-option]
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=221'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[single-quoted-argument]
-
-
+ZSH_HIGHLIGHT_STYLES[assign]='fg=226'
+ZSH_HIGHLIGHT_STYLES[redirection]=$ZSH_HIGHLIGHT_STYLES[assign]
+ZSH_HIGHLIGHT_STYLES[comment]='fg=243'
 
