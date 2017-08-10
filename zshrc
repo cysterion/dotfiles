@@ -83,13 +83,13 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=135'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=215'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=99'
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=50'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=215'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=81'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=$ZSH_HIGHLIGHT_STYLES[single-hyphen-option]
-ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=81'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=215'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[single-quoted-argument]
 ZSH_HIGHLIGHT_STYLES[assign]='fg=226'
 ZSH_HIGHLIGHT_STYLES[redirection]=$ZSH_HIGHLIGHT_STYLES[assign]
 ZSH_HIGHLIGHT_STYLES[comment]='fg=243'
-ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=49'
+ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]='fg=204'
 ZSH_HIGHLIGHT_STYLES[back-dollar-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]
 
