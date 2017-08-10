@@ -172,7 +172,7 @@ hi User4 term=none cterm=none ctermbg=235 ctermfg=203
 set noshowmode
 set statusline=%{ChangeStatuslineColor()}%1* " Changing the mode color
 set statusline+=\ %{g:mode_map[mode()]} " Current mode and modified flag
-set statusline+=%{&paste?' PASTE':''} " If in paste mode
+set statusline+=%{&paste?'\ \ PASTE':''} " If in paste mode
 set statusline+=%m\ %< " Modify flag and line break
 set statusline+=%4*%h%r "help file flag and read only flag
 " set statusline+=\ %2*%n\  " buffernr
