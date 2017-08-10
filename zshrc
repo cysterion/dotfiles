@@ -76,14 +76,14 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 
 # Go to the full 256 bit colors
 ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=203,bold'
-ZSH_HIGHLIGHT_STYLES[command]='fg=41'
+ZSH_HIGHLIGHT_STYLES[command]='fg=84'
 ZSH_HIGHLIGHT_STYLES[alias]=$ZSH_HIGHLIGHT_STYLES[command]
 ZSH_HIGHLIGHT_STYLES[function]=$ZSH_HIGHLIGHT_STYLES[command]
 ZSH_HIGHLIGHT_STYLES[builtin]='fg=135'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=215'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=99'
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=50'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=81'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=51'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=$ZSH_HIGHLIGHT_STYLES[single-hyphen-option]
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=215'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[single-quoted-argument]
