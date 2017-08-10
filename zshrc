@@ -83,7 +83,7 @@ ZSH_HIGHLIGHT_STYLES[builtin]='fg=135'
 ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=215'
 ZSH_HIGHLIGHT_STYLES[globbing]='fg=99'
 ZSH_HIGHLIGHT_STYLES[back-quoted-argument]='fg=50'
-ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=51'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=45'
 ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=$ZSH_HIGHLIGHT_STYLES[single-hyphen-option]
 ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=215'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=$ZSH_HIGHLIGHT_STYLES[single-quoted-argument]
