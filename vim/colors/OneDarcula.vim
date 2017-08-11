@@ -37,7 +37,7 @@ hi Todo      term=standout cterm=reverse ctermfg=226  ctermbg=232
 
 hi Title     term=bold cterm=bold ctermfg=040 ctermbg=none
 hi Directory term=bold cterm=bold ctermfg=032  ctermbg=none
-hi Macro     term=bold cterm=bold ctermfg=37
+hi Macro     term=bold cterm=bold ctermfg=037
 
 " Other stuff
 hi Comment term=none cterm=none ctermfg=243
