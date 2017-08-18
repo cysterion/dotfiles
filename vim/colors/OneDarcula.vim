@@ -11,7 +11,7 @@ if exists("syntax_on")
 endif
 let g:colors_name = "OneDarcula"
 
-hi Normal ctermfg=255 ctermbg=016
+" hi Normal ctermfg=255 ctermbg=016
 
 hi CursorLine   term=bold cterm=bold ctermbg=235 ctermfg=none
 hi CursorLineNr term=bold cterm=bold ctermbg=235 ctermfg=226
