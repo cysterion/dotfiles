@@ -25,11 +25,10 @@ setopt correct
 
 # Enable colors in prompt
 export TERM=xterm-256color
-export CLICOLOR=1
 
 # Enable colored output for ls
-export CLICOLOR=YES # MacOS
-# For Linux or mac with brew install coreutils
+export CLICOLOR=1 # MacOS
+# For Linux or MacOS with brew install coreutils
 if which dircolors &>/dev/null
 then
     alias ls='ls --color=auto --classify'
