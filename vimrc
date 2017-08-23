@@ -6,7 +6,7 @@ filetype plugin indent on
 " Enable vim-plug
 execute plug#begin()
 " Mine
-Plug 'BrandonRoehl/auto-omni'
+Plug 'brandonroehl/auto-omni'
 " Plug '~/workspace/auto-omnicomplete'
 
 " Common
