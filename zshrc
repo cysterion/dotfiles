@@ -66,7 +66,7 @@ alias cpdir="pwd | tr -d '\n' | pbcopy"
 # Attached a session if it has been detached from or create a new one
 alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
-alias gca='git commit -a && push'
+alias gca='git commit -a && git push'
 
 export PATH="$PATH:$HOME/workspace/universe/bin"
 
