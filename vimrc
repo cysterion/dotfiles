@@ -231,7 +231,7 @@ let g:gitgutter_sign_modified_removed='┃'
 
 
 " Close NerdTree when vim is closed
-autocmd bufenter * if (winnr("$") == 1
-            \ && exists("b:NERDTree")
-            \ && b:NERDTree.isTabTree()) | q | endif")")
+" autocmd bufenter * if (winnr("$") == 1
+            " \ && exists("b:NERDTree")
+            " \ && b:NERDTree.isTabTree()) | q | endif")")
 
