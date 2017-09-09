@@ -133,7 +133,11 @@ let g:omni_sql_no_default_maps=1
 " Spellcheck
 set spell spelllang=en
 set spellfile=$HOME/.vim/spell/en.utf-8.add
-set directory=$TMPDIR//
+if exists('$TMPDIR')
+    set directory=$TMPDIR//
+else
+    set directory=/tmp//
+endif
 
 "---------- Statusline ----------"
 let g:mode_map = {
