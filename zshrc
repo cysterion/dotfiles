@@ -68,7 +68,7 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 alias gca='git commit -a && git push'
 
-export PATH="$PATH:$HOME/workspace/universe/bin"
+# export PATH="$PATH:$HOME/workspace/universe/bin"
 
 # Plugin configuration
 
