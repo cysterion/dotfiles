@@ -1,0 +1,8 @@
+#!/bin/bash
+echo 'Updating git repositories'
+currentPath=$PWD
+dotdir=$(readlink ~/.zshrc)
+cd ${dotdir/\/zshrc/}
+brew list > installed.txt
+git submodule foreach 'git checkout master; git pull;'
+cd $currentPath

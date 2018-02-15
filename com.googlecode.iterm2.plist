@@ -4,12 +4,16 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
+	<key>AlternateMouseScroll</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoCommandHistory</key>
 	<false/>
 	<key>Default Bookmark Guid</key>
@@ -21,7 +25,7 @@
 	<key>DimOnlyText</key>
 	<true/>
 	<key>DisableFullscreenTransparency</key>
-	<false/>
+	<true/>
 	<key>DisableWindowSizeSnap</key>
 	<false/>
 	<key>FlashTabBarInFullscreen</key>
@@ -31,23 +35,23 @@
 	<key>HideMenuBarInFullscreen</key>
 	<false/>
 	<key>HideScrollbar</key>
-	<false/>
+	<true/>
 	<key>HideTab</key>
 	<true/>
 	<key>HideTabCloseButton</key>
-	<true/>
+	<false/>
 	<key>HideTabNumber</key>
+	<false/>
+	<key>HotkeyMigratedFromSingleToMulti</key>
+	<true/>
+	<key>JobName</key>
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
-	<key>NSFontPanelAttributes</key>
-	<string>1, 1</string>
-	<key>NSFontPanelPreviewHeight</key>
-	<real>0.0</real>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/Documents/dotfiles</string>
+	<string>~/workspace/dotfiles</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
-	<string>{712, 459}</string>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -56,42 +60,39 @@
 	<false/>
 	<key>NSScrollViewShouldScrollUnderTitlebar</key>
 	<false/>
-	<key>NSTableView Columns KeyBingingTable</key>
-	<array>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATCG
-		</data>
-		<string>198</string>
-		<data>
-		BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU1N0cmluZwGEhAhOU09iamVjdACF
-		hAErATGG
-		</data>
-		<string>322</string>
-	</array>
-	<key>NSTableView Hidden Columns KeyBingingTable</key>
-	<array/>
-	<key>NSTableView Sort Ordering KeyBingingTable</key>
-	<array/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
+	<key>NSTableView Columns v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGNjdYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoK4HCA8aGxwdHh8gJjAxMlUkbnVsbNIJCgsOWk5TLm9iamVjdHNWJGNsYXNzogwN
+	gAKACoAN0xAJChEVGVdOUy5rZXlzoxITFIADgASABaMWFxiABoAHgAiACVpJZGVudGlm
+	aWVyVVdpZHRoVkhpZGRlblEwI0BowAAAAAAACNIhIiMkWiRjbGFzc25hbWVYJGNsYXNz
+	ZXNcTlNEaWN0aW9uYXJ5oiMlWE5TT2JqZWN00xAJCicrGaMSExSAA4AEgAWjLC0YgAuA
+	DIAIgAlRMSNAdKGdsi0OVtIhIjM0Xk5TTXV0YWJsZUFycmF5ozM1JVdOU0FycmF5XxAP
+	TlNLZXllZEFyY2hpdmVy0Tg5VUFycmF5gAEACAARABoAIwAtADIANwBGAEwAUQBcAGMA
+	ZgBoAGoAbABzAHsAfwCBAIMAhQCJAIsAjQCPAJEAnACiAKkAqwC0ALUAugDFAM4A2wDe
+	AOcA7gDyAPQA9gD4APwA/gEAAQIBBAEGAQ8BFAEjAScBLwFBAUQBSgAAAAAAAAIBAAAA
+	AAAAADoAAAAAAAAAAAAAAAAAAAFM
+	</data>
+	<key>NSTableView Sort Ordering v2 KeyBingingTable</key>
+	<data>
+	YnBsaXN0MDDUAQIDBAUGFBVYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+	AAGGoKMHCA1VJG51bGzSCQoLDFpOUy5vYmplY3RzViRjbGFzc6CAAtIODxARWiRjbGFz
+	c25hbWVYJGNsYXNzZXNeTlNNdXRhYmxlQXJyYXmjEBITV05TQXJyYXlYTlNPYmplY3Rf
+	EA9OU0tleWVkQXJjaGl2ZXLRFhdVQXJyYXmAAQgRGiMtMjc7QUZRWFlbYGt0g4ePmKqt
+	swAAAAAAAAEBAAAAAAAAABgAAAAAAAAAAAAAAAAAAAC1
+	</data>
+	<key>NSTableView Supports v2 KeyBingingTable</key>
+	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>507 83 445 77 0 0 1440 878 </string>
-	<key>NSWindow Frame Preferences</key>
-	<string>269 403 606 456 0 0 1440 878 </string>
+	<string>1315 148 445 337 0 0 1920 1057 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>447 364 620 392 0 0 1440 878 </string>
+	<string>2570 516 620 392 1920 0 1920 1080 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>288 76 918 495 0 0 1440 878 </string>
-	<key>NSWindow Frame UKCrashReporter</key>
-	<string>99 294 592 584 0 0 1440 878 </string>
+	<string>2670 620 918 381 1920 0 1920 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>260 415 570 377 0 0 1440 878 </string>
+	<string>2322 427 570 427 1920 0 1920 1058 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>98 153 1186 699 0 0 1440 878 </string>
+	<string>461 185 955 731 0 0 1920 1057 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -292,12 +293,14 @@
 				<key>Blue Component</key>
 				<real>0.0</real>
 				<key>Color Space</key>
-				<string>Calibrated</string>
+				<string>sRGB</string>
 				<key>Green Component</key>
 				<real>0.0</real>
 				<key>Red Component</key>
 				<real>0.0</real>
 			</dict>
+			<key>Background Image Is Tiled</key>
+			<false/>
 			<key>Background Image Location</key>
 			<string></string>
 			<key>Badge Color</key>
@@ -322,7 +325,7 @@
 			<key>Blinking Cursor</key>
 			<true/>
 			<key>Blur</key>
-			<true/>
+			<false/>
 			<key>Blur Radius</key>
 			<real>30</real>
 			<key>Bold Color</key>
@@ -412,6 +415,8 @@
 			</dict>
 			<key>Guid</key>
 			<string>B091E726-AE75-4CC2-9CD9-61EE377E988B</string>
+			<key>Hide After Opening</key>
+			<false/>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>Idle Code</key>
@@ -728,11 +733,11 @@
 			<key>Name</key>
 			<string>Default</string>
 			<key>Non Ascii Font</key>
-			<string>Monaco 12</string>
+			<string>Menlo-Regular 14</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Menlo-Regular 12</string>
+			<string>RobotoMono-Regular 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<false/>
 			<key>Option Key Sends</key>
@@ -740,7 +745,7 @@
 			<key>Place Prompt at First Column</key>
 			<false/>
 			<key>Prompt Before Closing 2</key>
-			<false/>
+			<integer>2</integer>
 			<key>Right Option Key Sends</key>
 			<integer>0</integer>
 			<key>Rows</key>
@@ -769,6 +774,15 @@
 				<key>Red Component</key>
 				<real>0.70980000495910645</real>
 			</dict>
+			<key>Semantic History</key>
+			<dict>
+				<key>action</key>
+				<string>best editor</string>
+				<key>editor</key>
+				<string>org.vim.MacVim</string>
+				<key>text</key>
+				<string></string>
+			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
 			<key>Send New Output Alert</key>
@@ -781,6 +795,8 @@
 			<true/>
 			<key>Smart Cursor Color</key>
 			<true/>
+			<key>Space</key>
+			<integer>0</integer>
 			<key>Sync Title</key>
 			<false/>
 			<key>Tab Color</key>
@@ -788,22 +804,24 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.0</real>
+				<real>0.11500217765569687</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.0</real>
+				<real>0.061998210847377777</real>
 				<key>Red Component</key>
-				<real>0.0</real>
+				<real>0.77625435590744019</real>
 			</dict>
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
 			<string>xterm-256color</string>
 			<key>Thin Strokes</key>
-			<integer>0</integer>
+			<integer>1</integer>
 			<key>Transparency</key>
-			<real>0.2262897559171598</real>
+			<real>0.0</real>
+			<key>Unicode Version</key>
+			<integer>9</integer>
 			<key>Unlimited Scrollback</key>
 			<true/>
 			<key>Use Bold Font</key>
@@ -821,23 +839,19 @@
 			<key>Vertical Spacing</key>
 			<real>1</real>
 			<key>Visual Bell</key>
-			<true/>
+			<false/>
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
 			<string>/Users/BrandonRoehl</string>
 		</dict>
 	</array>
-	<key>NoSyncCommandHistoryHasEverBeenUsed</key>
-	<true/>
-	<key>NoSyncConfirmBeta</key>
-	<true/>
-	<key>NoSyncHaveWarnedAboutIncompatibleSoftware</key>
+	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>0AD41BA8-E018-43D7-B51E-5187317DC70A</string>
+	<string>03E22E54-75B2-4679-91DC-146F0E53F0DC</string>
 	<key>NoSyncLastTipTime</key>
-	<real>492998468.114645</real>
+	<real>532886630.204624</real>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -845,48 +859,34 @@
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>488412904.75779998</real>
-	<key>NoSyncTipsDisabled</key>
-	<true/>
+	<real>523814506.652951</real>
 	<key>NoSyncTipsToNotShow</key>
 	<array>
 		<string>000</string>
-		<string>000</string>
-		<string>0000</string>
 		<string>0000</string>
 		<string>0001</string>
 		<string>0002</string>
-		<string>0003</string>
 		<string>0003</string>
 		<string>0004</string>
 		<string>0005</string>
 		<string>0006</string>
 		<string>0007</string>
-		<string>0007</string>
 		<string>0008</string>
 		<string>0009</string>
-		<string>0010</string>
-		<string>0009</string>
-		<string>0009</string>
-		<string>0010</string>
 		<string>0010</string>
 		<string>0011</string>
 		<string>0012</string>
 		<string>0013</string>
 		<string>0014</string>
 		<string>0015</string>
-		<string>0015</string>
 		<string>0016</string>
 		<string>0017</string>
-		<string>0018</string>
-		<string>0019</string>
 		<string>0018</string>
 		<string>0019</string>
 		<string>0020</string>
 		<string>0021</string>
 		<string>0022</string>
 		<string>0023</string>
-		<string>0024</string>
 		<string>0024</string>
 		<string>0025</string>
 		<string>0026</string>
@@ -895,16 +895,10 @@
 		<string>0029</string>
 		<string>0030</string>
 		<string>0031</string>
-		<string>0030</string>
-		<string>0031</string>
 		<string>0032</string>
 		<string>0033</string>
 		<string>0034</string>
 		<string>0035</string>
-		<string>0034</string>
-		<string>0035</string>
-		<string>0036</string>
-		<string>0036</string>
 		<string>0036</string>
 		<string>0037</string>
 		<string>0038</string>
@@ -912,6 +906,7 @@
 		<string>0040</string>
 		<string>0041</string>
 		<string>0042</string>
+		<string>0041</string>
 		<string>0043</string>
 		<string>0044</string>
 		<string>0045</string>
@@ -925,6 +920,8 @@
 		<string>0053</string>
 		<string>0054</string>
 		<string>0055</string>
+		<string>0056</string>
+		<string>0057</string>
 	</array>
 	<key>OpenTmuxWindowsIn</key>
 	<integer>2</integer>
@@ -968,21 +965,25 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/BrandonRoehl/Documents/dotfiles</string>
+	<string>/Users/roehlbg8339/workspace/dotfiles</string>
 	<key>QuitWhenAllWindowsClosed</key>
+	<true/>
+	<key>SUAutomaticallyUpdate</key>
 	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/final.xml?shard=10</string>
+	<string>https://iterm2.com/appcasts/final.xml?shard=21</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2016-10-22T20:43:51Z</date>
+	<date>2017-11-20T16:03:49Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>Selection Respects Soft Boundaries</key>
+	<true/>
 	<key>ShowBookmarkName</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
@@ -994,13 +995,13 @@
 	<key>SlowFrameRate</key>
 	<real>30</real>
 	<key>SmartCursorColorBgThreshold</key>
-	<real>0.5</real>
+	<real>0.0</real>
 	<key>SmartCursorColorFgThreshold</key>
-	<real>0.75</real>
+	<real>0.0</real>
 	<key>SmartPlacement</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.31574519230769232</real>
+	<real>0.10000000000000001</real>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabTitlesUseSmartTruncation</key>
@@ -1014,8 +1015,6 @@
 	</array>
 	<key>TraditionalVisualBell</key>
 	<true/>
-	<key>UKCrashReporterLastCrashReportDate</key>
-	<real>1476368896</real>
 	<key>URLHandlersByGuid</key>
 	<dict/>
 	<key>UseAdaptiveFrameRate</key>
@@ -1028,6 +1027,8 @@
 	<true/>
 	<key>UseUnevenTabs</key>
 	<false/>
+	<key>WindowNumber</key>
+	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
 	<key>findIgnoreCase_iTerm</key>
@@ -1035,7 +1036,7 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.0.10</string>
+	<string>3.1.5</string>
 	<key>kCPFavoritesUserDefaultsKey</key>
 	<array>
 		<data>

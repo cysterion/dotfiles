@@ -10,7 +10,7 @@ export CLICOLOR=1
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 source "$(xcode-select -p)/usr/share/git-core/git-completion.bash"
 source "$(xcode-select -p)/usr/share/git-core/git-prompt.sh"
-source "$HOME/.profile"
+# source "$HOME/.profile"
 test -e "$HOME/.iterm2_shell_integration.bash" && source "$HOME/.iterm2_shell_integration.bash"
 if [ -f 'brew --prefix'/etc/bash_completion ]; then
     . 'brew --prefix'/etc/bash_completion
@@ -52,9 +52,11 @@ function mkmainJava {
                 echo "        " >> "$CLASS.java"
                 echo "    }" >> "$CLASS.java"
                 echo "}" >> "$CLASS.java"
-                echo "$CLASS.java with main was created successfuly"
+                echo "$CLASS.java with main was created successfully"
             fi
         done
     fi
 }
 
+# added by travis gem
+[ -f /Users/BrandonRoehl/.travis/travis.sh ] && source /Users/BrandonRoehl/.travis/travis.sh

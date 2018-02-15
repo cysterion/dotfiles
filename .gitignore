@@ -1,2 +1,6 @@
 .DS_Store
 *.swp
+installed.txt
+vim/plugged
+vim/.netrwhist
+zsh/bundle

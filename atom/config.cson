@@ -1,0 +1,46 @@
+"*":
+  "atom-material-ui":
+    colors: {}
+    tabs:
+      tintedTabBar: true
+    treeView:
+      blendTabs: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  autosave:
+    enabled: true
+  core:
+    projectHome: "/Users/BrandonRoehl/workspace"
+    telemetryConsent: "limited"
+    themes: [
+      "atom-material-ui"
+      "one-dark-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    fontFamily: "Roboto Mono"
+    fontSize: 12
+    tabLength: 4
+  "exception-reporting":
+    userId: "d5cac5a7-3131-ea39-89d0-21be943bab7d"
+  "markdown-preview": {}
+  "platformio-ide-terminal":
+    style:
+      theme: "one-dark"
+    toggles:
+      autoClose: true
+  "terminal-plus":
+    core: {}
+    style: {}
+    toggles:
+      autoClose: true
+  "tree-view":
+    hideVcsIgnoredFiles: true
+  "vim-mode-plus":
+    clearHighlightSearchOnResetNormalMode: true
+    useClipboardAsDefaultRegister: true
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
+  welcome:
+    showOnStartup: false

@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/bash
 echo '      _       _    __ _ _'
 echo '   __| | ___ | |_ / _(_) | ___  ___'
 echo '  / _` |/ _ \| __| |_| | |/ _ \/ __|'
@@ -6,8 +6,8 @@ echo ' | (_| | (_) | |_|  _| | |  __/\__ \'
 echo '(_)__,_|\___/ \__|_| |_|_|\___||___/'
 git submodule init
 git submodule update --recursive
-files=( 'zshrc' 'bashrc' 'vimrc' 'vim' 'tmux.conf' 'profile' 'universe' )
-for file in $files
+files=( 'vimrc' 'vim' 'zshrc' 'zsh' 'tmux.conf' 'bashrc' 'profile' 'atom' )
+for file in ${files[@]}
 do
     echo ""
     if [ -e "$HOME/.$file" ]
@@ -17,7 +17,7 @@ do
             rm "$HOME/.$file"
         else
             echo "Moving current .$file"
-            mv -iv "$HOME/.$file" "$HOME/${file}_$(date +%s)"
+            mv -ivf "$HOME/.$file" "$HOME/${file}_$(date +%s)"
         fi
     fi
     echo "Simlinking $file to $HOME"
@@ -30,6 +30,7 @@ do
         exit 1
     fi
 done
+git config --global alias.l 'log --graph --decorate --all'
 
 if [ hash brew >/dev/null 2>&1 ]
 then
@@ -42,9 +43,11 @@ then
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Linuxbrew/install/master/install)"
     fi
 fi
-./universe/utils/universe update
 brew install coreutils vim tmux wget bash
 
 echo 'install rvm or upgrade rvm'
-\curl -sSL https://get.rvm.io | bash -s stable
-rvm cleanup all
+curl -sSL https://get.rvm.io | bash -s stable
+if [ hash rvm >/dev/null 2>&1 ]
+then
+    rvm cleanup all
+fi
