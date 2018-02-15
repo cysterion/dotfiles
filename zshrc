@@ -4,6 +4,9 @@
 
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH:$HOME/.zsh/bin"
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$(brew --prefix)/share/man:$MANPATH"
+export INFOPATH="$(brew --prefix)/share/info:$INFOPATH"
 
 export ADOTDIR="$HOME/.zsh/bundle"
 source "$HOME/.zsh/antigen/antigen.zsh"
@@ -68,7 +71,8 @@ alias startTmux='(tmux ls | grep -vq attached && tmux at) || tmux'
 
 alias gca='git commit -a && git push'
 
-# export PATH="$PATH:$HOME/workspace/universe/bin"
+export PATH="$PATH:$HOME/Repos/universe/bin"
+source "$HOME/.aliases"
 
 # Plugin configuration
 
